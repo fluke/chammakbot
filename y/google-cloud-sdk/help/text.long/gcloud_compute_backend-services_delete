@@ -1,0 +1,28 @@
+NAME
+
+      gcloud compute backend-services delete - delete backend services
+
+SYNOPSIS
+
+      gcloud compute backend-services delete NAME [NAME ...] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      gcloud compute backend-services delete deletes one or more backend
+      services.
+
+POSITIONAL ARGUMENTS
+
+      NAME [NAME ...]
+
+         The resources to delete.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

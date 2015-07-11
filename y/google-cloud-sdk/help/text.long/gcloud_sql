@@ -1,0 +1,49 @@
+NAME
+
+      gcloud sql - manage Cloud SQL databases
+
+SYNOPSIS
+
+      gcloud sql GROUP [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      Manage Cloud SQL databases.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+GROUPS
+
+      GROUP is one of the following:
+
+      backups
+
+         Provide commands for working with backups of Cloud SQL instances.
+
+      flags
+
+         Provide a command to list flags.
+
+      instances
+
+         Provide commands for managing Cloud SQL instances.
+
+      operations
+
+         Provide commands for working with Cloud SQL instance operations.
+
+      ssl-certs
+
+         Provide commands for managing SSL certificates of Cloud SQL instances.
+
+      tiers
+
+         Provide a command to list tiers.
+
+NOTES
+
+      This command is in the Google Cloud SDK sql component. See installing
+      components if it is not installed.
+

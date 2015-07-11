@@ -1,0 +1,68 @@
+.TH "GCLOUD BETA DEPLOYMENT-MANAGER MANIFESTS" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_beta_deployment-manager_manifests \- commands for Deployment Manager V2 manifests
+.SH "SYNOPSIS"
+.sp
+gcloud beta deployment\-manager manifests \fICOMMAND\fR [\fB\-\-deployment\fR \fIDEPLOYMENT\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(BETA)\fR Commands to list and examine manifests within a deployment\&.
+.SH "FLAGS"
+.HP
+\fB\-\-deployment\fR \fIDEPLOYMENT\fR
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "COMMANDS"
+.sp
+\fICOMMAND\fR is one of the following:
+.PP
+\fBdescribe\fR
+.RS 4
+\fB(BETA)\fR
+Provide information about a manifest\&.
+.RE
+.PP
+\fBlist\fR
+.RS 4
+\fB(BETA)\fR
+List manifests in a deployment\&.
+.RE
+.SH "EXAMPLES"
+.sp
+To view all details about a manifest, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud beta deployment\-manager manifests describe manifest\-name \e
+    \-\-deployment my\-deployment
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To see the list of all manifests in a deployment, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud beta deployment\-manager manifests list \e
+    \-\-deployment my\-deployment
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBgcloud\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in BETA and may change without notice\&.

@@ -1,0 +1,47 @@
+NAME
+
+      gcloud alpha bigquery datasets remove - removes a dataset
+
+SYNOPSIS
+
+      gcloud alpha bigquery datasets remove DATASET_NAME [--fingerprint-job-id]
+      [--ignore-not-found] [--remove-tables] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Removes a dataset.
+
+POSITIONAL ARGUMENTS
+
+      DATASET_NAME
+
+         The name of the dataset.
+
+FLAGS
+
+      --ignore-not-found
+
+         Terminate without an error if the specified dataset does not exist.
+
+      --remove-tables
+
+         Remove the dataset even if it contains one or more tables.
+
+GROUP FLAGS
+
+      --fingerprint-job-id
+
+         Whether to use a job id that is derived from a fingerprint of the job
+         configuration.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK bigquery component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

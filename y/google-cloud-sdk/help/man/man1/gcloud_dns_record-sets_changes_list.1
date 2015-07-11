@@ -1,0 +1,60 @@
+.TH "GCLOUD DNS RECORD-SETS CHANGES LIST" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_dns_record-sets_changes_list \- view the list of changes that have been made to your record\-sets
+.SH "SYNOPSIS"
+.sp
+gcloud dns record\-sets changes list [\fB\-\-limit\fR \fILIMIT\fR] [\fB\-\-sort\-order\fR \fISORT_ORDER\fR] [\fB\-\-zone\fR \fIZONE\fR, \fB\-z\fR \fIZONE\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+This command displays the list of changes that have been made to your record\-sets\&.
+.SH "FLAGS"
+.HP
+\fB\-\-limit\fR \fILIMIT\fR
+.RE
+.PP
+\fB\-\-sort\-order\fR \fISORT_ORDER\fR
+.RS 4
+Sort order for listing (ascending|descending)\&.
+.RE
+.SH "GROUP FLAGS"
+.PP
+\fB\-\-zone\fR \fIZONE\fR, \fB\-z\fR \fIZONE\fR
+.RS 4
+Name of the managed\-zone whose record\-sets you want to manage\&.
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "EXAMPLES"
+.sp
+To see the list of changes, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud dns record\-sets changes list
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To see the list of first 10 changes, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud dns record\-sets changes list \-\-limit=10
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBdns\fR component\&. See installing components if it is not installed\&.

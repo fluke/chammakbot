@@ -1,0 +1,26 @@
+.TH "GCLOUD COMPUTE BACKEND-SERVICES EDIT" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_compute_backend-services_edit \- modify backend services
+.SH "SYNOPSIS"
+.sp
+gcloud compute backend\-services edit \fINAME\fR [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute backend\-services edit\fR can be used to modify a backend service\&. The backend service resource is fetched from the server and presented in a text editor\&. After the file is saved and closed, this command will update the resource\&. Only fields that can be modified are displayed in the editor\&.
+.sp
+The editor used to modify the resource is chosen by inspecting the \fIEDITOR\fR environment variable\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fINAME\fR
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBcompute\fR component\&. See installing components if it is not installed\&.

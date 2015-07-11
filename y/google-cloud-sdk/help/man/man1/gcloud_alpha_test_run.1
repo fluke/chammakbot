@@ -1,0 +1,322 @@
+.TH "GCLOUD ALPHA TEST RUN" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_alpha_test_run \- invoke a test in Google Cloud Test Lab and view test results
+.SH "SYNOPSIS"
+.sp
+gcloud alpha test run [\fIARGSPEC\fR] [\fB\-\-app\fR \fIAPP\fR, \fB\-a\fR \fIAPP\fR] [\fB\-\-app\-initial\-activity\fR \fIAPP_INITIAL_ACTIVITY\fR] [\fB\-\-app\-package\fR \fIAPP_PACKAGE\fR, \fB\-A\fR \fIAPP_PACKAGE\fR] [\fB\-\-async\fR] [\fB\-\-device\-ids\fR \fIDEVICE_ID\fR,[\fIDEVICE_ID\fR,\&...], \fB\-d\fR \fIDEVICE_ID\fR,[\fIDEVICE_ID\fR,\&...]] [\fB\-\-event\-count\fR \fIint\fR] [\fB\-\-event\-delay\fR \fIint\fR] [\fB\-\-locales\fR \fILOCALE\fR,[\fILOCALE\fR,\&...], \fB\-l\fR \fILOCALE\fR,[\fILOCALE\fR,\&...]] [\fB\-\-max\-depth\fR \fIint\fR] [\fB\-\-max\-steps\fR \fIint\fR] [\fB\-\-orientations\fR \fIORIENTATION\fR,[\fIORIENTATION\fR,\&...], \fB\-o\fR \fIORIENTATION\fR,[\fIORIENTATION\fR,\&...]] [\fB\-\-os\-version\-ids\fR \fIOS_VERSION_ID\fR,[\fIOS_VERSION_ID\fR,\&...], \fB\-v\fR \fIOS_VERSION_ID\fR,[\fIOS_VERSION_ID\fR,\&...]] [\fB\-\-random\-seed\fR \fIint\fR] [\fB\-\-results\-bucket\fR \fIRESULTS_BUCKET\fR, \fB\-b\fR \fIRESULTS_BUCKET\fR] [\fB\-\-results\-history\-name\fR \fIRESULTS_HISTORY_NAME\fR, \fB\-H\fR \fIRESULTS_HISTORY_NAME\fR] [\fB\-\-test\fR \fITEST\fR, \fB\-t\fR \fITEST\fR] [\fB\-\-test\-package\fR \fITEST_PACKAGE\fR, \fB\-T\fR \fITEST_PACKAGE\fR] [\fB\-\-test\-runner\-class\fR \fITEST_RUNNER_CLASS\fR, \fB\-r\fR \fITEST_RUNNER_CLASS\fR] [\fB\-\-test\-targets\fR \fITEST_TARGET\fR,[\fITEST_TARGET\fR,\&...]] [\fB\-\-timeout\fR \fITIMEOUT\fR] [\fB\-\-type\fR \fITYPE\fR, \fB\-y\fR \fITYPE\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fBgcloud alpha test run\fR invokes and monitors tests in Google Cloud Test Lab\&.
+.sp
+Three main types of tests are currently supported: \- \fBrobo\fR: runs a smart, automated exploration of the activities in your Android app which records any installation failures or crashes and builds an activity map with associated screenshots and video\&. \- \fBinstrumentation\fR: runs automated unit or integration tests written using a testing framework\&. Google Cloud Test Lab initially supports the Espresso and Robotium testing frameworks for Android\&. \- \fBmonkey\fR: runs an Android UIAutomator test\&.
+.sp
+The type of test to run can be specified with the \fB\-\-type\fR flag, although the type can often be inferred from other flags\&. Specifically, if the \fB\-\-test\fR flag is present, the test \fB\-\-type\fR will default to instrumentation\&. If \fB\-\-test\fR is not present, then \fB\-\-type\fR defaults to robo\&.
+.sp
+All arguments for \fBgcloud alpha test run\fR may be specified on the command line and/or within an argument file\&. Run \fB$ \fR\fBgcloud topic\fR\fB arg\-files\fR for more information about argument files\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+[\fIARGSPEC\fR]
+\fB$ \fR\fBgcloud topic\fR\fB arg\-files\fR
+for more information and examples\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-app\fR \fIAPP\fR, \fB\-a\fR \fIAPP\fR
+.RS 4
+The path to the application binary file\&. The path may be in the local filesystem or in Google Cloud Storage using gs:// notation\&.
+.RE
+.PP
+\fB\-\-app\-initial\-activity\fR \fIAPP_INITIAL_ACTIVITY\fR
+.RS 4
+The initial activity used to start the app during a robo test\&.
+.RE
+.PP
+\fB\-\-app\-package\fR \fIAPP_PACKAGE\fR, \fB\-A\fR \fIAPP_PACKAGE\fR
+.RS 4
+The Java package of the application under test (default: extracted from the APK manifest)\&.
+.RE
+.PP
+\fB\-\-async\fR
+.RS 4
+Invoke a test asynchronously without waiting for test results\&.
+.RE
+.PP
+\fB\-\-device\-ids\fR \fIDEVICE_ID\fR,[\fIDEVICE_ID\fR,\&...], \fB\-d\fR \fIDEVICE_ID\fR,[\fIDEVICE_ID\fR,\&...]
+.RS 4
+The list of DEVICE_IDs to test against (default: one device determined by Google Cloud Test Lab\(cqs device catalog; see TAGS listed by the
+\fB$ \fR\fBgcloud alpha test devices\fR\fB list\fR
+command)\&.
+.RE
+.PP
+\fB\-\-event\-count\fR \fIint\fR
+.RS 4
+Number of simulated user events to create during a monkey test (default: 1000)\&.
+.RE
+.PP
+\fB\-\-event\-delay\fR \fIint\fR
+.RS 4
+Fixed delay in milliseconds inserted between simulated events in a monkey test (default: 0)\&.
+.RE
+.PP
+\fB\-\-locales\fR \fILOCALE\fR,[\fILOCALE\fR,\&...], \fB\-l\fR \fILOCALE\fR,[\fILOCALE\fR,\&...]
+.RS 4
+The list of LOCALEs to test against (default: a single locale determined by Google Cloud Test Lab\(cqs device catalog)\&.
+.RE
+.PP
+\fB\-\-max\-depth\fR \fIint\fR
+.RS 4
+The maximum depth of the traversal stack a robo test can explore (default: 50)\&.
+.RE
+.PP
+\fB\-\-max\-steps\fR \fIint\fR
+.RS 4
+The maximum number of steps/actions a robo test can execute (default: no limit)\&.
+.RE
+.PP
+\fB\-\-orientations\fR \fIORIENTATION\fR,[\fIORIENTATION\fR,\&...], \fB\-o\fR \fIORIENTATION\fR,[\fIORIENTATION\fR,\&...]
+.RS 4
+The device orientation(s) to test against\&. Choices: portrait, landscape (default: portrait)\&.
+.RE
+.PP
+\fB\-\-os\-version\-ids\fR \fIOS_VERSION_ID\fR,[\fIOS_VERSION_ID\fR,\&...], \fB\-v\fR \fIOS_VERSION_ID\fR,[\fIOS_VERSION_ID\fR,\&...]
+.RS 4
+The list of OS_VERSION_IDs to test against (default: a version ID determined by Google Cloud Test Lab\(cqs device catalog)\&.
+.RE
+.PP
+\fB\-\-random\-seed\fR \fIint\fR
+.RS 4
+Seed value for the pseudo\-random number generator used during a monkey test (default: 0)\&.
+.RE
+.PP
+\fB\-\-results\-bucket\fR \fIRESULTS_BUCKET\fR, \fB\-b\fR \fIRESULTS_BUCKET\fR
+.RS 4
+The name of a Google Cloud Storage bucket where test results will be stored (default: "cloud\-test\-<PROJECT\-ID>")\&.
+.RE
+.PP
+\fB\-\-results\-history\-name\fR \fIRESULTS_HISTORY_NAME\fR, \fB\-H\fR \fIRESULTS_HISTORY_NAME\fR
+.RS 4
+The history name for your test results (an arbitrary string label; default: the application\(cqs label from the APK manifest)\&. All tests which use the same history name will have their results grouped together in the Google Developers Console in a time\-ordered test history list\&.
+.RE
+.PP
+\fB\-\-test\fR \fITEST\fR, \fB\-t\fR \fITEST\fR
+.RS 4
+The path to the test binary file\&. The given path may be in the local filesystem or in Google Cloud Storage using gs:// notation\&.
+.RE
+.PP
+\fB\-\-test\-package\fR \fITEST_PACKAGE\fR, \fB\-T\fR \fITEST_PACKAGE\fR
+.RS 4
+The Java package name of the test (default: extracted from the APK manifest)\&.
+.RE
+.PP
+\fB\-\-test\-runner\-class\fR \fITEST_RUNNER_CLASS\fR, \fB\-r\fR \fITEST_RUNNER_CLASS\fR
+.RS 4
+The fully\-qualified Java class name of the instrumentation test runner (default: the last name extracted from the APK manifest)\&.
+.RE
+.PP
+\fB\-\-test\-targets\fR \fITEST_TARGET\fR,[\fITEST_TARGET\fR,\&...]
+.RS 4
+A list of one or more test targets to be run (default: all targets)\&. Each target must be fully qualified with the package name or class name, in one of these formats:
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+"package package_name"
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+"class package_name\&.class_name"
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+"class package_name\&.class_name#method_name"\&.
+.RE
+.RE
+.PP
+\fB\-\-timeout\fR \fITIMEOUT\fR
+.RS 4
+The max time this test execution can run before it is cancelled (default: 15m)\&. The
+\fITIMEOUT\fR
+units can be h, m, or s\&. If no unit is given, seconds are assumed\&. Examples:
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-timeout 1h\fR
+is 1 hour
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-timeout 5m\fR
+is 5 minutes
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-timeout 200s\fR
+is 200 seconds
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-timeout 100\fR
+is 100 seconds
+.RE
+.RE
+.PP
+\fB\-\-type\fR \fITYPE\fR, \fB\-y\fR \fITYPE\fR
+.RS 4
+The type of test to run (\fITYPE\fR
+may be one of: instrumentation, robo, monkey)\&.
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "EXAMPLES"
+.sp
+To invoke a robo test lasting 100 seconds against the default device environment, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud alpha test run \-\-app APP_APK \-\-timeout 100s
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To invoke a monkey test against a virtual Nexus9 device in landscape orientation, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud alpha test run \-\-type monkey \-\-app APP_APK \e
+    \-\-device\-id Nexus9 \-\-orientation landscape
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To invoke an instrumentation test (Espresso or Robotium) against a physical Nexus 4 device (DEVICE_ID: mako) which is running Android API level 18 in French, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud alpha test run \-\-app APP_APK \-\-test TEST_APK \e
+    \-\-device\-id mako \-\-os\-version\-id 18 \-\-locale fr \e
+    \-\-orientation portrait
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To run the same test as above using short flags, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud alpha test run \-a APP_APK \-t TEST_APK \-d mako \-v 18 \-l fr \e
+    \-o portrait
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To run a series of 5\-minute robo tests against a comprehensive matrix of virtual and physical devices, OS versions and locales, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud alpha test run \-\-app APP_APK \-\-timeout 5m \e
+    \-\-device\-ids mako,shamu,Nexus5,Nexus6,k3g \e
+    \-\-os\-version\-ids 17,18,19,21,22 \e
+    \-\-locales de,en_US,en_GB,es,fr,it,ru,zh
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To run an instrumentation test against the default test environment, but using a specific Google Cloud Storage bucket to hold the raw test results and specifying the name under which the history of your tests will be collected and displayed in the Google Developers Console, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud alpha test run \-a APP_APK \-t TEST_APK \e
+    \-\-results\-bucket excelsior\-app\-results\-bucket \e
+    \-\-results\-history\-name \*(AqExcelsior App Test History\*(Aq
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+All test arguments for a given test may alternatively be stored in an argument group within a YAML\-formatted argument file\&. The \fIARG_FILE\fR may contain one or more named argument groups, and argument groups may be combined using the include: attribute (Run \fB$ \fR\fBgcloud topic\fR\fB arg\-files\fR for more information)\&. The ARG_FILE can easily be shared with colleagues or placed under source control to ensure consistent test executions\&.
+.sp
+To run a test using arguments loaded from an ARG_FILE named \fBexcelsior_args\fR, which contains an argument group named \fBrobo\-args:\fR, use the following syntax:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud alpha test run path/to/excelsior_args:robo\-args
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBgcloud\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in ALPHA and may change without notice\&.

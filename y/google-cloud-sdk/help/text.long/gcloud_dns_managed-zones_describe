@@ -1,0 +1,34 @@
+NAME
+
+      gcloud dns managed-zones describe - view the details of a Cloud DNS
+         managed-zone
+
+SYNOPSIS
+
+      gcloud dns managed-zones describe ZONE_NAME [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      This command displays the details of the specified managed-zone.
+
+POSITIONAL ARGUMENTS
+
+      ZONE_NAME
+
+         The name of the managed-zone you want details for.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To display the details of your managed-zone, run:
+
+        $ gcloud dns managed-zones describe my_zone
+
+NOTES
+
+      This command is in the Google Cloud SDK dns component. See installing
+      components if it is not installed.
+

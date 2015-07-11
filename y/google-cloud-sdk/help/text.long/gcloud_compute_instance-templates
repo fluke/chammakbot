@@ -1,0 +1,42 @@
+NAME
+
+      gcloud compute instance-templates - read and manipulate Google Compute
+         Engine instances templates
+
+SYNOPSIS
+
+      gcloud compute instance-templates COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      Read and manipulate Google Compute Engine instances templates.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      create
+
+         Create a Compute Engine virtual machine instance template.
+
+      delete
+
+         Delete Google Compute Engine virtual machine instance templates.
+
+      describe
+
+         Describe a virtual machine instance template.
+
+      list
+
+         List Google Compute Engine instance tempates.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

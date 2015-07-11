@@ -1,0 +1,50 @@
+NAME
+
+      gcloud beta deployment-manager manifests list - list manifests in a
+         deployment
+
+SYNOPSIS
+
+      gcloud beta deployment-manager manifests list [--deployment DEPLOYMENT]
+      [--limit LIMIT] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (BETA) Prints a table with summary information on all manifests in the
+      deployment.
+
+FLAGS
+
+      --limit LIMIT
+
+         The maximum number of results to list.
+
+GROUP FLAGS
+
+      --deployment DEPLOYMENT
+
+         Deployment name
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To print out a list of manifests in a deployment, run:
+
+        $ gcloud beta deployment-manager manifests list \
+            --deployment my-deployment
+
+      To print only the name of each manifest, run:
+
+        $ gcloud beta deployment-manager manifests list \
+            --deployment my-deployment --simple-list
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in BETA and may change without notice.
+

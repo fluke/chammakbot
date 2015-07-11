@@ -1,0 +1,38 @@
+NAME
+
+      gcloud alpha genomics datasets create - creates a dataset with a specified
+         name
+
+SYNOPSIS
+
+      gcloud alpha genomics datasets create NAME
+      --project-number PROJECT_NUMBER [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) A dataset is a collection of genomics objects such as reads and
+      variants.
+
+POSITIONAL ARGUMENTS
+
+      NAME
+
+         The name of the dataset being created.
+
+FLAGS
+
+      --project-number PROJECT_NUMBER
+
+         The project number to list datasets for.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

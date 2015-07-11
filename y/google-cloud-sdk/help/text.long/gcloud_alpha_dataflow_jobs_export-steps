@@ -1,0 +1,30 @@
+NAME
+
+      gcloud alpha dataflow jobs export-steps - exports information about the
+         steps for the given job
+
+SYNOPSIS
+
+      gcloud alpha dataflow jobs export-steps JOB_ID [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) The only currently supported format is to a GraphViz dot file.
+
+POSITIONAL ARGUMENTS
+
+      JOB_ID
+
+         The job ID to operate on.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

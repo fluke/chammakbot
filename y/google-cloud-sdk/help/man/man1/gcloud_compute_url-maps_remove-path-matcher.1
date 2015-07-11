@@ -1,0 +1,44 @@
+.TH "GCLOUD COMPUTE URL-MAPS REMOVE-PATH-MATCHER" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_compute_url-maps_remove-path-matcher \- remove a path matcher from a URL map
+.SH "SYNOPSIS"
+.sp
+gcloud compute url\-maps remove\-path\-matcher \fINAME\fR \fB\-\-path\-matcher\-name\fR \fIPATH_MATCHER_NAME\fR [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute url\-maps remove\-path\-matcher\fR is used to remove a path matcher from a URL map\&. When a path matcher is removed, all host rules that refer to the path matcher are also removed\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fINAME\fR
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-path\-matcher\-name\fR \fIPATH_MATCHER_NAME\fR
+.RS 4
+The name of the path matcher to remove\&.
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "EXAMPLES"
+.sp
+To remove the path matcher named \fIMY\-MATCHER\fR from the URL map named \fIMY\-URL\-MAP\fR, you can use this command:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud compute url\-maps remove\-path\-matcher MY\-URL\-MAP \e
+    \-\-path\-matcher MY\-MATCHER
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBcompute\fR component\&. See installing components if it is not installed\&.

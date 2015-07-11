@@ -1,0 +1,32 @@
+NAME
+
+      gcloud alpha genomics - manage Genomics resources using version 1 beta 2
+         of the API
+
+SYNOPSIS
+
+      gcloud alpha genomics GROUP [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Manage Genomics resources using version 1 beta 2 of the API.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+GROUPS
+
+      GROUP is one of the following:
+
+      datasets
+
+         (ALPHA) Commands for Genomics datasets.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

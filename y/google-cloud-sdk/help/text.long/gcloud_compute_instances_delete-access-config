@@ -1,0 +1,67 @@
+NAME
+
+      gcloud compute instances delete-access-config - delete an access
+         configuration from a virtual machine network interface
+
+SYNOPSIS
+
+      gcloud compute instances delete-access-config NAME
+      [--access-config-name ACCESS_CONFIG_NAME; default="external-nat"]
+      [--network-interface NETWORK_INTERFACE; default="nic0"] [--zone ZONE]
+      [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      gcloud compute instances delete-access-config is used to delete access
+      configurations from network interfaces of Google Compute Engine virtual
+      machines.
+
+POSITIONAL ARGUMENTS
+
+      NAME
+
+         The name of the instance from which to delete the access configuration.
+
+FLAGS
+
+      --access-config-name ACCESS_CONFIG_NAME; default="external-nat"
+
+         Specifies the name of the access configuration to delete. external-nat
+         is used as the default if this flag is not provided.
+
+      --network-interface NETWORK_INTERFACE; default="nic0"
+
+         Specifies the name of the network interface from which to delete the
+         access configuration. If this is not provided, then nic0 is used as the
+         default.
+
+      --zone ZONE
+
+         The zone of the instance to delete an access config from. If not
+         specified, you will be prompted to select a zone.
+
+         To avoid prompting when this flag is omitted, you can set the
+         compute/zone property:
+
+           $ gcloud config set compute/zone ZONE
+
+         A list of zones can be fetched by running:
+
+           $ gcloud compute zones list
+
+         To unset the property, run:
+
+           $ gcloud config unset compute/zone
+
+         Alternatively, the zone can be stored in the environment variable
+         CLOUDSDK_COMPUTE_ZONE.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

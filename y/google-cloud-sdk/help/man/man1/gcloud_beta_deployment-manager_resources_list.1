@@ -1,0 +1,64 @@
+.TH "GCLOUD BETA DEPLOYMENT-MANAGER RESOURCES LIST" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_beta_deployment-manager_resources_list \- list resources in a deployment
+.SH "SYNOPSIS"
+.sp
+gcloud beta deployment\-manager resources list [\fB\-\-deployment\fR \fIDEPLOYMENT\fR] [\fB\-\-limit\fR \fILIMIT\fR] [\fB\-\-simple\-list\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(BETA)\fR Prints a table with summary information on all resources in the deployment\&.
+.SH "FLAGS"
+.HP
+\fB\-\-limit\fR \fILIMIT\fR
+.RE
+.PP
+\fB\-\-simple\-list\fR
+.RS 4
+If true, only the list of resource IDs is printed\&. If false, prints a human\-readable table of resource information\&.
+.RE
+.SH "GROUP FLAGS"
+.PP
+\fB\-\-deployment\fR \fIDEPLOYMENT\fR
+.RS 4
+Deployment name
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "EXAMPLES"
+.sp
+To print out a list of resources in the deployment with some summary information about each, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud beta deployment\-manager resources list \e
+    \-\-deployment my\-deployment
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To print only the name of each resource, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud beta deployment\-manager resources list \e
+    \-\-deployment my\-deployment \-\-simple\-list
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBgcloud\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in BETA and may change without notice\&.

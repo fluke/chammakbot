@@ -1,0 +1,35 @@
+NAME
+
+      gcloud beta sql connect - connects to a Cloud SQL instance
+
+SYNOPSIS
+
+      gcloud beta sql connect INSTANCE [--user USER, -u USER] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (BETA) Connects to a Cloud SQL instance.
+
+POSITIONAL ARGUMENTS
+
+      INSTANCE
+
+         Cloud SQL instance ID.
+
+FLAGS
+
+      --user USER, -u USER
+
+         Cloud SQL instance user to connect as.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in BETA and may change without notice.
+

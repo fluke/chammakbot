@@ -1,0 +1,74 @@
+NAME
+
+      gcloud alpha bigquery - a group of commands for using BigQuery
+
+SYNOPSIS
+
+      gcloud alpha bigquery GROUP | COMMAND [--fingerprint-job-id] [GLOBAL-FLAG
+      ...]
+
+DESCRIPTION
+
+      (ALPHA) A group of commands for using BigQuery.
+
+FLAGS
+
+      --fingerprint-job-id
+
+         Whether to use a job id that is derived from a fingerprint of the job
+         configuration.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+GROUPS
+
+      GROUP is one of the following:
+
+      datasets
+
+         (ALPHA) A group of subcommands for working with datasets.
+
+      jobs
+
+         (ALPHA) A group of subcommands for working with BigQuery jobs.
+
+      tables
+
+         (ALPHA) A group of subcommands for working with BigQuery tables.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      copy
+
+         (ALPHA) Copy one table to another.
+
+      export
+
+         (ALPHA) Exports data from a specified source table to one or more
+         destinations.
+
+      import
+
+         (ALPHA) Import data from a specified source into a specified
+         destination table.
+
+      list-projects
+
+         (ALPHA) Lists all the user's projects for which the Big Query API is
+         enabled.
+
+      query
+
+         (ALPHA) Executes an SQL query.
+
+NOTES
+
+      This command is in the Google Cloud SDK bigquery component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

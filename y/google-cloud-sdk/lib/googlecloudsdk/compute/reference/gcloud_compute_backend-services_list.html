@@ -1,0 +1,100 @@
+<html devsite="">
+<head>
+<title>gcloud compute backend-services list</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="project_path" value="/sdk/_project.yaml">
+<meta name="book_path" value="/sdk/_book.yaml">
+<!--
+        THIS DOC IS GENERATED.  DO NOT EDIT.
+        -->
+<style>
+  dd { margin-bottom: 1ex; }
+  .hangingindent { padding-left: 1.5em; text-indent: -1.5em; }
+</style>
+</head>
+<body><dl>
+<section>
+<dt>NAME</dt>
+<dd>gcloud compute backend-services list - list Google Compute Engine backend services</dd>
+</section><section>
+<dt>SYNOPSIS</dt>
+<dd><pre>gcloud compute backend-services list [NAME …] [--limit LIMIT] [--regexp REGEXP, -r REGEXP] [--sort-by SORT_BY] [--uri] [GLOBAL-FLAG …]</pre></dd>
+</section><section>
+<dt>DESCRIPTION</dt>
+<dd>
+<code>gcloud compute backend-services list</code> displays all Google Compute Engine backend services in a project.</dd>
+</section><section>
+<dt>POSITIONAL ARGUMENTS</dt>
+<dd><dl>
+<dt class="hangingindent">
+<nobr>[<code><var>NAME</var></code>&nbsp;&nbsp;&#32;…]</nobr>
+</dt>
+
+<dd>
+If provided, show details for the specified names and/or URIs of resources.
+</dd>
+
+</dl></dd>
+</section><section>
+<dt>FLAGS</dt>
+<dd><dl>
+<dt>
+<code>--limit</code> <code><var>LIMIT</var></code>
+</dt>
+
+<dd>
+The maximum number of results.
+</dd>
+
+
+<dt>
+<code>--regexp</code> <code><var>REGEXP</var></code>, <code>-r</code> <code><var>REGEXP</var></code>
+</dt>
+
+<dd>
+A regular expression to filter the names of the results on. Any names
+that do not match the entire regular expression will be filtered out.
+</dd>
+
+
+<dt>
+<code>--sort-by</code> <code><var>SORT_BY</var></code>
+</dt>
+
+<dd>
+A field to sort by. To perform a descending-order sort, prefix
+the value of this flag with a tilde (<code><var>~</var></code>).
+</dd>
+
+
+<dt>
+<code>--uri</code>
+</dt>
+
+<dd>
+If provided, the list command will only print URIs for the
+resources returned.  If this flag is not provided, the list
+command will print a human-readable table of useful resource
+data.
+</dd>
+
+</dl></dd>
+</section><section>
+<dt>GLOBAL FLAGS</dt>
+<dd>Run <code>$ <a href="../../">gcloud</a> help</code> for a description of flags available to
+all commands.</dd>
+</section><section>
+<dt>EXAMPLES</dt>
+<dd>To list all backend services in a project in table form, run:</dd>
+<dd><pre>$ <A href="../../compute/backend-services/list">gcloud compute backend-services list</A></pre></dd>
+<dd>To list the URIs of all backend services in a project, run:</dd>
+<dd><pre>$ <A href="../../compute/backend-services/list">gcloud compute backend-services list</A> --uri</pre></dd>
+</section><section>
+<dt>NOTES</dt>
+<dd>This command is in the Google Cloud SDK <code>compute</code> component. See
+<a href="/sdk/gcloud/#gcloud.components">installing components</a>
+if it is not installed.</dd>
+</section>
+</dl></body>
+</html>
+

@@ -1,0 +1,78 @@
+NAME
+
+      gcloud compute backend-services create - create a backend service
+
+SYNOPSIS
+
+      gcloud compute backend-services create NAME [--description DESCRIPTION]
+      [--http-health-checks HTTP_HEALTH_CHECK,[HTTP_HEALTH_CHECK,...]]
+      [--port PORT] [--port-name PORT_NAME]
+      [--protocol PROTOCOL; default="HTTP"] [--timeout TIMEOUT; default="30s"]
+      [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      gcloud compute backend-services create is used to create backend services.
+      Backend services define groups of backends that can receive traffic. Each
+      backend group has parameters that define the group's capacity (e.g., max
+      CPU utilization, max queries per second, ...). URL maps define which
+      requests are sent to which backend services.
+
+      Backend services created through this command will start out without any
+      backend groups. To add backend groups, use 'gcloud compute
+      backend-services add-backend' or 'gcloud compute backend-services edit'.
+
+POSITIONAL ARGUMENTS
+
+      NAME
+
+         The name of the backend service.
+
+FLAGS
+
+      --description DESCRIPTION
+
+         An optional, textual description for the backend service.
+
+      --http-health-checks HTTP_HEALTH_CHECK,[HTTP_HEALTH_CHECK,...]
+
+         Specifies a list of HTTP health check objects for checking the health
+         of the backend service.
+
+      --port PORT
+
+         The TCP port to use when connecting to the backend. --port is being
+         deprecated in favor of --port-name.
+
+      --port-name PORT_NAME
+
+         The name of a service that has been added to an instance group in this
+         backend. Instance group services map a name to a port number which is
+         used by the load balancing service. Only one port-name may be added to
+         a backend service, and that name must exist as a service on all
+         instance groups that are a part of this backend service. The port
+         number associated with the name may differ between instances. If you do
+         not specify this flag, your instance groups must have a service named
+         http configured. See **gcloud preview instance-groups add-service(1)
+         for details.
+
+      --protocol PROTOCOL; default="HTTP"
+
+         The protocol for incoming requests.
+
+      --timeout TIMEOUT; default="30s"
+
+         The amount of time to wait for a backend to respond to a request before
+         considering the request failed. For example, specifying 10s will give
+         backends 10 seconds to respond to requests. Valid units for this flag
+         are s for seconds, m for minutes, and h for hours.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

@@ -1,0 +1,49 @@
+NAME
+
+      gcloud alpha dataflow jobs describe - outputs the Job object resulting
+         from the Get API
+
+SYNOPSIS
+
+      gcloud alpha dataflow jobs describe JOB_ID [--full] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) By default this will display the Summary view which includes:
+
+        - Project ID
+        - Job ID
+        - Job Name
+        - Job Type (Batch vs. Streaming)
+        - Job Create Time
+        - Job Status (Running, Done, Cancelled, Failed)
+        - Job Status Time
+
+      Notable values that are only in the full view:
+
+        - Environment (staging Jars, information about workers, etc.)
+        - Steps from the workflow graph
+
+POSITIONAL ARGUMENTS
+
+      JOB_ID
+
+         The job ID to operate on.
+
+FLAGS
+
+      --full
+
+         Retrieve the full Job rather than the summary view
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

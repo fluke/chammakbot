@@ -1,0 +1,38 @@
+NAME
+
+      gcloud compute snapshots - list, describe, and delete Google Compute
+         Engine snapshots
+
+SYNOPSIS
+
+      gcloud compute snapshots COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      List, describe, and delete Google Compute Engine snapshots.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      delete
+
+         Delete Google Compute Engine snapshots.
+
+      describe
+
+         Describe a Google Compute Engine snapshot.
+
+      list
+
+         List Google Compute Engine snapshots.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

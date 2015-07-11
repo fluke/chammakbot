@@ -1,0 +1,48 @@
+NAME
+
+      gcloud beta deployment-manager operations list - list operations in a
+         project
+
+SYNOPSIS
+
+      gcloud beta deployment-manager operations list [--limit LIMIT]
+      [--simple-list] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (BETA) Prints a table with summary information on all operations in the
+      project.
+
+FLAGS
+
+      --limit LIMIT
+
+         The maximum number of results to list.
+
+      --simple-list
+
+         If true, only the list of resource IDs is printed. If false, prints a
+         human-readable table of resource information.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To print out a list of operations with some summary information about
+      each, run:
+
+        $ gcloud beta deployment-manager operations list
+
+      To print only the name of each operation, run:
+
+        $ gcloud beta deployment-manager operations list --simple-list
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in BETA and may change without notice.
+

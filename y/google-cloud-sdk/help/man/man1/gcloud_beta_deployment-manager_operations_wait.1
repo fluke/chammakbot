@@ -1,0 +1,52 @@
+.TH "GCLOUD BETA DEPLOYMENT-MANAGER OPERATIONS WAIT" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_beta_deployment-manager_operations_wait \- wait for all operations specified to complete before returning
+.SH "SYNOPSIS"
+.sp
+gcloud beta deployment\-manager operations wait \fIOPERATION_NAME\fR [\fIOPERATION_NAME\fR \&...] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(BETA)\fR Polls until all operations have finished, then prints the resulting operations along with any operation errors\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fIOPERATION_NAME\fR [\fIOPERATION_NAME\fR \&...]
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "EXAMPLES"
+.sp
+To poll until an operation has completed, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud beta deployment\-manager operations wait operation\-name
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To poll until several operations have all completed, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud beta deployment\-manager operations wait operation\-one \e
+    operation\-two operation\-three
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBgcloud\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in BETA and may change without notice\&.

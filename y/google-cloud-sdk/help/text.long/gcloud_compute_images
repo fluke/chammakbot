@@ -1,0 +1,46 @@
+NAME
+
+      gcloud compute images - list, create, and delete Google Compute Engine
+         images
+
+SYNOPSIS
+
+      gcloud compute images COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      List, create, and delete Google Compute Engine images.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      create
+
+         Create Google Compute Engine images.
+
+      delete
+
+         Delete Google Compute Engine images.
+
+      deprecate
+
+         Manage deprecation status of Google Compute Engine images.
+
+      describe
+
+         Describe a Google Compute Engine image.
+
+      list
+
+         List Google Compute Engine images.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

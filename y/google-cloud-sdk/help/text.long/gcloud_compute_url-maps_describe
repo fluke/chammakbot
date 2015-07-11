@@ -1,0 +1,51 @@
+NAME
+
+      gcloud compute url-maps describe - describe a URL map
+
+SYNOPSIS
+
+      gcloud compute url-maps describe NAME [--region REGION] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      gcloud compute url-maps describe displays all data associated with a URL
+      map in a project.
+
+POSITIONAL ARGUMENTS
+
+      NAME
+
+         The name of the resource to fetch.
+
+FLAGS
+
+      --region REGION
+
+         The region of the resource to fetch. If not specified, you will be
+         prompted to select a region.
+
+         To avoid prompting when this flag is omitted, you can set the
+         compute/region property:
+
+           $ gcloud config set compute/region REGION
+
+         A list of regions can be fetched by running:
+
+           $ gcloud compute regions list
+
+         To unset the property, run:
+
+           $ gcloud config unset compute/region
+
+         Alternatively, the region can be stored in the environment variable
+         CLOUDSDK_COMPUTE_REGION.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

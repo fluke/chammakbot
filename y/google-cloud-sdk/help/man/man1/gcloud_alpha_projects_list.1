@@ -1,0 +1,41 @@
+.TH "GCLOUD ALPHA PROJECTS LIST" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_alpha_projects_list \- list all active Projects
+.SH "SYNOPSIS"
+.sp
+gcloud alpha projects list [\fB\-\-limit\fR \fILIMIT\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(ALPHA)\fR \fBgcloud alpha projects list\fR lists all active Projects (ID and title), for the active user\(cqs credentials, in alphabetical order by Project title\&. Projects which have been deleted or are pending deletion will not be included\&.
+.sp
+You can specify the maximum number of Projects to list with the \fIlimit\fR flag\&.
+.SH "FLAGS"
+.HP
+\fB\-\-limit\fR \fILIMIT\fR
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "EXAMPLES"
+.sp
+The following command will list a maximum of 5 Projects, out of all of the active user\(cqs active Projects, sorted alphabetically by title\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud alpha projects list \-\-limit=5
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBalpha\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in ALPHA and may change without notice\&.

@@ -1,0 +1,41 @@
+NAME
+
+      gcloud alpha dataflow jobs show - shows a short description of the given
+         job
+
+SYNOPSIS
+
+      gcloud alpha dataflow jobs show JOB_ID [--environment] [--steps]
+      [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Shows a short description of the given job.
+
+POSITIONAL ARGUMENTS
+
+      JOB_ID
+
+         The job ID to operate on.
+
+FLAGS
+
+      --environment
+
+         If present, the environment will be listed.
+
+      --steps
+
+         If present, the steps will be listed.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

@@ -1,0 +1,122 @@
+<html devsite="">
+<head>
+<title>gcloud alpha bigquery tables create</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="project_path" value="/sdk/_project.yaml">
+<meta name="book_path" value="/sdk/_book.yaml">
+<!--
+        THIS DOC IS GENERATED.  DO NOT EDIT.
+        -->
+<style>
+  dd { margin-bottom: 1ex; }
+  .hangingindent { padding-left: 1.5em; text-indent: -1.5em; }
+</style>
+</head>
+<body><dl>
+<section>
+<dt>NAME</dt>
+<dd>gcloud alpha bigquery tables create - creates a table or view with a specified name</dd>
+</section><section>
+<dt>SYNOPSIS</dt>
+<dd><pre>gcloud alpha bigquery tables create TABLE [--description DESCRIPTION] [--expiration EXPIRATION] [--fingerprint-job-id] [--if-exists IF_EXISTS; default="fail"] [--schema SCHEMA | --schema-file SCHEMA_FILE] [--view VIEW] [GLOBAL-FLAG …]</pre></dd>
+</section><section>
+<dt>DESCRIPTION</dt>
+<dd>
+<code>(ALPHA)</code> A view is a collection of rows selected by a query in a flag, and manipulated
+as a table. The dataset to contain the table or view must already exist, and
+must not contain a table or view with the specified name.</dd>
+</section><section>
+<dt>POSITIONAL ARGUMENTS</dt>
+<dd><dl>
+<dt class="hangingindent">
+<code><var>TABLE</var></code>
+</dt>
+
+<dd>
+Specification of the table or view to be created
+</dd>
+
+</dl></dd>
+</section><section>
+<dt>FLAGS</dt>
+<dd><dl>
+<dt>
+<code>--description</code> <code><var>DESCRIPTION</var></code>
+</dt>
+
+<dd>
+Description of the table or view.
+</dd>
+
+
+<dt>
+<code>--expiration</code> <code><var>EXPIRATION</var></code>
+</dt>
+
+<dd>
+Expiration time of the table or view being created, in seconds from now.
+</dd>
+
+
+<dt>
+<code>--if-exists</code> <code><var>IF_EXISTS</var></code>; default="fail"
+</dt>
+
+<dd>
+What to do if the table to be created already exists in the dataset.
+</dd>
+
+
+<dt>
+<code>--schema</code> <code><var>SCHEMA</var></code>
+</dt>
+
+<dd>
+A comma-separated list of entries of the form name[:type], where type defaults to string if not present, specifying field names and types for the table being created. Possible types are string, integer, float, boolean, record, and timestamp.
+</dd>
+
+
+<dt>
+<code>--schema-file</code> <code><var>SCHEMA_FILE</var></code>
+</dt>
+
+<dd>
+he name of a JSON file containing a single array object, each element of which is an object with properties name, type, and, optionally, mode, specifying a schema for the table being created.
+</dd>
+
+
+<dt>
+<code>--view</code> <code><var>VIEW</var></code>
+</dt>
+
+<dd>
+Create a view with this SQL query. (If this flag is not specified, a table is created.)
+</dd>
+
+</dl></dd>
+</section><section>
+<dt>GROUP FLAGS</dt>
+<dd><dl>
+<dt>
+<code>--fingerprint-job-id</code>
+</dt>
+
+<dd>
+Whether to use a job id that is derived from a fingerprint of the job configuration.
+</dd>
+
+</dl></dd>
+</section><section>
+<dt>GLOBAL FLAGS</dt>
+<dd>Run <code>$ <a href="../../../">gcloud</a> help</code> for a description of flags available to
+all commands.</dd>
+</section><section>
+<dt>NOTES</dt>
+<dd>This command is in the Google Cloud SDK <code>bigquery</code> component. See
+<a href="/sdk/gcloud/#gcloud.components">installing components</a>
+if it is not installed.</dd>
+<dd>This command is currently in ALPHA and may change without notice.</dd>
+</section>
+</dl></body>
+</html>
+

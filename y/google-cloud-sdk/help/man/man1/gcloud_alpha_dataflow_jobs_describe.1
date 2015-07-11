@@ -1,0 +1,34 @@
+.TH "GCLOUD ALPHA DATAFLOW JOBS DESCRIBE" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_alpha_dataflow_jobs_describe \- outputs the Job object resulting from the Get API
+.SH "SYNOPSIS"
+.sp
+gcloud alpha dataflow jobs describe \fIJOB_ID\fR [\fB\-\-full\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(ALPHA)\fR By default this will display the Summary view which includes: \- Project ID \- Job ID \- Job Name \- Job Type (Batch vs\&. Streaming) \- Job Create Time \- Job Status (Running, Done, Cancelled, Failed) \- Job Status Time
+.sp
+Notable values that are only in the full view: \- Environment (staging Jars, information about workers, etc\&.) \- Steps from the workflow graph
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fIJOB_ID\fR
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-full\fR
+.RS 4
+Retrieve the full Job rather than the summary view
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBgcloud\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in ALPHA and may change without notice\&.

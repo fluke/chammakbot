@@ -1,0 +1,59 @@
+NAME
+
+      gcloud compute target-pools remove-instances - remove instances from a
+         target pool
+
+SYNOPSIS
+
+      gcloud compute target-pools remove-instances NAME
+      --instances INSTANCE,[INSTANCE,...] [--zone ZONE] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      gcloud compute target-pools remove-instances is used to remove one or more
+      instances from a target pool. For more information on health checks and
+      load balancing, see
+      https://developers.google.com/compute/docs/load-balancing/.
+
+POSITIONAL ARGUMENTS
+
+      NAME
+
+         The name of the target pool from which to remove the instances.
+
+FLAGS
+
+      --instances INSTANCE,[INSTANCE,...]
+
+         Specifies a list of instances to remove from the target pool.
+
+      --zone ZONE
+
+         The zone of the instances to remove from the target pool. If not
+         specified, you will be prompted to select a zone.
+
+         To avoid prompting when this flag is omitted, you can set the
+         compute/zone property:
+
+           $ gcloud config set compute/zone ZONE
+
+         A list of zones can be fetched by running:
+
+           $ gcloud compute zones list
+
+         To unset the property, run:
+
+           $ gcloud config unset compute/zone
+
+         Alternatively, the zone can be stored in the environment variable
+         CLOUDSDK_COMPUTE_ZONE.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

@@ -1,0 +1,64 @@
+NAME
+
+      gcloud alpha bigquery tables - a group of subcommands for working with
+         BigQuery tables
+
+SYNOPSIS
+
+      gcloud alpha bigquery tables COMMAND [--fingerprint-job-id] [GLOBAL-FLAG
+      ...]
+
+DESCRIPTION
+
+      (ALPHA) A group of subcommands for working with BigQuery tables.
+
+GROUP FLAGS
+
+      --fingerprint-job-id
+
+         Whether to use a job id that is derived from a fingerprint of the job
+         configuration.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      add-rows
+
+         (ALPHA) Adds records specified in a file to a specified existing table.
+
+      create
+
+         (ALPHA) Creates a table or view with a specified name.
+
+      describe
+
+         (ALPHA) Displays metadata about a table or view.
+
+      list
+
+         (ALPHA) Lists the name of each table or view in a specified dataset.
+
+      patch
+
+         (ALPHA) Updates one or more attributes of a table or view.
+
+      remove
+
+         (ALPHA) Removes a specified table or view.
+
+      show-rows
+
+         (ALPHA) Displays selected rows in a specified table.
+
+NOTES
+
+      This command is in the Google Cloud SDK bigquery component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

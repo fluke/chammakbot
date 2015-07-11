@@ -1,0 +1,77 @@
+.TH "GCLOUD COMPUTE OPERATIONS DESCRIBE" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_compute_operations_describe \- describe a Google Compute Engine operation
+.SH "SYNOPSIS"
+.sp
+gcloud compute operations describe \fINAME\fR [\fB\-\-global\fR | \fB\-\-region\fR \fIREGION\fR | \fB\-\-zone\fR \fIZONE\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute operations describe\fR displays all data associated with a Google Compute Engine operation in a project\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fINAME\fR
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-global\fR
+.RS 4
+If provided, it is assumed that the requested operation is global\&.
+.RE
+.PP
+\fB\-\-region\fR \fIREGION\fR
+.RS 4
+The region of the operation to fetch\&.
+.RE
+.PP
+\fB\-\-zone\fR \fIZONE\fR
+.RS 4
+The zone of the operation to fetch\&.
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "EXAMPLES"
+.sp
+To get details about a global operation, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud compute operations describe OPERATION \-\-global
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To get details about a regional operation, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud compute operations describe OPERATION \-\-region us\-central1
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To get details about a zonal operation, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud compute operations describe OPERATION \-\-zone us\-central1\-a
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBcompute\fR component\&. See installing components if it is not installed\&.

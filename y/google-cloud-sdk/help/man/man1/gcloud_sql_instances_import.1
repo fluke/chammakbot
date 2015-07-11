@@ -1,0 +1,40 @@
+.TH "GCLOUD SQL INSTANCES IMPORT" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_sql_instances_import \- imports data into a Cloud SQL instance from Google Cloud Storage
+.SH "SYNOPSIS"
+.sp
+gcloud sql instances import \fIINSTANCE\fR \fIURI\fR [\fIURI\fR \&...] [\fB\-\-async\fR] [\fB\-\-database\fR \fIDATABASE\fR, \fB\-d\fR \fIDATABASE\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+Imports data into a Cloud SQL instance from Google Cloud Storage\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fIINSTANCE\fR
+.RE
+.PP
+\fIURI\fR [\fIURI\fR \&...]
+.RS 4
+Path to the MySQL dump file in Google Cloud Storage from which the import is made\&. The URI is in the form gs://bucketName/fileName\&. Compressed gzip files (\&.gz) are also supported\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-async\fR
+.RS 4
+Do not wait for the operation to complete\&.
+.RE
+.PP
+\fB\-\-database\fR \fIDATABASE\fR, \fB\-d\fR \fIDATABASE\fR
+.RS 4
+The database (for example, guestbook) to which the import is made\&. If not set, it is assumed that the database is specified in the file to be imported\&.
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBsql\fR component\&. See installing components if it is not installed\&.

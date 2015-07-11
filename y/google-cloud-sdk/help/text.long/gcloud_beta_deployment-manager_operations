@@ -1,0 +1,54 @@
+NAME
+
+      gcloud beta deployment-manager operations - commands for Deployment
+         Manager V2 operations
+
+SYNOPSIS
+
+      gcloud beta deployment-manager operations COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (BETA) Commands to list, examine, and wait for long-running operations.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      describe
+
+         (BETA) Provide information about an operation.
+
+      list
+
+         (BETA) List operations in a project.
+
+      wait
+
+         (BETA) Wait for all operations specified to complete before returning.
+
+EXAMPLES
+
+      To view the details of an operation, run:
+
+        $ gcloud beta deployment-manager operations describe operation-name
+
+      To see the list of all operations, run:
+
+        $ gcloud beta deployment-manager operations list
+
+      To wait for an operation to complete, run:
+
+        $ gcloud beta deployment-manager operations wait operation-name
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in BETA and may change without notice.
+

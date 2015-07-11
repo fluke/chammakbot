@@ -1,0 +1,35 @@
+NAME
+
+      gcloud sql backups describe - retrieves information about a backup
+
+SYNOPSIS
+
+      gcloud sql backups describe DUE_TIME [--instance INSTANCE, -i INSTANCE]
+      [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      Retrieves information about a backup.
+
+POSITIONAL ARGUMENTS
+
+      DUE_TIME
+
+         The time when this run is due to start in RFC 3339 format, for example
+         2012-11-15T16:19:00.094Z.
+
+GROUP FLAGS
+
+      --instance INSTANCE, -i INSTANCE
+
+         Cloud SQL instance ID.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK sql component. See installing
+      components if it is not installed.
+

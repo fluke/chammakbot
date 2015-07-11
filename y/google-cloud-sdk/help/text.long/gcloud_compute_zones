@@ -1,0 +1,33 @@
+NAME
+
+      gcloud compute zones - list Google Compute Engine zones
+
+SYNOPSIS
+
+      gcloud compute zones COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      List Google Compute Engine zones.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      describe
+
+         Describe a Google Compute Engine zone.
+
+      list
+
+         List Google Compute Engine zones.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

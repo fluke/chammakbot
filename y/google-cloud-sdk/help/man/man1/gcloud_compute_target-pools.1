@@ -1,0 +1,71 @@
+.TH "GCLOUD COMPUTE TARGET-POOLS" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_compute_target-pools \- control Compute Engine target pools for network load balancing
+.SH "SYNOPSIS"
+.sp
+gcloud compute target\-pools \fICOMMAND\fR [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+Control Compute Engine target pools for network load balancing\&.
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "COMMANDS"
+.sp
+\fICOMMAND\fR is one of the following:
+.HP
+\fBadd\-health\-checks\fR
+.RE
+.PP
+\fBadd\-instances\fR
+.RS 4
+Add instances to a target pool\&.
+.RE
+.PP
+\fBcreate\fR
+.RS 4
+Define a load\-balanced pool of virtual machine instances\&.
+.RE
+.PP
+\fBdelete\fR
+.RS 4
+Delete target pools\&.
+.RE
+.PP
+\fBdescribe\fR
+.RS 4
+Describe a Google Compute Engine target pool\&.
+.RE
+.PP
+\fBget\-health\fR
+.RS 4
+Get the health of instances in a target pool\&.
+.RE
+.PP
+\fBlist\fR
+.RS 4
+List Google Compute Engine target pools\&.
+.RE
+.PP
+\fBremove\-health\-checks\fR
+.RS 4
+Remove an HTTP health check from a target pool\&.
+.RE
+.PP
+\fBremove\-instances\fR
+.RS 4
+Remove instances from a target pool\&.
+.RE
+.PP
+\fBset\-backup\fR
+.RS 4
+Set a backup pool for a target pool\&.
+.RE
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBcompute\fR component\&. See installing components if it is not installed\&.

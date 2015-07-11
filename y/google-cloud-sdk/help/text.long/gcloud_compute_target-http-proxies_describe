@@ -1,0 +1,29 @@
+NAME
+
+      gcloud compute target-http-proxies describe - display detailed information
+         about a target HTTP proxy
+
+SYNOPSIS
+
+      gcloud compute target-http-proxies describe NAME [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      gcloud compute target-http-proxies describe displays all data associated
+      with a target HTTP proxy in a project.
+
+POSITIONAL ARGUMENTS
+
+      NAME
+
+         The name of the resource to fetch.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

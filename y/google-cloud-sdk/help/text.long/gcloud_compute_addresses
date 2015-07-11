@@ -1,0 +1,42 @@
+NAME
+
+      gcloud compute addresses - read and manipulate Google Compute Engine
+         addresses
+
+SYNOPSIS
+
+      gcloud compute addresses COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      Read and manipulate Google Compute Engine addresses.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      create
+
+         Reserve IP addresses.
+
+      delete
+
+         Release reserved IP addresses.
+
+      describe
+
+         Display detailed information about an address.
+
+      list
+
+         List addresses.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

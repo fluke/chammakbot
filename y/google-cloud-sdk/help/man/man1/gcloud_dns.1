@@ -1,0 +1,73 @@
+.TH "GCLOUD DNS" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_dns \- manage your Cloud DNS managed\-zones and record\-sets
+.SH "SYNOPSIS"
+.sp
+gcloud dns \fIGROUP\fR [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+This set of commands allows you to create and maintain managed\-zones and their record\-sets\&.
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "GROUPS"
+.sp
+\fIGROUP\fR is one of the following:
+.HP
+\fBmanaged\-zones\fR
+.RE
+.PP
+\fBproject\-info\fR
+.RS 4
+View Cloud DNS related information for a project\&.
+.RE
+.PP
+\fBrecord\-sets\fR
+.RS 4
+Manage the record\-sets within your managed\-zones\&.
+.RE
+.SH "EXAMPLES"
+.sp
+To see how to create and maintain managed\-zones, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud dns managed\-zones
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To see how to maintain the record\-sets within a managed\-zone, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud dns record\-sets
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To display Cloud DNS related information for your project, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud dns project\-info describe
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBdns\fR component\&. See installing components if it is not installed\&.

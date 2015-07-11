@@ -1,0 +1,38 @@
+NAME
+
+      gcloud beta deployment-manager types - commands for Deployment Manager V2
+         types
+
+SYNOPSIS
+
+      gcloud beta deployment-manager types COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (BETA) Commands to show available resource types.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      list
+
+         (BETA) List types in a project.
+
+EXAMPLES
+
+      To see the list of all available resource types, run:
+
+        $ gcloud beta deployment-manager types list
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in BETA and may change without notice.
+

@@ -1,0 +1,51 @@
+NAME
+
+      gcloud alpha genomics datasets - commands for Genomics datasets
+
+SYNOPSIS
+
+      gcloud alpha genomics datasets COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Commands to create, update, delete, and examine datasets.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      create
+
+         (ALPHA) Creates a dataset with a specified name.
+
+      delete
+
+         (ALPHA) Deletes a dataset.
+
+      describe
+
+         (ALPHA) Returns details about a dataset.
+
+      list
+
+         (ALPHA) List Genomics datasets in a project.
+
+      restore
+
+         (ALPHA) Restores a deleted dataset.
+
+      update
+
+         (ALPHA) Updates a dataset name.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

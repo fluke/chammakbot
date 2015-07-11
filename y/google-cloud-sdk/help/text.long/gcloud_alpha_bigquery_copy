@@ -1,0 +1,71 @@
+NAME
+
+      gcloud alpha bigquery copy - copy one table to another
+
+SYNOPSIS
+
+      gcloud alpha bigquery copy SOURCE DESTINATION [--async]
+      [--fingerprint-job-id] [--if-exists IF_EXISTS; default="prompt"]
+      [--job-id JOB_ID] [--status STATUS; default="periodic"] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) If the table does not exist, it is created. Otherwise, use
+      --if-exist flag to choose desired behaviour.
+
+POSITIONAL ARGUMENTS
+
+      SOURCE
+
+         the table to be copied from
+
+      DESTINATION
+
+         the table to be copied to
+
+FLAGS
+
+      --async
+
+         If True, create an asynchronous job, and use the success of job
+         creation as the error code. If False, wait for command completion
+         before returning, and use the job completion status for error codes.
+
+      --if-exists IF_EXISTS; default="prompt"
+
+         What to do if the destination table already exists.
+
+      --job-id JOB_ID
+
+         A unique job ID to use for the request.
+
+      --status STATUS; default="periodic"
+
+         Whether the status of the copying job should be reported periodically,
+         every time the status changes, or not at all.
+
+GROUP FLAGS
+
+      --fingerprint-job-id
+
+         Whether to use a job id that is derived from a fingerprint of the job
+         configuration.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To copy table from projectX to current project in datasetY:
+
+        $ gcloud alpha bigquery copy projectX/datasetX/tableX \
+            datasetY/tableY
+
+NOTES
+
+      This command is in the Google Cloud SDK bigquery component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

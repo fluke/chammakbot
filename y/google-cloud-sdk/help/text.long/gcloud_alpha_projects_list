@@ -1,0 +1,42 @@
+NAME
+
+      gcloud alpha projects list - list all active Projects
+
+SYNOPSIS
+
+      gcloud alpha projects list [--limit LIMIT] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) gcloud alpha projects list lists all active Projects (ID and
+      title), for the active user's credentials, in alphabetical order by
+      Project title. Projects which have been deleted or are pending deletion
+      will not be included.
+
+      You can specify the maximum number of Projects to list with the 'limit'
+      flag.
+
+FLAGS
+
+      --limit LIMIT
+
+         Maximum number of results.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      The following command will list a maximum of 5 Projects, out of all of the
+      active user's active Projects, sorted alphabetically by title.
+
+        $ gcloud alpha projects list --limit=5
+
+NOTES
+
+      This command is in the Google Cloud SDK alpha component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

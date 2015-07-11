@@ -1,0 +1,44 @@
+NAME
+
+      gcloud alpha bigquery tables remove - removes a specified table or view
+
+SYNOPSIS
+
+      gcloud alpha bigquery tables remove TABLE_OR_VIEW [--fingerprint-job-id]
+      [--ignore-not-found] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) The user will be asked to confirm the action unless the --quiet
+      flag is specified.
+
+POSITIONAL ARGUMENTS
+
+      TABLE_OR_VIEW
+
+         The table or view to be removed.
+
+FLAGS
+
+      --ignore-not-found
+
+         Terminate without an error if the specified table does not exist.
+
+GROUP FLAGS
+
+      --fingerprint-job-id
+
+         Whether to use a job id that is derived from a fingerprint of the job
+         configuration.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK bigquery component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

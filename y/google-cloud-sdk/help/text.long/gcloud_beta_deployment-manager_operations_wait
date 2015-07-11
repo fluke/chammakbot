@@ -1,0 +1,43 @@
+NAME
+
+      gcloud beta deployment-manager operations wait - wait for all operations
+         specified to complete before returning
+
+SYNOPSIS
+
+      gcloud beta deployment-manager operations wait OPERATION_NAME
+      [OPERATION_NAME ...] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (BETA) Polls until all operations have finished, then prints the resulting
+      operations along with any operation errors.
+
+POSITIONAL ARGUMENTS
+
+      OPERATION_NAME [OPERATION_NAME ...]
+
+         Operation name.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To poll until an operation has completed, run:
+
+        $ gcloud beta deployment-manager operations wait operation-name
+
+      To poll until several operations have all completed, run:
+
+        $ gcloud beta deployment-manager operations wait operation-one \
+            operation-two operation-three
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in BETA and may change without notice.
+

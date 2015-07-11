@@ -1,0 +1,56 @@
+NAME
+
+      gcloud alpha source clone - clone project git repository in the current
+         directory
+
+SYNOPSIS
+
+      gcloud alpha source clone REPOSITORY_NAME [DIRECTORY_NAME] [GLOBAL-FLAG
+      ...]
+
+DESCRIPTION
+
+      This command clones git repository for the currently active Google Cloud
+      Platform project into specified folder in current directory.
+
+      If you have enabled push-to-deploy in the Cloud Console, this gcloud alpha
+      source clone will clone the Google-hosted git repository associated with
+      PROJECT. This repository will automatically be connected to Google, and it
+      will use the credentials indicated as active by gcloud auth list. Pushing
+      to the origin's master branch will trigger an App Engine deployment using
+      the contents of that branch.
+
+POSITIONAL ARGUMENTS
+
+      REPOSITORY_NAME
+
+         Name of the repository. Note: GCP projects generally have (if created)
+         repository named "default"
+
+      [DIRECTORY_NAME]
+
+         Directory name for the cloned repo. Defaults repo name.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To perform a simple "Hello, world!" App Engine deployment with this
+      command, run the following command lines with MYPROJECT replaced by a
+      project you own and can use for this experiment.
+
+        $ gcloud source clone REPOSITORY_NAME
+        $ cd REPOSITORY_NAME
+        $ git pull
+          https://github.com/GoogleCloudPlatform/appengine-helloworld-python
+        $ git push origin master
+
+NOTES
+
+      This command is in the Google Cloud SDK source component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

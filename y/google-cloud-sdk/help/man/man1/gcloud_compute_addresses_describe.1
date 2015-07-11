@@ -1,0 +1,60 @@
+.TH "GCLOUD COMPUTE ADDRESSES DESCRIBE" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_compute_addresses_describe \- display detailed information about an address
+.SH "SYNOPSIS"
+.sp
+gcloud compute addresses describe \fINAME\fR [\fB\-\-global\fR | \fB\-\-region\fR \fIREGION\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute addresses describe\fR displays all data associated with an address in a project\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fINAME\fR
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-global\fR
+.RS 4
+If provided, it is assumed that the requested resource is global\&.
+.RE
+.PP
+\fB\-\-region\fR \fIREGION\fR
+.RS 4
+The region of the resource to fetch\&.
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "EXAMPLES"
+.sp
+To get details about a global address, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud compute addresses describe ADDRESS \-\-global
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To get details about a regional address, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud compute addresses describe ADDRESS \-\-region us\-central1
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBcompute\fR component\&. See installing components if it is not installed\&.

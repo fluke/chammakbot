@@ -1,0 +1,39 @@
+.TH "GCLOUD COMPUTE URL-MAPS CREATE" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_compute_url-maps_create \- create a URL map
+.SH "SYNOPSIS"
+.sp
+gcloud compute url\-maps create \fINAME\fR \fB\-\-default\-service\fR \fIDEFAULT_SERVICE\fR [\fB\-\-description\fR \fIDESCRIPTION\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute url\-maps create\fR is used to create URL maps which map HTTP and HTTPS request URLs to backend services\&. Mappings are done using a longest\-match strategy\&.
+.sp
+There are two components to a mapping: a host rule and a path matcher\&. A host rule maps one or more hosts to a path matcher\&. A path matcher maps request paths to backend services\&. For example, a host rule can map the hosts \fI*\&.google\&.com\fR and \fIgoogle\&.com\fR to a path matcher called \fIwww\fR\&. The \fIwww\fR path matcher in turn can map the path \fI/search/*\fR to the search backend service and everything else to a default backend service\&.
+.sp
+Host rules and patch matchers can be added to the URL map after the map is created by using \fIgcloud compute url\-maps edit\fR or by using \fIgcloud compute url\-maps add\-path\-matcher\fR and \fIgcloud compute url\-maps add\-host\-rule\fR\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fINAME\fR
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-default\-service\fR \fIDEFAULT_SERVICE\fR
+.RS 4
+A backend service that will be used for requests for which this URL map has no mappings\&.
+.RE
+.PP
+\fB\-\-description\fR \fIDESCRIPTION\fR
+.RS 4
+An optional, textual description for the URL map\&.
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBcompute\fR component\&. See installing components if it is not installed\&.

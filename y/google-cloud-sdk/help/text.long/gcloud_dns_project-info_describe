@@ -1,0 +1,35 @@
+NAME
+
+      gcloud dns project-info describe - view Cloud DNS related information for
+         a project
+
+SYNOPSIS
+
+      gcloud dns project-info describe PROJECT_ID [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      This command displays Cloud DNS related information for your project
+      including quotas for various resources and operations.
+
+POSITIONAL ARGUMENTS
+
+      PROJECT_ID
+
+         The identifier for the project you want DNS related info for.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To display Cloud DNS related information for your project, run:
+
+        $ gcloud dns project-info describe my_project_id
+
+NOTES
+
+      This command is in the Google Cloud SDK dns component. See installing
+      components if it is not installed.
+

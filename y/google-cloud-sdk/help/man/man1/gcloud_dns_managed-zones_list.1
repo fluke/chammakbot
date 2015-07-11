@@ -1,0 +1,49 @@
+.TH "GCLOUD DNS MANAGED-ZONES LIST" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_dns_managed-zones_list \- view the list of all your managed\-zones
+.SH "SYNOPSIS"
+.sp
+gcloud dns managed\-zones list [\fB\-\-limit\fR \fILIMIT\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+This command displays the list of your managed\-zones\&.
+.SH "FLAGS"
+.HP
+\fB\-\-limit\fR \fILIMIT\fR
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "EXAMPLES"
+.sp
+To see the list of all managed\-zones, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud dns managed\-zones list
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To see the list of first 10 managed\-zones, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud dns managed\-zones list \-\-limit=10
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBdns\fR component\&. See installing components if it is not installed\&.

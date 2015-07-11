@@ -1,0 +1,42 @@
+NAME
+
+      gcloud compute target-instances - read and manipulate Google Compute
+         Engine virtual target instances
+
+SYNOPSIS
+
+      gcloud compute target-instances COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      Read and manipulate Google Compute Engine virtual target instances.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      create
+
+         Create a target instance for handling traffic from a forwarding rule.
+
+      delete
+
+         Delete target instances.
+
+      describe
+
+         Describe a target instance.
+
+      list
+
+         List Google Compute Engine target instances.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

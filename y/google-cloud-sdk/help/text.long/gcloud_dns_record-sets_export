@@ -1,0 +1,52 @@
+NAME
+
+      gcloud dns record-sets export - export your record-sets into a file
+
+SYNOPSIS
+
+      gcloud dns record-sets export RECORDS_FILE [--zone ZONE, -z ZONE]
+      [--zone-file-format] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      This command exports the record-sets contained within the specified
+      managed-zone into a file.
+
+POSITIONAL ARGUMENTS
+
+      RECORDS_FILE
+
+         File to which record-sets should be exported.
+
+FLAGS
+
+      --zone-file-format
+
+         Indicates that records-file should be in the zone file format.
+
+GROUP FLAGS
+
+      --zone ZONE, -z ZONE
+
+         Name of the managed-zone whose record-sets you want to manage.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To export record-sets into a yaml file, run:
+
+        $ gcloud dns record-sets export YAML_RECORDS_FILE -z MANAGED_ZONE
+
+      To import record-sets into a zone file, run:
+
+        $ gcloud dns record-sets export ZONE_FILE --zone-file-format \
+            -z MANAGED_ZONE
+
+NOTES
+
+      This command is in the Google Cloud SDK dns component. See installing
+      components if it is not installed.
+

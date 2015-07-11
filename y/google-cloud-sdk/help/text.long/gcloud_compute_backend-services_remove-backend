@@ -1,0 +1,62 @@
+NAME
+
+      gcloud compute backend-services remove-backend - remove a backend from a
+         backend service
+
+SYNOPSIS
+
+      gcloud compute backend-services remove-backend NAME [--group GROUP]
+      [--zone ZONE] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      gcloud compute backend-services remove-backend is used to remove a backend
+      from a backend service.
+
+      Before removing a backend, it is a good idea to "drain" the backend first.
+      A backend can be drained by setting its capacity scaler to zero through
+      'gcloud compute backend-services edit'.
+
+POSITIONAL ARGUMENTS
+
+      NAME
+
+         The name of the backend service.
+
+FLAGS
+
+      --group GROUP
+
+         The name of a Compute Engine instance group used by the backend to be
+         removed.
+
+      --zone ZONE
+
+         The zone of the instance group to remove from the backend service. If
+         not specified, you will be prompted to select a zone.
+
+         To avoid prompting when this flag is omitted, you can set the
+         compute/zone property:
+
+           $ gcloud config set compute/zone ZONE
+
+         A list of zones can be fetched by running:
+
+           $ gcloud compute zones list
+
+         To unset the property, run:
+
+           $ gcloud config unset compute/zone
+
+         Alternatively, the zone can be stored in the environment variable
+         CLOUDSDK_COMPUTE_ZONE.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

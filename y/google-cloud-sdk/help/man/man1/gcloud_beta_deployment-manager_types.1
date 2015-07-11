@@ -1,0 +1,42 @@
+.TH "GCLOUD BETA DEPLOYMENT-MANAGER TYPES" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_beta_deployment-manager_types \- commands for Deployment Manager V2 types
+.SH "SYNOPSIS"
+.sp
+gcloud beta deployment\-manager types \fICOMMAND\fR [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(BETA)\fR Commands to show available resource types\&.
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "COMMANDS"
+.sp
+\fICOMMAND\fR is one of the following:
+.HP
+\fBlist\fR
+List types in a project\&.
+.RE
+.SH "EXAMPLES"
+.sp
+To see the list of all available resource types, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud beta deployment\-manager types list
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBgcloud\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in BETA and may change without notice\&.

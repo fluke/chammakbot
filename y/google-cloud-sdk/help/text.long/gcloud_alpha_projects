@@ -1,0 +1,51 @@
+NAME
+
+      gcloud alpha projects - manage your Projects
+
+SYNOPSIS
+
+      gcloud alpha projects COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Commands to get information about your Google Developer Projects.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      add-iam-policy-binding
+
+         (ALPHA) Add IAM policy binding for a Project.
+
+      describe
+
+         (ALPHA) Show metadata for a Project.
+
+      get-iam-policy
+
+         (ALPHA) Get IAM policy for a Project.
+
+      list
+
+         (ALPHA) List all active Projects.
+
+      remove-iam-policy-binding
+
+         (ALPHA) Remove IAM policy binding for a Project.
+
+      set-iam-policy
+
+         (ALPHA) Set IAM policy for a Project.
+
+NOTES
+
+      This command is in the Google Cloud SDK alpha component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

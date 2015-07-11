@@ -1,0 +1,42 @@
+.TH "GCLOUD ALPHA DATAFLOW METRICS TAIL" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_alpha_dataflow_metrics_tail \- retrieves the metrics from a specific job
+.SH "SYNOPSIS"
+.sp
+gcloud alpha dataflow metrics tail \fIJOB_ID\fR [\fB\-\-changed\-after\fR \fICHANGED_AFTER\fR] [\fB\-\-hide\-committed\fR] [\fB\-\-tentative\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(ALPHA)\fR Retrieves the metrics from a specific job\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fIJOB_ID\fR
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-changed\-after\fR \fICHANGED_AFTER\fR
+.RS 4
+Only display metrics that have changed after the given time
+.RE
+.PP
+\fB\-\-hide\-committed\fR
+.RS 4
+If true, hide committed values\&.
+.RE
+.PP
+\fB\-\-tentative\fR
+.RS 4
+If true, display tentative values\&.
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBgcloud\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in ALPHA and may change without notice\&.

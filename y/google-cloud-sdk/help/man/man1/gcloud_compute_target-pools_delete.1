@@ -1,0 +1,71 @@
+.TH "GCLOUD COMPUTE TARGET-POOLS DELETE" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_compute_target-pools_delete \- delete target pools
+.SH "SYNOPSIS"
+.sp
+gcloud compute target\-pools delete \fINAME\fR [\fINAME\fR \&...] [\fB\-\-region\fR \fIREGION\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute target\-pools delete\fR deletes one or more Google Compute Engine target pools\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fINAME\fR [\fINAME\fR \&...]
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-region\fR \fIREGION\fR
+.RS 4
+The region of the resources to delete\&. If not specified, you will be prompted to select a region\&.
+.sp
+To avoid prompting when this flag is omitted, you can set the
+\fIcompute/region\fR
+property:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud config set compute/region REGION
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+A list of regions can be fetched by running:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud compute regions list
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To unset the property, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud config unset compute/region
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+Alternatively, the region can be stored in the environment variable
+\fICLOUDSDK_COMPUTE_REGION\fR\&.
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBcompute\fR component\&. See installing components if it is not installed\&.

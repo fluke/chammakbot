@@ -1,0 +1,28 @@
+NAME
+
+      gcloud compute zones describe - describe a Google Compute Engine zone
+
+SYNOPSIS
+
+      gcloud compute zones describe NAME [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      gcloud compute zones describe displays all data associated with a Google
+      Compute Engine zone.
+
+POSITIONAL ARGUMENTS
+
+      NAME
+
+         The name of the resource to fetch.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

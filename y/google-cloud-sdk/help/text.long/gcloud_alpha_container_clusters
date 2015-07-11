@@ -1,0 +1,51 @@
+NAME
+
+      gcloud alpha container clusters - deploy and teardown Google Container
+         Engine clusters
+
+SYNOPSIS
+
+      gcloud alpha container clusters COMMAND [--zone ZONE, -z ZONE]
+      [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Deploy and teardown Google Container Engine clusters.
+
+GROUP FLAGS
+
+      --zone ZONE, -z ZONE
+
+         The compute zone (e.g. us-central1-a) for the cluster
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      create
+
+         (ALPHA) Create a cluster for running containers.
+
+      delete
+
+         (ALPHA) Delete an existing cluster for running containers.
+
+      describe
+
+         (ALPHA) Describe an existing cluster for running containers.
+
+      list
+
+         (ALPHA) List existing clusters for running containers.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

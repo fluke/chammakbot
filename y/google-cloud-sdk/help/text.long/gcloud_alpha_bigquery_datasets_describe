@@ -1,0 +1,39 @@
+NAME
+
+      gcloud alpha bigquery datasets describe - shows the last-modified date and
+         access-control lists of a dataset
+
+SYNOPSIS
+
+      gcloud alpha bigquery datasets describe DATASET_NAME
+      [--fingerprint-job-id] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Shows the last-modified date and access-control lists of a
+      dataset.
+
+POSITIONAL ARGUMENTS
+
+      DATASET_NAME
+
+         The name of the dataset.
+
+GROUP FLAGS
+
+      --fingerprint-job-id
+
+         Whether to use a job id that is derived from a fingerprint of the job
+         configuration.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK bigquery component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

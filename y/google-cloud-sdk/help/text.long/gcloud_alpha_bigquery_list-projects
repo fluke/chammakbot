@@ -1,0 +1,39 @@
+NAME
+
+      gcloud alpha bigquery list-projects - lists all the user's projects for
+         which the Big Query API is enabled
+
+SYNOPSIS
+
+      gcloud alpha bigquery list-projects [--fingerprint-job-id]
+      [--limit LIMIT; default="100"] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Lists all the user's projects for which the Big Query API is
+      enabled.
+
+FLAGS
+
+      --limit LIMIT; default="100"
+
+         The maximum number of projects to list.
+
+GROUP FLAGS
+
+      --fingerprint-job-id
+
+         Whether to use a job id that is derived from a fingerprint of the job
+         configuration.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK bigquery component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

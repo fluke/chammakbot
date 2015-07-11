@@ -1,0 +1,48 @@
+NAME
+
+      gcloud alpha dataflow jobs - a group of subcommands for working with
+         Dataflow jobs
+
+SYNOPSIS
+
+      gcloud alpha dataflow jobs COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) A group of subcommands for working with Dataflow jobs.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      cancel
+
+         (ALPHA) Cancels all jobs that match the command line arguments.
+
+      describe
+
+         (ALPHA) Outputs the Job object resulting from the Get API.
+
+      export-steps
+
+         (ALPHA) Exports information about the steps for the given job.
+
+      list
+
+         (ALPHA) Lists all jobs in a particular project.
+
+      show
+
+         (ALPHA) Shows a short description of the given job.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

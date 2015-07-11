@@ -1,0 +1,31 @@
+NAME
+
+      gcloud compute firewall-rules delete - delete Google Compute Engine
+         firewall rules
+
+SYNOPSIS
+
+      gcloud compute firewall-rules delete NAME [NAME ...] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      gcloud compute firewall-rules delete deletes one or more Google Compute
+      Engine firewall
+
+       rules.
+
+POSITIONAL ARGUMENTS
+
+      NAME [NAME ...]
+
+         The resources to delete.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

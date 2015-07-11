@@ -1,0 +1,340 @@
+<html devsite="">
+<head>
+<title>gcloud alpha test run</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="project_path" value="/sdk/_project.yaml">
+<meta name="book_path" value="/sdk/_book.yaml">
+<!--
+        THIS DOC IS GENERATED.  DO NOT EDIT.
+        -->
+<style>
+  dd { margin-bottom: 1ex; }
+  .hangingindent { padding-left: 1.5em; text-indent: -1.5em; }
+</style>
+</head>
+<body><dl>
+<section>
+<dt>NAME</dt>
+<dd>gcloud alpha test run - invoke a test in Google Cloud Test Lab and view test results</dd>
+</section><section>
+<dt>SYNOPSIS</dt>
+<dd><pre>gcloud alpha test run [ARGSPEC] [--app APP, -a APP] [--app-initial-activity APP_INITIAL_ACTIVITY] [--app-package APP_PACKAGE, -A APP_PACKAGE] [--async] [--device-ids DEVICE_ID,[DEVICE_ID,…], -d DEVICE_ID,[DEVICE_ID,…]] [--event-count int] [--event-delay int] [--locales LOCALE,[LOCALE,…], -l LOCALE,[LOCALE,…]] [--max-depth int] [--max-steps int] [--orientations ORIENTATION,[ORIENTATION,…], -o ORIENTATION,[ORIENTATION,…]] [--os-version-ids OS_VERSION_ID,[OS_VERSION_ID,…], -v OS_VERSION_ID,[OS_VERSION_ID,…]] [--random-seed int] [--results-bucket RESULTS_BUCKET, -b RESULTS_BUCKET] [--results-history-name RESULTS_HISTORY_NAME, -H RESULTS_HISTORY_NAME] [--test TEST, -t TEST] [--test-package TEST_PACKAGE, -T TEST_PACKAGE] [--test-runner-class TEST_RUNNER_CLASS, -r TEST_RUNNER_CLASS] [--test-targets TEST_TARGET,[TEST_TARGET,…]] [--timeout TIMEOUT] [--type TYPE, -y TYPE] [GLOBAL-FLAG …]</pre></dd>
+</section><section>
+<dt>DESCRIPTION</dt>
+<dd>
+<code>gcloud alpha test run</code> invokes and monitors tests in Google Cloud Test Lab.</dd>
+<dd>Three main types of tests are currently supported:
+- <code>robo</code>: runs a smart, automated exploration of the activities in
+  your Android app which records any installation failures or crashes
+  and builds an activity map with associated screenshots and video.
+- <code>instrumentation</code>: runs automated unit or integration tests written
+  using a testing framework. Google Cloud Test Lab initially supports
+  the Espresso and Robotium testing frameworks for Android.
+- <code>monkey</code>: runs an Android UIAutomator test.</dd>
+<dd>The type of test to run can be specified with the <code>--type</code> flag,
+although the type can often be inferred from other flags.
+Specifically, if the <code>--test</code> flag is present, the test <code>--type</code> will
+default to <code>instrumentation</code>. If <code>--test</code> is not present, then
+<code>--type</code> defaults to <code>robo</code>.</dd>
+<dd>All arguments for <code>gcloud alpha test run</code> may be specified on the command line
+and/or within an argument file. Run <code>$ <a href="../../topic">gcloud topic</a> arg-files</code> for
+more information about argument files.</dd>
+</section><section>
+<dt>POSITIONAL ARGUMENTS</dt>
+<dd><dl>
+<dt class="hangingindent">
+<nobr>[<code><var>ARGSPEC</var></code>]</nobr>
+</dt>
+
+<dd>
+An ARG_FILE:ARG_GROUP_NAME pair, where ARG_FILE is the path to a file containing groups of test arguments in yaml format, and ARG_GROUP_NAME is the particular yaml object holding a group of arg:value pairs to use. Run <code>$ <a href="../../topic">gcloud topic</a> arg-files</code> for more information and examples.
+</dd>
+
+</dl></dd>
+</section><section>
+<dt>FLAGS</dt>
+<dd><dl>
+<dt>
+<code>--app</code> <code><var>APP</var></code>, <code>-a</code> <code><var>APP</var></code>
+</dt>
+
+<dd>
+The path to the application binary file. The path may be in the local filesystem or in Google Cloud Storage using gs:// notation.
+</dd>
+
+
+<dt>
+<code>--app-initial-activity</code> <code><var>APP_INITIAL_ACTIVITY</var></code>
+</dt>
+
+<dd>
+The initial activity used to start the app during a robo test.
+</dd>
+
+
+<dt>
+<code>--app-package</code> <code><var>APP_PACKAGE</var></code>, <code>-A</code> <code><var>APP_PACKAGE</var></code>
+</dt>
+
+<dd>
+The Java package of the application under test (default: extracted from the APK manifest).
+</dd>
+
+
+<dt>
+<code>--async</code>
+</dt>
+
+<dd>
+Invoke a test asynchronously without waiting for test results.
+</dd>
+
+
+<dt>
+<code>--device-ids</code> <code><var>DEVICE_ID</var></code>,[<code><var>DEVICE_ID</var></code>,…], <code>-d</code> <code><var>DEVICE_ID</var></code>,[<code><var>DEVICE_ID</var></code>,…]
+</dt>
+
+<dd>
+The list of DEVICE_IDs to test against (default: one device determined by Google Cloud Test Lab’s device catalog; see TAGS listed by the <code>$ <a href="../../alpha/test/devices">gcloud alpha test devices</a> list</code> command).
+</dd>
+
+
+<dt>
+<code>--event-count</code> <code><var>int</var></code>
+</dt>
+
+<dd>
+Number of simulated user events to create during a monkey test (default: 1000).
+</dd>
+
+
+<dt>
+<code>--event-delay</code> <code><var>int</var></code>
+</dt>
+
+<dd>
+Fixed delay in milliseconds inserted between simulated events in a monkey test (default: 0).
+</dd>
+
+
+<dt>
+<code>--locales</code> <code><var>LOCALE</var></code>,[<code><var>LOCALE</var></code>,…], <code>-l</code> <code><var>LOCALE</var></code>,[<code><var>LOCALE</var></code>,…]
+</dt>
+
+<dd>
+The list of LOCALEs to test against (default: a single locale determined by Google Cloud Test Lab’s device catalog).
+</dd>
+
+
+<dt>
+<code>--max-depth</code> <code><var>int</var></code>
+</dt>
+
+<dd>
+The maximum depth of the traversal stack a robo test can explore (default: 50).
+</dd>
+
+
+<dt>
+<code>--max-steps</code> <code><var>int</var></code>
+</dt>
+
+<dd>
+The maximum number of steps/actions a robo test can execute (default: no limit).
+</dd>
+
+
+<dt>
+<code>--orientations</code> <code><var>ORIENTATION</var></code>,[<code><var>ORIENTATION</var></code>,…], <code>-o</code> <code><var>ORIENTATION</var></code>,[<code><var>ORIENTATION</var></code>,…]
+</dt>
+
+<dd>
+The device orientation(s) to test against. Choices: portrait, landscape (default: portrait).
+</dd>
+
+
+<dt>
+<code>--os-version-ids</code> <code><var>OS_VERSION_ID</var></code>,[<code><var>OS_VERSION_ID</var></code>,…], <code>-v</code> <code><var>OS_VERSION_ID</var></code>,[<code><var>OS_VERSION_ID</var></code>,…]
+</dt>
+
+<dd>
+The list of OS_VERSION_IDs to test against (default: a version ID determined by Google Cloud Test Lab’s device catalog).
+</dd>
+
+
+<dt>
+<code>--random-seed</code> <code><var>int</var></code>
+</dt>
+
+<dd>
+Seed value for the pseudo-random number generator used during a monkey test (default: 0).
+</dd>
+
+
+<dt>
+<code>--results-bucket</code> <code><var>RESULTS_BUCKET</var></code>, <code>-b</code> <code><var>RESULTS_BUCKET</var></code>
+</dt>
+
+<dd>
+The name of a Google Cloud Storage bucket where test results will be stored (default: "cloud-test-&lt;PROJECT-ID&gt;").
+</dd>
+
+
+<dt>
+<code>--results-history-name</code> <code><var>RESULTS_HISTORY_NAME</var></code>, <code>-H</code> <code><var>RESULTS_HISTORY_NAME</var></code>
+</dt>
+
+<dd>
+The history name for your test results (an arbitrary string label; default: the application’s label from the APK manifest). All tests which use the same history name will have their results grouped together in the Google Developers Console in a time-ordered test history list.
+</dd>
+
+
+<dt>
+<code>--test</code> <code><var>TEST</var></code>, <code>-t</code> <code><var>TEST</var></code>
+</dt>
+
+<dd>
+The path to the test binary file. The given path may be in the local filesystem or in Google Cloud Storage using gs:// notation.
+</dd>
+
+
+<dt>
+<code>--test-package</code> <code><var>TEST_PACKAGE</var></code>, <code>-T</code> <code><var>TEST_PACKAGE</var></code>
+</dt>
+
+<dd>
+The Java package name of the test (default: extracted from the APK manifest).
+</dd>
+
+
+<dt>
+<code>--test-runner-class</code> <code><var>TEST_RUNNER_CLASS</var></code>, <code>-r</code> <code><var>TEST_RUNNER_CLASS</var></code>
+</dt>
+
+<dd>
+The fully-qualified Java class name of the instrumentation test runner (default: the last name extracted from the APK manifest).
+</dd>
+
+
+<dt>
+<code>--test-targets</code> <code><var>TEST_TARGET</var></code>,[<code><var>TEST_TARGET</var></code>,…]
+</dt>
+
+<dd>
+A list of one or more test targets to be run (default: all targets). Each target must be fully qualified with the package name or class name, in one of these formats:
+</dd>
+<itemizedlist>
+
+<dd>
+"package package_name"
+</dd>
+
+
+<dd>
+"class package_name.class_name"
+</dd>
+
+
+<dd>
+"class package_name.class_name#method_name".
+</dd>
+
+</itemizedlist>
+
+
+<dt>
+<code>--timeout</code> <code><var>TIMEOUT</var></code>
+</dt>
+
+<dd>
+The max time this test execution can run before it is cancelled (default: 15m). The <code>TIMEOUT</code> units can be h, m, or s. If no unit is given, seconds are assumed. Examples:
+</dd>
+<itemizedlist>
+
+<dd>
+<code>--timeout 1h</code> is 1 hour
+</dd>
+
+
+<dd>
+<code>--timeout 5m</code> is 5 minutes
+</dd>
+
+
+<dd>
+<code>--timeout 200s</code> is 200 seconds
+</dd>
+
+
+<dd>
+<code>--timeout 100</code> is 100 seconds
+</dd>
+
+</itemizedlist>
+
+
+<dt>
+<code>--type</code> <code><var>TYPE</var></code>, <code>-y</code> <code><var>TYPE</var></code>
+</dt>
+
+<dd>
+The type of test to run (<code>TYPE</code> may be one of: instrumentation, robo, monkey).
+</dd>
+
+</dl></dd>
+</section><section>
+<dt>GLOBAL FLAGS</dt>
+<dd>Run <code>$ <a href="../../">gcloud</a> help</code> for a description of flags available to
+all commands.</dd>
+</section><section>
+<dt>EXAMPLES</dt>
+<dd>To invoke a robo test lasting 100 seconds against the default device
+environment, run:</dd>
+<dd><pre>$ <A href="../../alpha/test/run">gcloud alpha test run</A> --app APP_APK --timeout 100s</pre></dd>
+<dd>To invoke a monkey test against a virtual Nexus9 device in
+landscape orientation, run:</dd>
+<dd><pre>$ <A href="../../alpha/test/run">gcloud alpha test run</A> --type monkey --app APP_APK \
+    --device-id Nexus9 --orientation landscape</pre></dd>
+<dd>To invoke an instrumentation test (Espresso or Robotium) against a
+physical Nexus 4 device (DEVICE_ID: mako) which is running Android API
+level 18 in French, run:</dd>
+<dd><pre>$ <A href="../../alpha/test/run">gcloud alpha test run</A> --app APP_APK --test TEST_APK \
+    --device-id mako --os-version-id 18 --locale fr \
+    --orientation portrait</pre></dd>
+<dd>To run the same test as above using short flags, run:</dd>
+<dd><pre>$ <A href="../../alpha/test/run">gcloud alpha test run</A> -a APP_APK -t TEST_APK -d mako -v 18 -l fr \
+    -o portrait</pre></dd>
+<dd>To run a series of 5-minute robo tests against a comprehensive matrix
+of virtual and physical devices, OS versions and locales, run:</dd>
+<dd><pre>$ <A href="../../alpha/test/run">gcloud alpha test run</A> --app APP_APK --timeout 5m \
+    --device-ids mako,shamu,Nexus5,Nexus6,k3g \
+    --os-version-ids 17,18,19,21,22 \
+    --locales de,en_US,en_GB,es,fr,it,ru,zh</pre></dd>
+<dd>To run an instrumentation test against the default test environment,
+but using a specific Google Cloud Storage bucket to hold the raw test
+results and specifying the name under which the history of your tests
+will be collected and displayed in the Google Developers Console, run:</dd>
+<dd><pre>$ <A href="../../alpha/test/run">gcloud alpha test run</A> -a APP_APK -t TEST_APK \
+    --results-bucket excelsior-app-results-bucket \
+    --results-history-name 'Excelsior App Test History'</pre></dd>
+<dd>All test arguments for a given test may alternatively be stored in an
+argument group within a YAML-formatted argument file. The <code>ARG_FILE</code>
+may contain one or more named argument groups, and argument groups may
+be combined using the <code>include:</code> attribute (Run <code>$ <a href="../../topic">gcloud topic</a>
+arg-files</code> for more information). The ARG_FILE can easily be shared
+with colleagues or placed under source control to ensure consistent
+test executions.</dd>
+<dd>To run a test using arguments loaded from an ARG_FILE named
+<code>excelsior_args</code>, which contains an argument group named <code>robo-args:</code>,
+use the following syntax:</dd>
+<dd><pre>$ <A href="../../alpha/test/run">gcloud alpha test run</A> path/to/excelsior_args:robo-args</pre></dd>
+</section><section>
+<dt>NOTES</dt>
+<dd>This command is in the Google Cloud SDK <code>gcloud</code> component. See
+<a href="/sdk/gcloud/#gcloud.components">installing components</a>
+if it is not installed.</dd>
+<dd>This command is currently in ALPHA and may change without notice.</dd>
+</section>
+</dl></body>
+</html>
+

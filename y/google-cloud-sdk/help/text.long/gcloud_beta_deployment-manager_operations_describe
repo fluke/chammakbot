@@ -1,0 +1,37 @@
+NAME
+
+      gcloud beta deployment-manager operations describe - provide information
+         about an operation
+
+SYNOPSIS
+
+      gcloud beta deployment-manager operations describe OPERATION_NAME
+      [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (BETA) This command prints out all available details about an operation.
+
+POSITIONAL ARGUMENTS
+
+      OPERATION_NAME
+
+         Operation name.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To display information about an operation, run:
+
+        $ gcloud beta deployment-manager operations describe operation-name
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in BETA and may change without notice.
+

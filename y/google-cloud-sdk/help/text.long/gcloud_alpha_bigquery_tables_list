@@ -1,0 +1,38 @@
+NAME
+
+      gcloud alpha bigquery tables list - lists the name of each table or view
+         in a specified dataset
+
+SYNOPSIS
+
+      gcloud alpha bigquery tables list DATASET_NAME [--fingerprint-job-id]
+      [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Lists the name of each table or view in a specified dataset.
+
+POSITIONAL ARGUMENTS
+
+      DATASET_NAME
+
+         The dataset whose tables and views are to be listed.
+
+GROUP FLAGS
+
+      --fingerprint-job-id
+
+         Whether to use a job id that is derived from a fingerprint of the job
+         configuration.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK bigquery component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

@@ -1,0 +1,46 @@
+.TH "GCLOUD BETA DEPLOYMENT-MANAGER RESOURCES DESCRIBE" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_beta_deployment-manager_resources_describe \- provide information about a resource
+.SH "SYNOPSIS"
+.sp
+gcloud beta deployment\-manager resources describe \fIRESOURCE\fR [\fB\-\-deployment\fR \fIDEPLOYMENT\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(BETA)\fR This command prints out all available details about a resource\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fIRESOURCE\fR
+.RE
+.SH "GROUP FLAGS"
+.PP
+\fB\-\-deployment\fR \fIDEPLOYMENT\fR
+.RS 4
+Deployment name
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "EXAMPLES"
+.sp
+To display information about a resource, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud beta deployment\-manager resources describe \e
+    \-\-deployment my\-deployment my\-resource\-name
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBgcloud\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in BETA and may change without notice\&.

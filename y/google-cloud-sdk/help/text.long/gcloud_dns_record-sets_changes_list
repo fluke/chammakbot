@@ -1,0 +1,50 @@
+NAME
+
+      gcloud dns record-sets changes list - view the list of changes that have
+         been made to your record-sets
+
+SYNOPSIS
+
+      gcloud dns record-sets changes list [--limit LIMIT]
+      [--sort-order SORT_ORDER] [--zone ZONE, -z ZONE] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      This command displays the list of changes that have been made to your
+      record-sets.
+
+FLAGS
+
+      --limit LIMIT
+
+         Maximum number of changes to list.
+
+      --sort-order SORT_ORDER
+
+         Sort order for listing (ascending|descending).
+
+GROUP FLAGS
+
+      --zone ZONE, -z ZONE
+
+         Name of the managed-zone whose record-sets you want to manage.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To see the list of changes, run:
+
+        $ gcloud dns record-sets changes list
+
+      To see the list of first 10 changes, run:
+
+        $ gcloud dns record-sets changes list --limit=10
+
+NOTES
+
+      This command is in the Google Cloud SDK dns component. See installing
+      components if it is not installed.
+

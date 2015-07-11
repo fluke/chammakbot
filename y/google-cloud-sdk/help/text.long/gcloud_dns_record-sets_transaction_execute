@@ -1,0 +1,41 @@
+NAME
+
+      gcloud dns record-sets transaction execute - execute the transaction on
+         Cloud DNS
+
+SYNOPSIS
+
+      gcloud dns record-sets transaction execute
+      [--transaction-file TRANSACTION_FILE; default="transaction.yaml"]
+      [--zone ZONE, -z ZONE] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      This command executes the transaction on Cloud DNS. This will result in
+      record-sets being changed as specified in the transaction.
+
+GROUP FLAGS
+
+      --transaction-file TRANSACTION_FILE; default="transaction.yaml"
+
+         Path of the file which contains the transaction.
+
+      --zone ZONE, -z ZONE
+
+         Name of the managed-zone whose record-sets you want to manage.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To execute the transaction, run:
+
+        $ gcloud dns record-sets transaction execute -z MANAGED_ZONE
+
+NOTES
+
+      This command is in the Google Cloud SDK dns component. See installing
+      components if it is not installed.
+

@@ -1,0 +1,29 @@
+NAME
+
+      gcloud sql flags - provide a command to list flags
+
+SYNOPSIS
+
+      gcloud sql flags COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      Provide a command to list flags.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      list
+
+         Lists customizable MySQL flags for Google Cloud SQL instances.
+
+NOTES
+
+      This command is in the Google Cloud SDK sql component. See installing
+      components if it is not installed.
+

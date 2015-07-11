@@ -1,0 +1,52 @@
+NAME
+
+      gcloud compute machine-types describe - describe a Google Compute Engine
+         machine type
+
+SYNOPSIS
+
+      gcloud compute machine-types describe NAME [--zone ZONE] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      gcloud compute machine-types describe displays all data associated with a
+      Google Compute Engine machine type.
+
+POSITIONAL ARGUMENTS
+
+      NAME
+
+         The name of the resource to fetch.
+
+FLAGS
+
+      --zone ZONE
+
+         The zone of the resource to fetch. If not specified, you will be
+         prompted to select a zone.
+
+         To avoid prompting when this flag is omitted, you can set the
+         compute/zone property:
+
+           $ gcloud config set compute/zone ZONE
+
+         A list of zones can be fetched by running:
+
+           $ gcloud compute zones list
+
+         To unset the property, run:
+
+           $ gcloud config unset compute/zone
+
+         Alternatively, the zone can be stored in the environment variable
+         CLOUDSDK_COMPUTE_ZONE.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

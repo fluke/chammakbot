@@ -1,0 +1,42 @@
+NAME
+
+      gcloud alpha projects describe - show metadata for a Project
+
+SYNOPSIS
+
+      gcloud alpha projects describe ID [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      This command shows metadata for a Project, given a valid Project ID.
+
+      This call can fail for the following reasons:
+
+          * The project specified does not exist.
+          * The active user does not have permission to access the given
+            project.
+
+POSITIONAL ARGUMENTS
+
+      ID
+
+         Project ID
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      The following command will print metadata for a Project with identifier
+      'example-foo-bar-1'
+
+        $ gcloud alpha projects describe example-foo-bar-1
+
+NOTES
+
+      This command is in the Google Cloud SDK alpha component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

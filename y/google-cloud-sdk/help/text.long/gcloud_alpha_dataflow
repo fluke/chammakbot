@@ -1,0 +1,35 @@
+NAME
+
+      gcloud alpha dataflow - read and manipulate Google Dataflow resources
+
+SYNOPSIS
+
+      gcloud alpha dataflow GROUP [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Read and manipulate Google Dataflow resources.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+GROUPS
+
+      GROUP is one of the following:
+
+      jobs
+
+         (ALPHA) A group of subcommands for working with Dataflow jobs.
+
+      metrics
+
+         (ALPHA) A group of subcommands for working with Dataflow metrics.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

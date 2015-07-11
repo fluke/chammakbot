@@ -1,0 +1,39 @@
+NAME
+
+      gcloud alpha bigquery jobs describe - shows information about a specified
+         job
+
+SYNOPSIS
+
+      gcloud alpha bigquery jobs describe JOB_ID [--fingerprint-job-id]
+      [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) The job's job type, state, start time, duration, and number of
+      bytes processed are displayed.
+
+POSITIONAL ARGUMENTS
+
+      JOB_ID
+
+         The ID of the job to be described.
+
+GROUP FLAGS
+
+      --fingerprint-job-id
+
+         Whether to use a job id that is derived from a fingerprint of the job
+         configuration.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK bigquery component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

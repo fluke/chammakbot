@@ -1,0 +1,43 @@
+.TH "GCLOUD ALPHA BIGQUERY DATASETS REMOVE" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_alpha_bigquery_datasets_remove \- removes a dataset
+.SH "SYNOPSIS"
+.sp
+gcloud alpha bigquery datasets remove \fIDATASET_NAME\fR [\fB\-\-fingerprint\-job\-id\fR] [\fB\-\-ignore\-not\-found\fR] [\fB\-\-remove\-tables\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(ALPHA)\fR Removes a dataset\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fIDATASET_NAME\fR
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-ignore\-not\-found\fR
+.RS 4
+Terminate without an error if the specified dataset does not exist\&.
+.RE
+.PP
+\fB\-\-remove\-tables\fR
+.RS 4
+Remove the dataset even if it contains one or more tables\&.
+.RE
+.SH "GROUP FLAGS"
+.PP
+\fB\-\-fingerprint\-job\-id\fR
+.RS 4
+Whether to use a job id that is derived from a fingerprint of the job configuration\&.
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBbigquery\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in ALPHA and may change without notice\&.

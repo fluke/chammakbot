@@ -1,0 +1,51 @@
+NAME
+
+      gcloud dns record-sets changes - view details about changes to your Cloud
+         DNS record-sets
+
+SYNOPSIS
+
+      gcloud dns record-sets changes COMMAND [--zone ZONE, -z ZONE] [GLOBAL-FLAG
+      ...]
+
+DESCRIPTION
+
+      View details about changes to your Cloud DNS record-sets.
+
+GROUP FLAGS
+
+      --zone ZONE, -z ZONE
+
+         Name of the managed-zone whose record-sets you want to manage.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      describe
+
+         View the details of a change.
+
+      list
+
+         View the list of changes that have been made to your record-sets.
+
+EXAMPLES
+
+      To view the details of a particular change, run:
+
+        $ gcloud dns record-sets changes describe CHANGE_ID -z MANAGED_ZONE
+
+      To view the list of all changes, run:
+
+        $ gcloud dns record-sets changes list -z MANAGED_ZONE
+
+NOTES
+
+      This command is in the Google Cloud SDK dns component. See installing
+      components if it is not installed.
+

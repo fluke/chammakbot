@@ -1,0 +1,35 @@
+NAME
+
+      gcloud alpha genomics datasets update - updates a dataset name
+
+SYNOPSIS
+
+      gcloud alpha genomics datasets update ID --name NAME [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Updates a dataset name.
+
+POSITIONAL ARGUMENTS
+
+      ID
+
+         The ID of the dataset to be updated.
+
+FLAGS
+
+      --name NAME
+
+         The new name of the dataset.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

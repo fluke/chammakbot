@@ -1,0 +1,46 @@
+NAME
+
+      gcloud compute http-health-checks - read and manipulate HTTP health checks
+         for load balanced instances
+
+SYNOPSIS
+
+      gcloud compute http-health-checks COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      Read and manipulate HTTP health checks for load balanced instances.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      create
+
+         Create an HTTP health check to monitor load balanced instances.
+
+      delete
+
+         Delete HTTP health checks.
+
+      describe
+
+         Display detailed information about an HTTP health check.
+
+      list
+
+         List Google Compute Engine health checks.
+
+      update
+
+         Update an HTTP health check.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

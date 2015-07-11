@@ -1,0 +1,42 @@
+.TH "GCLOUD SQL OPERATIONS" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_sql_operations \- provide commands for working with Cloud SQL instance operations
+.SH "SYNOPSIS"
+.sp
+gcloud sql operations \fICOMMAND\fR [\fB\-\-instance\fR \fIINSTANCE\fR, \fB\-i\fR \fIINSTANCE\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+Provide commands for working with Cloud SQL instance operations, including listing and getting information about instance operations of a Cloud SQL instance\&.
+.SH "FLAGS"
+.HP
+\fB\-\-instance\fR \fIINSTANCE\fR, \fB\-i\fR \fIINSTANCE\fR
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "COMMANDS"
+.sp
+\fICOMMAND\fR is one of the following:
+.PP
+\fBdescribe\fR
+.RS 4
+Retrieves information about a Cloud SQL instance operation\&.
+.RE
+.PP
+\fBlist\fR
+.RS 4
+Lists all instance operations for the given Cloud SQL instance\&.
+.RE
+.PP
+\fBwait\fR
+.RS 4
+Waits for one or more operations to complete\&.
+.RE
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBsql\fR component\&. See installing components if it is not installed\&.

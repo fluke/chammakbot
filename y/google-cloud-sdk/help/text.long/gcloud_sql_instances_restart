@@ -1,0 +1,33 @@
+NAME
+
+      gcloud sql instances restart - restarts a Cloud SQL instance
+
+SYNOPSIS
+
+      gcloud sql instances restart INSTANCE [--async] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      Restarts a Cloud SQL instance.
+
+POSITIONAL ARGUMENTS
+
+      INSTANCE
+
+         Cloud SQL instance ID.
+
+FLAGS
+
+      --async
+
+         Do not wait for the operation to complete.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK sql component. See installing
+      components if it is not installed.
+

@@ -1,0 +1,98 @@
+.TH "GCLOUD ALPHA BIGQUERY QUERY" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_alpha_bigquery_query \- executes an SQL query
+.SH "SYNOPSIS"
+.sp
+gcloud alpha bigquery query \fISQL_QUERY\fR [\fB\-\-allow\-large\-results\fR] [\fB\-\-append\-to\fR \fIAPPEND_TO\fR | \fB\-\-write\-to\fR \fIWRITE_TO\fR] [\fB\-\-async\fR] [\fB\-\-batch\fR] [\fB\-\-dry\-run\fR] [\fB\-\-fingerprint\-job\-id\fR] [\fB\-\-job\-id\fR \fIJOB_ID\fR] [\fB\-\-limit\fR \fILIMIT\fR; default="100"] [\fB\-\-require\-cache\fR] [\fB\-\-start\-row\fR \fISTART_ROW\fR] [\fB\-\-status\fR \fISTATUS\fR; default="periodic"] [\fB\-\-structured\fR] [\fB\-\-use\-cache\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(ALPHA)\fR A table or view reference in the query has the form dataset_name/table_or_view_name (for a dataset in the current project) or /project_name/dataset_name/table_or_view_name
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fISQL_QUERY\fR
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-allow\-large\-results\fR
+.RS 4
+Enable larger \-\-append\-to or \-\-write\-to table sizes\&.
+.RE
+.PP
+\fB\-\-append\-to\fR \fIAPPEND_TO\fR
+.RS 4
+Name of a table to which query results will be appended\&.
+.RE
+.PP
+\fB\-\-async\fR
+.RS 4
+Create an asynchronous job to perform the query\&.
+.RE
+.PP
+\fB\-\-batch\fR
+.RS 4
+Run the query in batch mode\&.
+.RE
+.PP
+\fB\-\-dry\-run\fR
+.RS 4
+Validate the query, but do not execute it\&.
+.RE
+.PP
+\fB\-\-job\-id\fR \fIJOB_ID\fR
+.RS 4
+A unique job ID to use for the request\&.
+.RE
+.PP
+\fB\-\-limit\fR \fILIMIT\fR; default="100"
+.RS 4
+How many rows to return in the result\&.
+.RE
+.PP
+\fB\-\-require\-cache\fR
+.RS 4
+Run the query only if it is already cached\&.
+.RE
+.PP
+\fB\-\-start\-row\fR \fISTART_ROW\fR
+.RS 4
+First row to return in the result\&.
+.RE
+.PP
+\fB\-\-status\fR \fISTATUS\fR; default="periodic"
+.RS 4
+Whether the status of the query job should be reported periodically, every time the status changes, or not at all\&.
+.RE
+.PP
+\fB\-\-structured\fR
+.RS 4
+Preserve nested and repeated fields in the result schema\&. If not set, rows in the result are flattened\&.
+.RE
+.PP
+\fB\-\-use\-cache\fR
+.RS 4
+Use the query cache to avoid rerunning cached queries\&.
+.RE
+.PP
+\fB\-\-write\-to\fR \fIWRITE_TO\fR
+.RS 4
+Name of a table to which query results will be written (replacing the old contents of the table, if any)\&.
+.RE
+.SH "GROUP FLAGS"
+.PP
+\fB\-\-fingerprint\-job\-id\fR
+.RS 4
+Whether to use a job id that is derived from a fingerprint of the job configuration\&.
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBbigquery\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in ALPHA and may change without notice\&.

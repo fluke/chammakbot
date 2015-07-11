@@ -1,0 +1,91 @@
+.TH "GCLOUD DNS MANAGED-ZONES" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_dns_managed-zones \- manage your Cloud DNS managed\-zones
+.SH "SYNOPSIS"
+.sp
+gcloud dns managed\-zones \fICOMMAND\fR [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+Manage your Cloud DNS managed\-zones\&.
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "COMMANDS"
+.sp
+\fICOMMAND\fR is one of the following:
+.HP
+\fBcreate\fR
+.RE
+.PP
+\fBdelete\fR
+.RS 4
+Delete an empty Cloud DNS managed\-zone\&.
+.RE
+.PP
+\fBdescribe\fR
+.RS 4
+View the details of a Cloud DNS managed\-zone\&.
+.RE
+.PP
+\fBlist\fR
+.RS 4
+View the list of all your managed\-zones\&.
+.RE
+.SH "EXAMPLES"
+.sp
+To create a managed\-zone, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud dns managed\-zones create my_zone \-\-description="My Zone" \e
+    \-\-dns\-name="my\&.zone\&.com\&."
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To delete a managed\-zone, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud dns managed\-zones delete my_zone
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To view the details of a managed\-zone, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud dns managed\-zones describe my_zone
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To see the list of all managed\-zones, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud dns managed\-zones list
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBdns\fR component\&. See installing components if it is not installed\&.

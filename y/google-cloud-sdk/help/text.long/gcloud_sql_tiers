@@ -1,0 +1,29 @@
+NAME
+
+      gcloud sql tiers - provide a command to list tiers
+
+SYNOPSIS
+
+      gcloud sql tiers COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      Provide a command to list tiers.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      list
+
+         Lists all available service tiers for Google Cloud SQL.
+
+NOTES
+
+      This command is in the Google Cloud SDK sql component. See installing
+      components if it is not installed.
+

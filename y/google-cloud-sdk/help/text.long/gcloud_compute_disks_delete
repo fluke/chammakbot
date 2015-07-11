@@ -1,0 +1,54 @@
+NAME
+
+      gcloud compute disks delete - delete Google Compute Engine persistent
+         disks
+
+SYNOPSIS
+
+      gcloud compute disks delete NAME [NAME ...] [--zone ZONE] [GLOBAL-FLAG
+      ...]
+
+DESCRIPTION
+
+      gcloud compute disks delete deletes one or more Google Compute Engine
+      persistent disks. Disks can be deleted only if they are not being used by
+      any virtual machine instances.
+
+POSITIONAL ARGUMENTS
+
+      NAME [NAME ...]
+
+         The resources to delete.
+
+FLAGS
+
+      --zone ZONE
+
+         The zone of the resources to delete. If not specified, you will be
+         prompted to select a zone.
+
+         To avoid prompting when this flag is omitted, you can set the
+         compute/zone property:
+
+           $ gcloud config set compute/zone ZONE
+
+         A list of zones can be fetched by running:
+
+           $ gcloud compute zones list
+
+         To unset the property, run:
+
+           $ gcloud config unset compute/zone
+
+         Alternatively, the zone can be stored in the environment variable
+         CLOUDSDK_COMPUTE_ZONE.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

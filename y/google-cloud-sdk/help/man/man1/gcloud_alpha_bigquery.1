@@ -1,0 +1,80 @@
+.TH "GCLOUD ALPHA BIGQUERY" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_alpha_bigquery \- a group of commands for using BigQuery
+.SH "SYNOPSIS"
+.sp
+gcloud alpha bigquery \fIGROUP\fR | \fICOMMAND\fR [\fB\-\-fingerprint\-job\-id\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(ALPHA)\fR A group of commands for using BigQuery\&.
+.SH "FLAGS"
+.HP
+\fB\-\-fingerprint\-job\-id\fR
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "GROUPS"
+.sp
+\fIGROUP\fR is one of the following:
+.PP
+\fBdatasets\fR
+.RS 4
+\fB(ALPHA)\fR
+A group of subcommands for working with datasets\&.
+.RE
+.PP
+\fBjobs\fR
+.RS 4
+\fB(ALPHA)\fR
+A group of subcommands for working with BigQuery jobs\&.
+.RE
+.PP
+\fBtables\fR
+.RS 4
+\fB(ALPHA)\fR
+A group of subcommands for working with BigQuery tables\&.
+.RE
+.SH "COMMANDS"
+.sp
+\fICOMMAND\fR is one of the following:
+.PP
+\fBcopy\fR
+.RS 4
+\fB(ALPHA)\fR
+Copy one table to another\&.
+.RE
+.PP
+\fBexport\fR
+.RS 4
+\fB(ALPHA)\fR
+Exports data from a specified source table to one or more destinations\&.
+.RE
+.PP
+\fBimport\fR
+.RS 4
+\fB(ALPHA)\fR
+Import data from a specified source into a specified destination table\&.
+.RE
+.PP
+\fBlist\-projects\fR
+.RS 4
+\fB(ALPHA)\fR
+Lists all the user\(cqs projects for which the Big Query API is enabled\&.
+.RE
+.PP
+\fBquery\fR
+.RS 4
+\fB(ALPHA)\fR
+Executes an SQL query\&.
+.RE
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBbigquery\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in ALPHA and may change without notice\&.

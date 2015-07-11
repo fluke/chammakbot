@@ -1,0 +1,68 @@
+NAME
+
+      gcloud beta deployment-manager deployments create - create a deployment
+
+SYNOPSIS
+
+      gcloud beta deployment-manager deployments create DEPLOYMENT_NAME
+      [--async] --config CONFIG [--description DESCRIPTION] [--preview]
+      [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (BETA) This command inserts (creates) a new deployment based on a provided
+      config file.
+
+POSITIONAL ARGUMENTS
+
+      DEPLOYMENT_NAME
+
+         Deployment name.
+
+FLAGS
+
+      --async
+
+         Return immediately and print information about the Operation in
+         progress rather than waiting for the Operation to complete.
+         (default=False)
+
+      --config CONFIG
+
+         Filename of config which specifies resources to deploy.
+
+      --description DESCRIPTION
+
+         Optional description of the deployment to insert.
+
+      --preview
+
+         Preview the requested create without actually instantiating the
+         underlying resources. (default=False)
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To create a new deployment, run:
+
+        $ gcloud beta deployment-manager deployments create my-deployment \
+            --config config.yaml --description "My deployment"
+
+      To preview a deployment without actually creating resources, run:
+
+        $ gcloud beta deployment-manager deployments create \
+            my-new-deployment --config config.yaml --preview
+
+      To instantiate a deployment that has been previewed, issue an update
+      command for that deployment without specifying a config file.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in BETA and may change without notice.
+

@@ -1,0 +1,52 @@
+NAME
+
+      gcloud compute target-pools delete - delete target pools
+
+SYNOPSIS
+
+      gcloud compute target-pools delete NAME [NAME ...] [--region REGION]
+      [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      gcloud compute target-pools delete deletes one or more Google Compute
+      Engine target pools.
+
+POSITIONAL ARGUMENTS
+
+      NAME [NAME ...]
+
+         The resources to delete.
+
+FLAGS
+
+      --region REGION
+
+         The region of the resources to delete. If not specified, you will be
+         prompted to select a region.
+
+         To avoid prompting when this flag is omitted, you can set the
+         compute/region property:
+
+           $ gcloud config set compute/region REGION
+
+         A list of regions can be fetched by running:
+
+           $ gcloud compute regions list
+
+         To unset the property, run:
+
+           $ gcloud config unset compute/region
+
+         Alternatively, the region can be stored in the environment variable
+         CLOUDSDK_COMPUTE_REGION.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

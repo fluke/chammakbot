@@ -1,0 +1,24 @@
+NAME
+
+      gcloud alpha source list - lists all repositories in a particular project
+
+SYNOPSIS
+
+      gcloud alpha source list [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) By default, repos in the current project are listed; this can be
+      overridden with the gcloud --project flag.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK source component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

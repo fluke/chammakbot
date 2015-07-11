@@ -1,0 +1,48 @@
+NAME
+
+      gcloud alpha bigquery tables show-rows - displays selected rows in a
+         specified table
+
+SYNOPSIS
+
+      gcloud alpha bigquery tables show-rows TABLE [--fingerprint-job-id]
+      [--limit LIMIT; default="100"] [--start-row START_ROW] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) (This command does not apply to views.)
+
+POSITIONAL ARGUMENTS
+
+      TABLE
+
+         The table whose rows are to be shown.
+
+FLAGS
+
+      --limit LIMIT; default="100"
+
+         The maximum number of rows to display.
+
+      --start-row START_ROW
+
+         The number of rows to skip before showing table data.
+
+GROUP FLAGS
+
+      --fingerprint-job-id
+
+         Whether to use a job id that is derived from a fingerprint of the job
+         configuration.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK bigquery component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

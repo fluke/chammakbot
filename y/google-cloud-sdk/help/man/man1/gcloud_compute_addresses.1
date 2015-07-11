@@ -1,0 +1,41 @@
+.TH "GCLOUD COMPUTE ADDRESSES" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_compute_addresses \- read and manipulate Google Compute Engine addresses
+.SH "SYNOPSIS"
+.sp
+gcloud compute addresses \fICOMMAND\fR [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+Read and manipulate Google Compute Engine addresses\&.
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "COMMANDS"
+.sp
+\fICOMMAND\fR is one of the following:
+.HP
+\fBcreate\fR
+.RE
+.PP
+\fBdelete\fR
+.RS 4
+Release reserved IP addresses\&.
+.RE
+.PP
+\fBdescribe\fR
+.RS 4
+Display detailed information about an address\&.
+.RE
+.PP
+\fBlist\fR
+.RS 4
+List addresses\&.
+.RE
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBcompute\fR component\&. See installing components if it is not installed\&.

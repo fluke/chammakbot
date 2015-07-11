@@ -1,0 +1,49 @@
+NAME
+
+      gcloud compute disks - read and manipulate Google Compute Engine disks
+
+SYNOPSIS
+
+      gcloud compute disks COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      Read and manipulate Google Compute Engine disks.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      create
+
+         Create Google Compute Engine persistent disks.
+
+      delete
+
+         Delete Google Compute Engine persistent disks.
+
+      describe
+
+         Describe a Google Compute Engine disk.
+
+      list
+
+         List Google Compute Engine disks.
+
+      move
+
+         Move a disk between zones.
+
+      snapshot
+
+         Snapshot Google Compute Engine persistent disks.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

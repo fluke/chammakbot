@@ -1,0 +1,35 @@
+.TH "GCLOUD SQL INSTANCES RESTORE-BACKUP" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_sql_instances_restore-backup \- restores a backup of a Cloud SQL instance
+.SH "SYNOPSIS"
+.sp
+gcloud sql instances restore\-backup \fIINSTANCE\fR [\fB\-\-async\fR] \fB\-\-due\-time\fR \fIDUE_TIME\fR, \fB\-d\fR \fIDUE_TIME\fR [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+Restores a backup of a Cloud SQL instance\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fIINSTANCE\fR
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-async\fR
+.RS 4
+Do not wait for the operation to complete\&.
+.RE
+.PP
+\fB\-\-due\-time\fR \fIDUE_TIME\fR, \fB\-d\fR \fIDUE_TIME\fR
+.RS 4
+The time when this run was due to start in RFC 3339 format, for example 2012\-11\-15T16:19:00\&.094Z\&.
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBsql\fR component\&. See installing components if it is not installed\&.

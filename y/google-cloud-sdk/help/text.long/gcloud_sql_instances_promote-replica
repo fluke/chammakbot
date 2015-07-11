@@ -1,0 +1,34 @@
+NAME
+
+      gcloud sql instances promote-replica - promotes Cloud SQL read replica to
+         a stand-alone instance
+
+SYNOPSIS
+
+      gcloud sql instances promote-replica REPLICA [--async] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      Promotes Cloud SQL read replica to a stand-alone instance.
+
+POSITIONAL ARGUMENTS
+
+      REPLICA
+
+         Cloud SQL read replica ID.
+
+FLAGS
+
+      --async
+
+         Do not wait for the operation to complete.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK sql component. See installing
+      components if it is not installed.
+

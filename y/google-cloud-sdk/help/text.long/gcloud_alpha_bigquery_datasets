@@ -1,0 +1,57 @@
+NAME
+
+      gcloud alpha bigquery datasets - a group of subcommands for working with
+         datasets
+
+SYNOPSIS
+
+      gcloud alpha bigquery datasets COMMAND [--fingerprint-job-id] [GLOBAL-FLAG
+      ...]
+
+DESCRIPTION
+
+      (ALPHA) A dataset is a collection of related tables.
+
+GROUP FLAGS
+
+      --fingerprint-job-id
+
+         Whether to use a job id that is derived from a fingerprint of the job
+         configuration.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      create
+
+         (ALPHA) Creates a new dataset.
+
+      describe
+
+         (ALPHA) Shows the last-modified date and access-control lists of a
+         dataset.
+
+      list
+
+         (ALPHA) List datasets in the current project.
+
+      patch
+
+         (ALPHA) Updates the description of a dataset.
+
+      remove
+
+         (ALPHA) Removes a dataset.
+
+NOTES
+
+      This command is in the Google Cloud SDK bigquery component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

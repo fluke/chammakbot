@@ -1,0 +1,47 @@
+NAME
+
+      gcloud alpha container operations - get and list operations for Google
+         Container Engine clusters
+
+SYNOPSIS
+
+      gcloud alpha container operations COMMAND [--zone ZONE, -z ZONE]
+      [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Get and list operations for Google Container Engine clusters.
+
+GROUP FLAGS
+
+      --zone ZONE, -z ZONE
+
+         The compute zone (e.g. us-central1-a) for the cluster
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      describe
+
+         (ALPHA) Describe an operation.
+
+      list
+
+         (ALPHA) List operations for container clusters.
+
+      wait
+
+         (ALPHA) Poll an operation for completion.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

@@ -1,0 +1,51 @@
+NAME
+
+      gcloud compute forwarding-rules describe - display detailed information
+         about a forwarding rule
+
+SYNOPSIS
+
+      gcloud compute forwarding-rules describe NAME [--global |
+       --region REGION] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      gcloud compute forwarding-rules describe displays all data associated with
+      a forwarding rule in a project.
+
+POSITIONAL ARGUMENTS
+
+      NAME
+
+         The name of the resource to fetch.
+
+FLAGS
+
+      --global
+
+         If provided, it is assumed that the requested resource is global.
+
+      --region REGION
+
+         The region of the resource to fetch.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To get details about a global forwarding rule, run:
+
+        $ gcloud compute forwarding-rules describe FORWARDING-RULE --global
+
+      To get details about a regional forwarding rule, run:
+
+        $ gcloud compute forwarding-rules describe FORWARDING-RULE \
+            --region us-central1
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

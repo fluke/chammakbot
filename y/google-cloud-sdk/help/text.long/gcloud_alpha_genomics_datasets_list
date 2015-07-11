@@ -1,0 +1,35 @@
+NAME
+
+      gcloud alpha genomics datasets list - list Genomics datasets in a project
+
+SYNOPSIS
+
+      gcloud alpha genomics datasets list [--limit LIMIT]
+      --project-number PROJECT_NUMBER [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Prints a table with summary information on datasets in the
+      project.
+
+FLAGS
+
+      --limit LIMIT
+
+         The maximum number of results to list.
+
+      --project-number PROJECT_NUMBER
+
+         The project number to list datasets for.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

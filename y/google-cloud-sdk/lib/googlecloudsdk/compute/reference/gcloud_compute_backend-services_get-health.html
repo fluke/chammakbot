@@ -1,0 +1,65 @@
+<html devsite="">
+<head>
+<title>gcloud compute backend-services get-health</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="project_path" value="/sdk/_project.yaml">
+<meta name="book_path" value="/sdk/_book.yaml">
+<!--
+        THIS DOC IS GENERATED.  DO NOT EDIT.
+        -->
+<style>
+  dd { margin-bottom: 1ex; }
+  .hangingindent { padding-left: 1.5em; text-indent: -1.5em; }
+</style>
+</head>
+<body><dl>
+<section>
+<dt>NAME</dt>
+<dd>gcloud compute backend-services get-health - get backend health statuses from a backend service</dd>
+</section><section>
+<dt>SYNOPSIS</dt>
+<dd><pre>gcloud compute backend-services get-health NAME [GLOBAL-FLAG …]</pre></dd>
+</section><section>
+<dt>DESCRIPTION</dt>
+<dd>
+<code>gcloud compute backend-services get-health</code> is used to request the current health status of
+instances in a backend service. Every group in the service
+is checked and the health status of each configured instance
+is printed.</dd>
+<dd>If a group contains names of instances that don’t exist or
+instances that haven’t yet been pushed to the load-balancing
+system, they will not show up. Those that are listed as
+<code><var>HEALTHY</var></code> are able to receive load-balanced traffic. Those that
+are marked as <code><var>UNHEALTHY</var></code> are either failing the configured
+health-check or not responding to it.</dd>
+<dd>Since the health checks are performed continuously and in
+a distributed manner, the state returned by this command is
+the most recent result of a vote of several redundant health
+checks. Backend services that do not have a valid global
+forwarding rule referencing it will not be health checked and
+so will have no health status.</dd>
+</section><section>
+<dt>POSITIONAL ARGUMENTS</dt>
+<dd><dl>
+<dt class="hangingindent">
+<code><var>NAME</var></code>
+</dt>
+
+<dd>
+The name of the backend service.
+</dd>
+
+</dl></dd>
+</section><section>
+<dt>GLOBAL FLAGS</dt>
+<dd>Run <code>$ <a href="../../">gcloud</a> help</code> for a description of flags available to
+all commands.</dd>
+</section><section>
+<dt>NOTES</dt>
+<dd>This command is in the Google Cloud SDK <code>compute</code> component. See
+<a href="/sdk/gcloud/#gcloud.components">installing components</a>
+if it is not installed.</dd>
+</section>
+</dl></body>
+</html>
+

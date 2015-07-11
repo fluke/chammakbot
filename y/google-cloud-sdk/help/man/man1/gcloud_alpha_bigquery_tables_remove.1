@@ -1,0 +1,38 @@
+.TH "GCLOUD ALPHA BIGQUERY TABLES REMOVE" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_alpha_bigquery_tables_remove \- removes a specified table or view
+.SH "SYNOPSIS"
+.sp
+gcloud alpha bigquery tables remove \fITABLE_OR_VIEW\fR [\fB\-\-fingerprint\-job\-id\fR] [\fB\-\-ignore\-not\-found\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(ALPHA)\fR The user will be asked to confirm the action unless the \-\-quiet flag is specified\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fITABLE_OR_VIEW\fR
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-ignore\-not\-found\fR
+.RS 4
+Terminate without an error if the specified table does not exist\&.
+.RE
+.SH "GROUP FLAGS"
+.PP
+\fB\-\-fingerprint\-job\-id\fR
+.RS 4
+Whether to use a job id that is derived from a fingerprint of the job configuration\&.
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBbigquery\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in ALPHA and may change without notice\&.

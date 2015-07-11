@@ -1,0 +1,34 @@
+NAME
+
+      gcloud dns managed-zones delete - delete an empty Cloud DNS managed-zone
+
+SYNOPSIS
+
+      gcloud dns managed-zones delete ZONE_NAME [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      This command deletes an empty Cloud DNS managed-zone. An empty
+      managed-zone has only SOA and NS record-sets.
+
+POSITIONAL ARGUMENTS
+
+      ZONE_NAME
+
+         Name of the empty managed-zone to be deleted.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To delete an empty managed-zone, run:
+
+        $ gcloud dns managed-zones delete my_zone
+
+NOTES
+
+      This command is in the Google Cloud SDK dns component. See installing
+      components if it is not installed.
+

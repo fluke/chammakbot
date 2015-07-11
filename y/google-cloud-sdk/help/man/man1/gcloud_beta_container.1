@@ -1,0 +1,50 @@
+.TH "GCLOUD BETA CONTAINER" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_beta_container \- deploy and manage clusters of machines for running containers
+.SH "SYNOPSIS"
+.sp
+gcloud beta container \fIGROUP\fR | \fICOMMAND\fR [\fB\-\-zone\fR \fIZONE\fR, \fB\-z\fR \fIZONE\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(BETA)\fR Deploy and manage clusters of machines for running containers\&.
+.SH "FLAGS"
+.HP
+\fB\-\-zone\fR \fIZONE\fR, \fB\-z\fR \fIZONE\fR
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "GROUPS"
+.sp
+\fIGROUP\fR is one of the following:
+.PP
+\fBclusters\fR
+.RS 4
+\fB(BETA)\fR
+Deploy and teardown Google Container Engine clusters\&.
+.RE
+.PP
+\fBoperations\fR
+.RS 4
+\fB(BETA)\fR
+Get and list operations for Google Container Engine clusters\&.
+.RE
+.SH "COMMANDS"
+.sp
+\fICOMMAND\fR is one of the following:
+.PP
+\fBget\-credentials\fR
+.RS 4
+\fB(BETA)\fR
+Fetch credentials for a running cluster\&.
+.RE
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBgcloud\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in BETA and may change without notice\&.

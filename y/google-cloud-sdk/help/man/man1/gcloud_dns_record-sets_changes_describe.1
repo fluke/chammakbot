@@ -1,0 +1,43 @@
+.TH "GCLOUD DNS RECORD-SETS CHANGES DESCRIBE" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_dns_record-sets_changes_describe \- view the details of a change
+.SH "SYNOPSIS"
+.sp
+gcloud dns record\-sets changes describe \fICHANGE_ID\fR [\fB\-\-zone\fR \fIZONE\fR, \fB\-z\fR \fIZONE\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+This command displays the details of the specified change\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fICHANGE_ID\fR
+.RE
+.SH "GROUP FLAGS"
+.PP
+\fB\-\-zone\fR \fIZONE\fR, \fB\-z\fR \fIZONE\fR
+.RS 4
+Name of the managed\-zone whose record\-sets you want to manage\&.
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "EXAMPLES"
+.sp
+To display the details of a change, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud dns record\-sets changes describe change_id
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBdns\fR component\&. See installing components if it is not installed\&.

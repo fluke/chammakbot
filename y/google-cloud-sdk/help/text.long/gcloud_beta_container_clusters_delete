@@ -1,0 +1,44 @@
+NAME
+
+      gcloud beta container clusters delete - delete an existing cluster for
+         running containers
+
+SYNOPSIS
+
+      gcloud beta container clusters delete NAME [NAME ...] [--no-wait]
+      [--zone ZONE, -z ZONE] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (BETA) Delete an existing cluster for running containers.
+
+POSITIONAL ARGUMENTS
+
+      NAME [NAME ...]
+
+         The names of the clusters to delete.
+
+FLAGS
+
+      --no-wait
+
+         Return after issuing delete request without polling the operation for
+         completion.
+
+GROUP FLAGS
+
+      --zone ZONE, -z ZONE
+
+         The compute zone (e.g. us-central1-a) for the cluster
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in BETA and may change without notice.
+

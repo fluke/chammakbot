@@ -1,0 +1,39 @@
+NAME
+
+      gcloud dns record-sets transaction abort - abort transaction
+
+SYNOPSIS
+
+      gcloud dns record-sets transaction abort
+      [--transaction-file TRANSACTION_FILE; default="transaction.yaml"]
+      [--zone ZONE, -z ZONE] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      This command aborts the transaction and deletes the transaction file.
+
+GROUP FLAGS
+
+      --transaction-file TRANSACTION_FILE; default="transaction.yaml"
+
+         Path of the file which contains the transaction.
+
+      --zone ZONE, -z ZONE
+
+         Name of the managed-zone whose record-sets you want to manage.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To abort the transaction, run:
+
+        $ gcloud dns record-sets transaction abort -z MANAGED_ZONE
+
+NOTES
+
+      This command is in the Google Cloud SDK dns component. See installing
+      components if it is not installed.
+

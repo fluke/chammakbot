@@ -1,0 +1,59 @@
+.TH "GCLOUD BETA DEPLOYMENT-MANAGER MANIFESTS LIST" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_beta_deployment-manager_manifests_list \- list manifests in a deployment
+.SH "SYNOPSIS"
+.sp
+gcloud beta deployment\-manager manifests list [\fB\-\-deployment\fR \fIDEPLOYMENT\fR] [\fB\-\-limit\fR \fILIMIT\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(BETA)\fR Prints a table with summary information on all manifests in the deployment\&.
+.SH "FLAGS"
+.HP
+\fB\-\-limit\fR \fILIMIT\fR
+.RE
+.SH "GROUP FLAGS"
+.PP
+\fB\-\-deployment\fR \fIDEPLOYMENT\fR
+.RS 4
+Deployment name
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "EXAMPLES"
+.sp
+To print out a list of manifests in a deployment, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud beta deployment\-manager manifests list \e
+    \-\-deployment my\-deployment
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To print only the name of each manifest, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud beta deployment\-manager manifests list \e
+    \-\-deployment my\-deployment \-\-simple\-list
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBgcloud\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in BETA and may change without notice\&.

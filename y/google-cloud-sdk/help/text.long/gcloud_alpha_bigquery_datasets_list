@@ -1,0 +1,41 @@
+NAME
+
+      gcloud alpha bigquery datasets list - list datasets in the current project
+
+SYNOPSIS
+
+      gcloud alpha bigquery datasets list [--all ALL] [--fingerprint-job-id]
+      [--limit LIMIT; default="100"] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) List datasets in the current project.
+
+FLAGS
+
+      --all ALL
+
+         List even hidden datasets.
+
+      --limit LIMIT; default="100"
+
+         The maximum number of datasets to list
+
+GROUP FLAGS
+
+      --fingerprint-job-id
+
+         Whether to use a job id that is derived from a fingerprint of the job
+         configuration.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK bigquery component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

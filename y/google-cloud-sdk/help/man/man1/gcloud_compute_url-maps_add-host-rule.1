@@ -1,0 +1,60 @@
+.TH "GCLOUD COMPUTE URL-MAPS ADD-HOST-RULE" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_compute_url-maps_add-host-rule \- add a rule to a URL map to map hosts to a path matcher
+.SH "SYNOPSIS"
+.sp
+gcloud compute url\-maps add\-host\-rule \fINAME\fR [\fB\-\-description\fR \fIDESCRIPTION\fR] \fB\-\-hosts\fR \fIHOST\fR,[\fIHOST\fR,\&...] \fB\-\-path\-matcher\-name\fR \fIPATH_MATCHER_NAME\fR [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute url\-maps add\-host\-rule\fR is used to add a mapping of hosts to a patch matcher in a URL map\&. The mapping will match the host component of HTTP requests to path matchers which in turn map the request to a backend service\&. Before adding a host rule, at least one path matcher must exist in the URL map to take care of the path component of the requests\&. \fIgcloud compute url\-maps add\-path\-matcher\fR or \fIgcloud compute url\-maps edit\fR can be used to add path matchers\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fINAME\fR
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-description\fR \fIDESCRIPTION\fR
+.RS 4
+An optional, textual description for the host rule\&.
+.RE
+.PP
+\fB\-\-hosts\fR \fIHOST\fR,[\fIHOST\fR,\&...]
+.RS 4
+The set of hosts to match requests against\&. Each host must be a fully qualified domain name (FQDN) with the exception that the host can begin with a
+\fI*\fR
+or
+\fI*\-\fR\&.
+\fI*\fR
+acts as a glob and will match any string of atoms to the left where an atom is separated by dots (\fI\&.\fR) or dashes (\fI\-\fR)\&.
+.RE
+.PP
+\fB\-\-path\-matcher\-name\fR \fIPATH_MATCHER_NAME\fR
+.RS 4
+The name of the patch matcher to use if a request matches this host rule\&. The patch matcher must already exist in the URL map (see
+\fIgcloud compute url\-maps add\-path\-matcher\fR)\&.
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "EXAMPLES"
+.sp
+To create a host rule mapping the \fI*\-foo\&.google\&.com\fR and \fIgoogle\&.com\fR hosts to the \fIwww\fR path matcher, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud compute url\-maps add\-host\-rule MY\-URL\-MAP \e
+    \-\-hosts *\-foo\&.google\&.com google\&.com \-\-path\-matcher\-name www
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBcompute\fR component\&. See installing components if it is not installed\&.

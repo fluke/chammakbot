@@ -1,0 +1,41 @@
+.TH "GCLOUD COMPUTE PROJECT-INFO" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_compute_project-info \- read and manipulate project\-level data like quotas and metadata
+.SH "SYNOPSIS"
+.sp
+gcloud compute project\-info \fICOMMAND\fR [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+Read and manipulate project\-level data like quotas and metadata\&.
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "COMMANDS"
+.sp
+\fICOMMAND\fR is one of the following:
+.HP
+\fBadd\-metadata\fR
+.RE
+.PP
+\fBdescribe\fR
+.RS 4
+Describe the Google Compute Engine project resource\&.
+.RE
+.PP
+\fBremove\-metadata\fR
+.RS 4
+Remove project\-wide metadata entries\&.
+.RE
+.PP
+\fBset\-usage\-bucket\fR
+.RS 4
+Set the usage reporting bucket for a project\&.
+.RE
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBcompute\fR component\&. See installing components if it is not installed\&.

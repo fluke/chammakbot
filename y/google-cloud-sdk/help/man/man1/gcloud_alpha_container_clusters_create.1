@@ -1,0 +1,118 @@
+.TH "GCLOUD ALPHA CONTAINER CLUSTERS CREATE" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_alpha_container_clusters_create \- create a cluster for running containers
+.SH "SYNOPSIS"
+.sp
+gcloud alpha container clusters create \fINAME\fR [\fB\-\-cluster\-api\-version\fR \fICLUSTER_API_VERSION\fR] [\fB\-\-container\-ipv4\-cidr\fR \fICONTAINER_IPV4_CIDR\fR] [\fB\-\-machine\-type\fR \fIMACHINE_TYPE\fR, \fB\-m\fR \fIMACHINE_TYPE\fR] [\fB\-\-network\fR \fINETWORK\fR] [\fB\-\-no\-enable\-cloud\-logging\fR] [\fB\-\-no\-wait\fR] [\fB\-\-num\-nodes\fR \fINUM_NODES\fR; default="3"] [\fB\-\-password\fR \fIPASSWORD\fR] [\fB\-\-scopes\fR \fISCOPE\fR,[\fISCOPE\fR,\&...]] [\fB\-\-source\-image\fR \fISOURCE_IMAGE\fR] [\fB\-\-user\fR \fIUSER\fR, \fB\-u\fR \fIUSER\fR; default="admin"] [\fB\-\-zone\fR \fIZONE\fR, \fB\-z\fR \fIZONE\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(ALPHA)\fR Create a cluster for running containers\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fINAME\fR
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-cluster\-api\-version\fR \fICLUSTER_API_VERSION\fR
+.RS 4
+The kubernetes release version to launch the cluster with\&. Defaults to server\-specified\&.
+.RE
+.PP
+\fB\-\-container\-ipv4\-cidr\fR \fICONTAINER_IPV4_CIDR\fR
+.RS 4
+The IP addresses of the container pods in this cluster in CIDR notation (e\&.g\&. 10\&.0\&.0\&.0/14)\&. Defaults to server\-specified
+.RE
+.PP
+\fB\-\-machine\-type\fR \fIMACHINE_TYPE\fR, \fB\-m\fR \fIMACHINE_TYPE\fR
+.RS 4
+The type of machine to use for workers\&. Defaults to server\-specified
+.RE
+.PP
+\fB\-\-network\fR \fINETWORK\fR
+.RS 4
+The Compute Engine Network that the cluster will connect to\&. Google Container Engine will use this network when creating routes and firewalls for the clusters\&. Defaults to the
+\fIdefault\fR
+network\&.
+.RE
+.PP
+\fB\-\-no\-enable\-cloud\-logging\fR
+.RS 4
+Don\(cqt automatically send logs from the cluster to the Google Cloud Logging API\&.
+.RE
+.PP
+\fB\-\-no\-wait\fR
+.RS 4
+Return after issuing create request without polling the operation for completion\&.
+.RE
+.PP
+\fB\-\-num\-nodes\fR \fINUM_NODES\fR; default="3"
+.RS 4
+The number of nodes in the cluster\&.
+.RE
+.PP
+\fB\-\-password\fR \fIPASSWORD\fR
+.RS 4
+The password to use for cluster auth\&. Defaults to a randomly\-generated string\&.
+.RE
+.PP
+\fB\-\-scopes\fR \fISCOPE\fR,[\fISCOPE\fR,\&...]
+.RS 4
+Specifies scopes for the node instances\&. The project\(cqs default service account is used\&. Examples:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud alpha container clusters create example\-cluster \e
+    \-\-scopes https://www\&.googleapis\&.com/auth/devstorage\&.read_only
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud alpha container clusters create example\-cluster \e
+    \-\-scopes bigquery,storage\-rw,compute\-ro
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+Multiple SCOPEs can specified, separated by commas\&. The scopes necessary for the cluster to function properly (compute\-rw, storage\-ro), are always added, even if not explicitly specified\&.
+.sp
+SCOPE can be either the full URI of the scope or an alias\&. Available aliases are:
+.sp
+Alias,URI bigquery,https://www\&.googleapis\&.com/auth/bigquery cloud\-platform,https://www\&.googleapis\&.com/auth/cloud\-platform compute\-ro,https://www\&.googleapis\&.com/auth/compute\&.readonly compute\-rw,https://www\&.googleapis\&.com/auth/compute computeaccounts\-ro,https://www\&.googleapis\&.com/auth/computeaccounts\&.readonly computeaccounts\-rw,https://www\&.googleapis\&.com/auth/computeaccounts datastore,https://www\&.googleapis\&.com/auth/datastore logging\-write,https://www\&.googleapis\&.com/auth/logging\&.write monitoring,https://www\&.googleapis\&.com/auth/monitoring sql,https://www\&.googleapis\&.com/auth/sqlservice sql\-admin,https://www\&.googleapis\&.com/auth/sqlservice\&.admin storage\-full,https://www\&.googleapis\&.com/auth/devstorage\&.full_control storage\-ro,https://www\&.googleapis\&.com/auth/devstorage\&.read_only storage\-rw,https://www\&.googleapis\&.com/auth/devstorage\&.read_write taskqueue,https://www\&.googleapis\&.com/auth/taskqueue userinfo\-email,https://www\&.googleapis\&.com/auth/userinfo\&.email
+.RE
+.PP
+\fB\-\-source\-image\fR \fISOURCE_IMAGE\fR
+.RS 4
+The source image to use for workers\&. Defaults to server\-specified
+.RE
+.PP
+\fB\-\-user\fR \fIUSER\fR, \fB\-u\fR \fIUSER\fR; default="admin"
+.RS 4
+The user name to use for cluster auth\&.
+.RE
+.SH "GROUP FLAGS"
+.PP
+\fB\-\-zone\fR \fIZONE\fR, \fB\-z\fR \fIZONE\fR
+.RS 4
+The compute zone (e\&.g\&. us\-central1\-a) for the cluster
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBgcloud\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in ALPHA and may change without notice\&.

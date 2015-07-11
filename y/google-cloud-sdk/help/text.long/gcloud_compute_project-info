@@ -1,0 +1,42 @@
+NAME
+
+      gcloud compute project-info - read and manipulate project-level data like
+         quotas and metadata
+
+SYNOPSIS
+
+      gcloud compute project-info COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      Read and manipulate project-level data like quotas and metadata.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      add-metadata
+
+         Add or update project-wide metadata.
+
+      describe
+
+         Describe the Google Compute Engine project resource.
+
+      remove-metadata
+
+         Remove project-wide metadata entries.
+
+      set-usage-bucket
+
+         Set the usage reporting bucket for a project.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

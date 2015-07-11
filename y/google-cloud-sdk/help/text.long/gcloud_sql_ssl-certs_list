@@ -1,0 +1,28 @@
+NAME
+
+      gcloud sql ssl-certs list - lists all SSL certs for a Cloud SQL instance
+
+SYNOPSIS
+
+      gcloud sql ssl-certs list [--instance INSTANCE, -i INSTANCE] [GLOBAL-FLAG
+      ...]
+
+DESCRIPTION
+
+      Lists all SSL certs for a Cloud SQL instance.
+
+GROUP FLAGS
+
+      --instance INSTANCE, -i INSTANCE
+
+         Cloud SQL instance ID.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK sql component. See installing
+      components if it is not installed.
+

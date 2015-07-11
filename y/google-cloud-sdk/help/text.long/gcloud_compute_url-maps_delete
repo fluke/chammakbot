@@ -1,0 +1,27 @@
+NAME
+
+      gcloud compute url-maps delete - delete URL maps
+
+SYNOPSIS
+
+      gcloud compute url-maps delete NAME [NAME ...] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      gcloud compute url-maps delete deletes one or more URL maps.
+
+POSITIONAL ARGUMENTS
+
+      NAME [NAME ...]
+
+         The resources to delete.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

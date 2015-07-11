@@ -1,0 +1,65 @@
+NAME
+
+      gcloud compute url-maps - list, create, and delete URL maps
+
+SYNOPSIS
+
+      gcloud compute url-maps COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      List, create, and delete URL maps.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      add-host-rule
+
+         Add a rule to a URL map to map hosts to a path matcher.
+
+      add-path-matcher
+
+         Add a path matcher to a URL map.
+
+      create
+
+         Create a URL map.
+
+      delete
+
+         Delete URL maps.
+
+      describe
+
+         Describe a URL map.
+
+      edit
+
+         Modify URL maps.
+
+      list
+
+         List Google Compute Engine URL maps.
+
+      remove-host-rule
+
+         Remove a host rule from a URL map.
+
+      remove-path-matcher
+
+         Remove a path matcher from a URL map.
+
+      set-default-service
+
+         Change the default service of a URL map.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

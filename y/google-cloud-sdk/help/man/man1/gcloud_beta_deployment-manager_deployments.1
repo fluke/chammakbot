@@ -1,0 +1,122 @@
+.TH "GCLOUD BETA DEPLOYMENT-MANAGER DEPLOYMENTS" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_beta_deployment-manager_deployments \- commands for Deployment Manager V2 deployments
+.SH "SYNOPSIS"
+.sp
+gcloud beta deployment\-manager deployments \fICOMMAND\fR [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(BETA)\fR Commands to create, update, delete, and examine deployments of resources\&.
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "COMMANDS"
+.sp
+\fICOMMAND\fR is one of the following:
+.HP
+\fBcancel\fR
+Cancel a pending or running deployment preview, update or creation\&.
+.RE
+.PP
+\fBcreate\fR
+.RS 4
+\fB(BETA)\fR
+Create a deployment\&.
+.RE
+.PP
+\fBdelete\fR
+.RS 4
+\fB(BETA)\fR
+Delete a deployment\&.
+.RE
+.PP
+\fBdescribe\fR
+.RS 4
+\fB(BETA)\fR
+Provide information about a deployment\&.
+.RE
+.PP
+\fBlist\fR
+.RS 4
+\fB(BETA)\fR
+List deployments in a project\&.
+.RE
+.PP
+\fBupdate\fR
+.RS 4
+\fB(BETA)\fR
+Update a deployment based on a provided config file\&.
+.RE
+.SH "EXAMPLES"
+.sp
+To create a deployment, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud beta deployment\-manager deployments create my\-deployment \e
+    \-\-config config\&.yaml
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To update a deployment, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud beta deployment\-manager deployments update my\-deployment \e
+    \-\-config new_config\&.yaml
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To delete a deployment, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud beta deployment\-manager deployments delete my\-deployment
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To view the details of a deployment, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud beta deployment\-manager deployments describe my\-deployment
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To see the list of all deployments, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud beta deployment\-manager deployments list
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBgcloud\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in BETA and may change without notice\&.

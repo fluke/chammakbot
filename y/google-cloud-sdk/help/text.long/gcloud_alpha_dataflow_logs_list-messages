@@ -1,0 +1,50 @@
+NAME
+
+      gcloud alpha dataflow logs list-messages - retrieve the logs from a
+         specific job using the GetMessages RPC
+
+SYNOPSIS
+
+      gcloud alpha dataflow logs list-messages JOB_ID [--after AFTER]
+      [--before BEFORE] [--importance IMPORTANCE; default="warning"]
+      [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) This is intended for short-term use and will be removed once the
+      CLI based on Cloud Logging is available.
+
+POSITIONAL ARGUMENTS
+
+      JOB_ID
+
+         The job ID to operate on.
+
+FLAGS
+
+      --after AFTER
+
+         Only display messages logged after the given time.
+
+      --before BEFORE
+
+         Only display messages logged before the given time.
+
+      --importance IMPORTANCE; default="warning"
+
+         Minimum importance a message must have to be displayed
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is an internal implementation detail and may change or
+      disappear without notice.
+
+      This command is currently in ALPHA and may change without notice.
+

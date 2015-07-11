@@ -1,0 +1,48 @@
+NAME
+
+      gcloud alpha bigquery datasets create - creates a new dataset
+
+SYNOPSIS
+
+      gcloud alpha bigquery datasets create DATASET_NAME
+      [--description DESCRIPTION] [--fingerprint-job-id]
+      [--if-exists IF_EXISTS; default="fail"] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Creates a new dataset.
+
+POSITIONAL ARGUMENTS
+
+      DATASET_NAME
+
+         The name of the dataset being created.
+
+FLAGS
+
+      --description DESCRIPTION
+
+         Description of the dataset.
+
+      --if-exists IF_EXISTS; default="fail"
+
+         What to do if the dataset already exists.
+
+GROUP FLAGS
+
+      --fingerprint-job-id
+
+         Whether to use a job id that is derived from a fingerprint of the job
+         configuration.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK bigquery component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

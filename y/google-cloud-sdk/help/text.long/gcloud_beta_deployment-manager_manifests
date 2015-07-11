@@ -1,0 +1,55 @@
+NAME
+
+      gcloud beta deployment-manager manifests - commands for Deployment Manager
+         V2 manifests
+
+SYNOPSIS
+
+      gcloud beta deployment-manager manifests COMMAND [--deployment DEPLOYMENT]
+      [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (BETA) Commands to list and examine manifests within a deployment.
+
+FLAGS
+
+      --deployment DEPLOYMENT
+
+         Deployment name
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      describe
+
+         (BETA) Provide information about a manifest.
+
+      list
+
+         (BETA) List manifests in a deployment.
+
+EXAMPLES
+
+      To view all details about a manifest, run:
+
+        $ gcloud beta deployment-manager manifests describe manifest-name \
+            --deployment my-deployment
+
+      To see the list of all manifests in a deployment, run:
+
+        $ gcloud beta deployment-manager manifests list \
+            --deployment my-deployment
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in BETA and may change without notice.
+

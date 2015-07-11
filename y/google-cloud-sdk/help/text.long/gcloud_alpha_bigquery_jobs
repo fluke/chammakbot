@@ -1,0 +1,53 @@
+NAME
+
+      gcloud alpha bigquery jobs - a group of subcommands for working with
+         BigQuery jobs
+
+SYNOPSIS
+
+      gcloud alpha bigquery jobs COMMAND [--fingerprint-job-id] [GLOBAL-FLAG
+      ...]
+
+DESCRIPTION
+
+      (ALPHA) A group of subcommands for working with BigQuery jobs.
+
+GROUP FLAGS
+
+      --fingerprint-job-id
+
+         Whether to use a job id that is derived from a fingerprint of the job
+         configuration.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      describe
+
+         (ALPHA) Shows information about a specified job.
+
+      list
+
+         (ALPHA) Lists all jobs in a particular project.
+
+      show-rows
+
+         (ALPHA) Displays selected rows in the result of a query job.
+
+      wait
+
+         (ALPHA) Waits up to a specified number of seconds for a specified job
+         to finish.
+
+NOTES
+
+      This command is in the Google Cloud SDK bigquery component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

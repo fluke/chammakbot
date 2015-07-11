@@ -1,0 +1,50 @@
+.TH "GCLOUD ALPHA SOURCE CLONE" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_alpha_source_clone \- clone project git repository in the current directory
+.SH "SYNOPSIS"
+.sp
+gcloud alpha source clone \fIREPOSITORY_NAME\fR [\fIDIRECTORY_NAME\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+This command clones git repository for the currently active Google Cloud Platform project into specified folder in current directory\&.
+.sp
+If you have enabled push\-to\-deploy in the Cloud Console, this gcloud alpha source clone will clone the Google\-hosted git repository associated with PROJECT\&. This repository will automatically be connected to Google, and it will use the credentials indicated as \fIactive\fR by gcloud auth list\&. Pushing to the origin\(cqs \fImaster\fR branch will trigger an App Engine deployment using the contents of that branch\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fIREPOSITORY_NAME\fR
+.RE
+.PP
+[\fIDIRECTORY_NAME\fR]
+.RS 4
+Directory name for the cloned repo\&. Defaults repo name\&.
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "EXAMPLES"
+.sp
+To perform a simple "Hello, world!" App Engine deployment with this command, run the following command lines with MYPROJECT replaced by a project you own and can use for this experiment\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud source clone REPOSITORY_NAME
+$ cd REPOSITORY_NAME
+$ git pull
+  https://github\&.com/GoogleCloudPlatform/appengine\-helloworld\-python
+$ git push origin master
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBsource\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in ALPHA and may change without notice\&.

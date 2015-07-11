@@ -1,0 +1,48 @@
+NAME
+
+      gcloud beta deployment-manager deployments list - list deployments in a
+         project
+
+SYNOPSIS
+
+      gcloud beta deployment-manager deployments list [--limit LIMIT]
+      [--simple-list] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (BETA) Prints a table with summary information on all deployments in the
+      project.
+
+FLAGS
+
+      --limit LIMIT
+
+         The maximum number of results to list.
+
+      --simple-list
+
+         If true, only the list of resource IDs is printed. If false, prints a
+         human-readable table of resource information.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To print out a list of deployments with some summary information about
+      each, run:
+
+        $ gcloud beta deployment-manager deployments list
+
+      To print only the name of each deployment, run:
+
+        $ gcloud beta deployment-manager deployments list --simple-list
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in BETA and may change without notice.
+

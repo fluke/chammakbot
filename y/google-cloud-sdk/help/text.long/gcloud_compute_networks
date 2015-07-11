@@ -1,0 +1,42 @@
+NAME
+
+      gcloud compute networks - list, create, and delete Google Compute Engine
+         networks
+
+SYNOPSIS
+
+      gcloud compute networks COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      List, create, and delete Google Compute Engine networks.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      create
+
+         Create a Google Compute Engine network.
+
+      delete
+
+         Delete Google Compute Engine networks.
+
+      describe
+
+         Describe a Google Compute Engine network.
+
+      list
+
+         List Google Compute Engine networks.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

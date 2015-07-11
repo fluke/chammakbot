@@ -1,0 +1,40 @@
+NAME
+
+      gcloud alpha test - interact with Google Cloud Test Lab
+
+SYNOPSIS
+
+      gcloud alpha test GROUP | COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Explore devices and OS versions available as test targets, run
+      tests, monitor test progress, and view detailed test results.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+GROUPS
+
+      GROUP is one of the following:
+
+      devices
+
+         (ALPHA) Explore testing device environments and characteristics.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      run
+
+         (ALPHA) Invoke a test in Google Cloud Test Lab and view test results.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

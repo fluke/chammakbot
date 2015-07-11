@@ -1,0 +1,239 @@
+NAME
+
+      gcloud alpha test run - invoke a test in Google Cloud Test Lab and view
+         test results
+
+SYNOPSIS
+
+      gcloud alpha test run [ARGSPEC] [--app APP, -a APP]
+      [--app-initial-activity APP_INITIAL_ACTIVITY]
+      [--app-package APP_PACKAGE, -A APP_PACKAGE] [--async]
+      [--device-ids DEVICE_ID,[DEVICE_ID,...], -d DEVICE_ID,[DEVICE_ID,...]]
+      [--event-count int] [--event-delay int]
+      [--locales LOCALE,[LOCALE,...], -l LOCALE,[LOCALE,...]] [--max-depth int]
+      [--max-steps int]
+      [--orientations ORIENTATION,[ORIENTATION,...], -o ORIENTATION,[ORIENTATION,...]]
+      [--os-version-ids OS_VERSION_ID,[OS_VERSION_ID,...], -v OS_VERSION_ID,[OS_VERSION_ID,...]]
+      [--random-seed int] [--results-bucket RESULTS_BUCKET, -b RESULTS_BUCKET]
+      [--results-history-name RESULTS_HISTORY_NAME, -H RESULTS_HISTORY_NAME]
+      [--test TEST, -t TEST] [--test-package TEST_PACKAGE, -T TEST_PACKAGE]
+      [--test-runner-class TEST_RUNNER_CLASS, -r TEST_RUNNER_CLASS]
+      [--test-targets TEST_TARGET,[TEST_TARGET,...]] [--timeout TIMEOUT]
+      [--type TYPE, -y TYPE] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      gcloud alpha test run invokes and monitors tests in Google Cloud Test Lab.
+
+      Three main types of tests are currently supported: o robo: runs a smart,
+      automated exploration of the activities in
+        your Android app which records any installation failures or crashes
+        and builds an activity map with associated screenshots and video.
+      o instrumentation: runs automated unit or integration tests written
+        using a testing framework. Google Cloud Test Lab initially supports
+        the Espresso and Robotium testing frameworks for Android.
+      o monkey: runs an Android UIAutomator test.
+
+      The type of test to run can be specified with the --type flag, although
+      the type can often be inferred from other flags. Specifically, if the
+      --test flag is present, the test --type will default to instrumentation.
+      If --test is not present, then --type defaults to robo.
+
+      All arguments for gcloud alpha test run may be specified on the command
+      line and/or within an argument file. Run $ gcloud topic arg-files for more
+      information about argument files.
+
+POSITIONAL ARGUMENTS
+
+      [ARGSPEC]
+
+         An ARG_FILE:ARG_GROUP_NAME pair, where ARG_FILE is the path to a file
+         containing groups of test arguments in yaml format, and ARG_GROUP_NAME
+         is the particular yaml object holding a group of arg:value pairs to
+         use. Run $ gcloud topic arg-files for more information and examples.
+
+FLAGS
+
+      --app APP, -a APP
+
+         The path to the application binary file. The path may be in the local
+         filesystem or in Google Cloud Storage using gs:// notation.
+
+      --app-initial-activity APP_INITIAL_ACTIVITY
+
+         The initial activity used to start the app during a robo test.
+
+      --app-package APP_PACKAGE, -A APP_PACKAGE
+
+         The Java package of the application under test (default: extracted from
+         the APK manifest).
+
+      --async
+
+         Invoke a test asynchronously without waiting for test results.
+
+      --device-ids DEVICE_ID,[DEVICE_ID,...], -d DEVICE_ID,[DEVICE_ID,...]
+
+         The list of DEVICE_IDs to test against (default: one device determined
+         by Google Cloud Test Lab's device catalog; see TAGS listed by the $
+         gcloud alpha test devices list command).
+
+      --event-count int
+
+         Number of simulated user events to create during a monkey test
+         (default: 1000).
+
+      --event-delay int
+
+         Fixed delay in milliseconds inserted between simulated events in a
+         monkey test (default: 0).
+
+      --locales LOCALE,[LOCALE,...], -l LOCALE,[LOCALE,...]
+
+         The list of LOCALEs to test against (default: a single locale
+         determined by Google Cloud Test Lab's device catalog).
+
+      --max-depth int
+
+         The maximum depth of the traversal stack a robo test can explore
+         (default: 50).
+
+      --max-steps int
+
+         The maximum number of steps/actions a robo test can execute (default:
+         no limit).
+
+      --orientations ORIENTATION,[ORIENTATION,...], -o
+         ORIENTATION,[ORIENTATION,...]
+
+         The device orientation(s) to test against. Choices: portrait, landscape
+         (default: portrait).
+
+      --os-version-ids OS_VERSION_ID,[OS_VERSION_ID,...], -v
+         OS_VERSION_ID,[OS_VERSION_ID,...]
+
+         The list of OS_VERSION_IDs to test against (default: a version ID
+         determined by Google Cloud Test Lab's device catalog).
+
+      --random-seed int
+
+         Seed value for the pseudo-random number generator used during a monkey
+         test (default: 0).
+
+      --results-bucket RESULTS_BUCKET, -b RESULTS_BUCKET
+
+         The name of a Google Cloud Storage bucket where test results will be
+         stored (default: "cloud-test-<PROJECT-ID>").
+
+      --results-history-name RESULTS_HISTORY_NAME, -H RESULTS_HISTORY_NAME
+
+         The history name for your test results (an arbitrary string label;
+         default: the application's label from the APK manifest). All tests
+         which use the same history name will have their results grouped
+         together in the Google Developers Console in a time-ordered test
+         history list.
+
+      --test TEST, -t TEST
+
+         The path to the test binary file. The given path may be in the local
+         filesystem or in Google Cloud Storage using gs:// notation.
+
+      --test-package TEST_PACKAGE, -T TEST_PACKAGE
+
+         The Java package name of the test (default: extracted from the APK
+         manifest).
+
+      --test-runner-class TEST_RUNNER_CLASS, -r TEST_RUNNER_CLASS
+
+         The fully-qualified Java class name of the instrumentation test runner
+         (default: the last name extracted from the APK manifest).
+
+      --test-targets TEST_TARGET,[TEST_TARGET,...]
+
+         A list of one or more test targets to be run (default: all targets).
+         Each target must be fully qualified with the package name or class
+         name, in one of these formats: o "package package_name"
+         o "class package_name.class_name"
+         o "class package_name.class_name#method_name".
+
+      --timeout TIMEOUT
+
+         The max time this test execution can run before it is cancelled
+         (default: 15m). The TIMEOUT units can be h, m, or s. If no unit is
+         given, seconds are assumed. Examples: o --timeout 1h is 1 hour
+         o --timeout 5m is 5 minutes
+         o --timeout 200s is 200 seconds
+         o --timeout 100 is 100 seconds
+
+      --type TYPE, -y TYPE
+
+         The type of test to run (TYPE may be one of: instrumentation, robo,
+         monkey).
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To invoke a robo test lasting 100 seconds against the default device
+      environment, run:
+
+        $ gcloud alpha test run --app APP_APK --timeout 100s
+
+      To invoke a monkey test against a virtual Nexus9 device in landscape
+      orientation, run:
+
+        $ gcloud alpha test run --type monkey --app APP_APK \
+            --device-id Nexus9 --orientation landscape
+
+      To invoke an instrumentation test (Espresso or Robotium) against a
+      physical Nexus 4 device (DEVICE_ID: mako) which is running Android API
+      level 18 in French, run:
+
+        $ gcloud alpha test run --app APP_APK --test TEST_APK \
+            --device-id mako --os-version-id 18 --locale fr \
+            --orientation portrait
+
+      To run the same test as above using short flags, run:
+
+        $ gcloud alpha test run -a APP_APK -t TEST_APK -d mako -v 18 -l fr \
+            -o portrait
+
+      To run a series of 5-minute robo tests against a comprehensive matrix of
+      virtual and physical devices, OS versions and locales, run:
+
+        $ gcloud alpha test run --app APP_APK --timeout 5m \
+            --device-ids mako,shamu,Nexus5,Nexus6,k3g \
+            --os-version-ids 17,18,19,21,22 \
+            --locales de,en_US,en_GB,es,fr,it,ru,zh
+
+      To run an instrumentation test against the default test environment, but
+      using a specific Google Cloud Storage bucket to hold the raw test results
+      and specifying the name under which the history of your tests will be
+      collected and displayed in the Google Developers Console, run:
+
+        $ gcloud alpha test run -a APP_APK -t TEST_APK \
+            --results-bucket excelsior-app-results-bucket \
+            --results-history-name 'Excelsior App Test History'
+
+      All test arguments for a given test may alternatively be stored in an
+      argument group within a YAML-formatted argument file. The ARG_FILE may
+      contain one or more named argument groups, and argument groups may be
+      combined using the include: attribute (Run $ gcloud topic arg-files for
+      more information). The ARG_FILE can easily be shared with colleagues or
+      placed under source control to ensure consistent test executions.
+
+      To run a test using arguments loaded from an ARG_FILE named
+      excelsior_args, which contains an argument group named robo-args:, use the
+      following syntax:
+
+        $ gcloud alpha test run path/to/excelsior_args:robo-args
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

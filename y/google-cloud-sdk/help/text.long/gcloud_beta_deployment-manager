@@ -1,0 +1,49 @@
+NAME
+
+      gcloud beta deployment-manager - manage Deployments of cloud resources
+         using version 2 beta of the API
+
+SYNOPSIS
+
+      gcloud beta deployment-manager GROUP [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (BETA) Manage Deployments of cloud resources using version 2 beta of the
+      API.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+GROUPS
+
+      GROUP is one of the following:
+
+      deployments
+
+         (BETA) Commands for Deployment Manager V2 deployments.
+
+      manifests
+
+         (BETA) Commands for Deployment Manager V2 manifests.
+
+      operations
+
+         (BETA) Commands for Deployment Manager V2 operations.
+
+      resources
+
+         (BETA) Commands for Deployment Manager V2 resources.
+
+      types
+
+         (BETA) Commands for Deployment Manager V2 types.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in BETA and may change without notice.
+

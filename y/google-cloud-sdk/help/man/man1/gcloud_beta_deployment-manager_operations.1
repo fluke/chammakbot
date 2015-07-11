@@ -1,0 +1,68 @@
+.TH "GCLOUD BETA DEPLOYMENT-MANAGER OPERATIONS" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_beta_deployment-manager_operations \- commands for Deployment Manager V2 operations
+.SH "SYNOPSIS"
+.sp
+gcloud beta deployment\-manager operations \fICOMMAND\fR [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(BETA)\fR Commands to list, examine, and wait for long\-running operations\&.
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "COMMANDS"
+.sp
+\fICOMMAND\fR is one of the following:
+.HP
+\fBdescribe\fR
+Provide information about an operation\&.
+.RE
+.PP
+\fBlist\fR
+.RS 4
+\fB(BETA)\fR
+List operations in a project\&.
+.RE
+.PP
+\fBwait\fR
+.RS 4
+\fB(BETA)\fR
+Wait for all operations specified to complete before returning\&.
+.RE
+.SH "EXAMPLES"
+.sp
+To view the details of an operation, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud beta deployment\-manager operations describe operation\-name
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To see the list of all operations, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud beta deployment\-manager operations list
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To wait for an operation to complete, run: $ gcloud beta deployment\-manager operations wait operation\-name
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBgcloud\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in BETA and may change without notice\&.

@@ -1,0 +1,38 @@
+.TH "GCLOUD ALPHA CONTAINER CLUSTERS DELETE" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_alpha_container_clusters_delete \- delete an existing cluster for running containers
+.SH "SYNOPSIS"
+.sp
+gcloud alpha container clusters delete \fINAME\fR [\fINAME\fR \&...] [\fB\-\-no\-wait\fR] [\fB\-\-zone\fR \fIZONE\fR, \fB\-z\fR \fIZONE\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(ALPHA)\fR Delete an existing cluster for running containers\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fINAME\fR [\fINAME\fR \&...]
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-no\-wait\fR
+.RS 4
+Return after issuing delete request without polling the operation for completion\&.
+.RE
+.SH "GROUP FLAGS"
+.PP
+\fB\-\-zone\fR \fIZONE\fR, \fB\-z\fR \fIZONE\fR
+.RS 4
+The compute zone (e\&.g\&. us\-central1\-a) for the cluster
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBgcloud\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in ALPHA and may change without notice\&.

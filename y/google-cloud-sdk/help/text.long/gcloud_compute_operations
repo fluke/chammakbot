@@ -1,0 +1,34 @@
+NAME
+
+      gcloud compute operations - read and manipulate Google Compute Engine
+         operations
+
+SYNOPSIS
+
+      gcloud compute operations COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      Read and manipulate Google Compute Engine operations.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      describe
+
+         Describe a Google Compute Engine operation.
+
+      list
+
+         List Google Compute Engine operations.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

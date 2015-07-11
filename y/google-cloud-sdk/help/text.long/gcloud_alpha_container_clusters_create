@@ -1,0 +1,132 @@
+NAME
+
+      gcloud alpha container clusters create - create a cluster for running
+         containers
+
+SYNOPSIS
+
+      gcloud alpha container clusters create NAME
+      [--cluster-api-version CLUSTER_API_VERSION]
+      [--container-ipv4-cidr CONTAINER_IPV4_CIDR]
+      [--machine-type MACHINE_TYPE, -m MACHINE_TYPE] [--network NETWORK]
+      [--no-enable-cloud-logging] [--no-wait]
+      [--num-nodes NUM_NODES; default="3"] [--password PASSWORD]
+      [--scopes SCOPE,[SCOPE,...]] [--source-image SOURCE_IMAGE]
+      [--user USER, -u USER; default="admin"] [--zone ZONE, -z ZONE]
+      [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Create a cluster for running containers.
+
+POSITIONAL ARGUMENTS
+
+      NAME
+
+         The name of this cluster.
+
+FLAGS
+
+      --cluster-api-version CLUSTER_API_VERSION
+
+         The kubernetes release version to launch the cluster with. Defaults to
+         server-specified.
+
+      --container-ipv4-cidr CONTAINER_IPV4_CIDR
+
+         The IP addresses of the container pods in this cluster in CIDR notation
+         (e.g. 10.0.0.0/14). Defaults to server-specified
+
+      --machine-type MACHINE_TYPE, -m MACHINE_TYPE
+
+         The type of machine to use for workers. Defaults to server-specified
+
+      --network NETWORK
+
+         The Compute Engine Network that the cluster will connect to. Google
+         Container Engine will use this network when creating routes and
+         firewalls for the clusters. Defaults to the 'default' network.
+
+      --no-enable-cloud-logging
+
+         Don't automatically send logs from the cluster to the Google Cloud
+         Logging API.
+
+      --no-wait
+
+         Return after issuing create request without polling the operation for
+         completion.
+
+      --num-nodes NUM_NODES; default="3"
+
+         The number of nodes in the cluster.
+
+      --password PASSWORD
+
+         The password to use for cluster auth. Defaults to a randomly-generated
+         string.
+
+      --scopes SCOPE,[SCOPE,...]
+
+         Specifies scopes for the node instances. The project's default service
+         account is used. Examples:
+
+           $ gcloud alpha container clusters create example-cluster \
+               --scopes https://www.googleapis.com/auth/devstorage.read_only
+           $ gcloud alpha container clusters create example-cluster \
+               --scopes bigquery,storage-rw,compute-ro
+
+         Multiple SCOPEs can specified, separated by commas. The scopes
+         necessary for the cluster to function properly (compute-rw,
+         storage-ro), are always added, even if not explicitly specified.
+
+         SCOPE can be either the full URI of the scope or an alias. Available
+         aliases are:
+
+         Alias,URI bigquery,https://www.googleapis.com/auth/bigquery
+
+                 cloud-platform,https://www.googleapis.com/auth/cloud-platform
+                 compute-ro,https://www.googleapis.com/auth/compute.readonly
+                 compute-rw,https://www.googleapis.com/auth/compute
+                
+         computeaccounts-ro,https://www.googleapis.com/auth/computeaccounts.readonly
+                
+         computeaccounts-rw,https://www.googleapis.com/auth/computeaccounts
+                 datastore,https://www.googleapis.com/auth/datastore
+                 logging-write,https://www.googleapis.com/auth/logging.write
+                 monitoring,https://www.googleapis.com/auth/monitoring
+                 sql,https://www.googleapis.com/auth/sqlservice
+                 sql-admin,https://www.googleapis.com/auth/sqlservice.admin
+                
+         storage-full,https://www.googleapis.com/auth/devstorage.full_control
+                 storage-ro,https://www.googleapis.com/auth/devstorage.read_only
+                
+         storage-rw,https://www.googleapis.com/auth/devstorage.read_write
+                 taskqueue,https://www.googleapis.com/auth/taskqueue
+                 userinfo-email,https://www.googleapis.com/auth/userinfo.email
+
+      --source-image SOURCE_IMAGE
+
+         The source image to use for workers. Defaults to server-specified
+
+      --user USER, -u USER; default="admin"
+
+         The user name to use for cluster auth.
+
+GROUP FLAGS
+
+      --zone ZONE, -z ZONE
+
+         The compute zone (e.g. us-central1-a) for the cluster
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

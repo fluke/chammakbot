@@ -1,0 +1,29 @@
+NAME
+
+      gcloud compute http-health-checks describe - display detailed information
+         about an HTTP health check
+
+SYNOPSIS
+
+      gcloud compute http-health-checks describe NAME [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      gcloud compute http-health-checks describe displays all data associated
+      with a Google Compute Engine HTTP health check in a project.
+
+POSITIONAL ARGUMENTS
+
+      NAME
+
+         The name of the resource to fetch.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

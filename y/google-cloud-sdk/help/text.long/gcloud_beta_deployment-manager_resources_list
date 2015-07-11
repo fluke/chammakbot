@@ -1,0 +1,56 @@
+NAME
+
+      gcloud beta deployment-manager resources list - list resources in a
+         deployment
+
+SYNOPSIS
+
+      gcloud beta deployment-manager resources list [--deployment DEPLOYMENT]
+      [--limit LIMIT] [--simple-list] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (BETA) Prints a table with summary information on all resources in the
+      deployment.
+
+FLAGS
+
+      --limit LIMIT
+
+         The maximum number of results to list.
+
+      --simple-list
+
+         If true, only the list of resource IDs is printed. If false, prints a
+         human-readable table of resource information.
+
+GROUP FLAGS
+
+      --deployment DEPLOYMENT
+
+         Deployment name
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To print out a list of resources in the deployment with some summary
+      information about each, run:
+
+        $ gcloud beta deployment-manager resources list \
+            --deployment my-deployment
+
+      To print only the name of each resource, run:
+
+        $ gcloud beta deployment-manager resources list \
+            --deployment my-deployment --simple-list
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in BETA and may change without notice.
+

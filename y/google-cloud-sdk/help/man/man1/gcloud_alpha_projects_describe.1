@@ -1,0 +1,41 @@
+.TH "GCLOUD ALPHA PROJECTS DESCRIBE" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_alpha_projects_describe \- show metadata for a Project
+.SH "SYNOPSIS"
+.sp
+gcloud alpha projects describe \fIID\fR [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+This command shows metadata for a Project, given a valid Project ID\&.
+.sp
+This call can fail for the following reasons: * The project specified does not exist\&. * The active user does not have permission to access the given project\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fIID\fR
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "EXAMPLES"
+.sp
+The following command will print metadata for a Project with identifier \fIexample\-foo\-bar\-1\fR
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud alpha projects describe example\-foo\-bar\-1
+.fi
+.if n \{\
+.RE
+.\}
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBalpha\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in ALPHA and may change without notice\&.

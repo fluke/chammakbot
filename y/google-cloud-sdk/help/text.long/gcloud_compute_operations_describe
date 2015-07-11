@@ -1,0 +1,58 @@
+NAME
+
+      gcloud compute operations describe - describe a Google Compute Engine
+         operation
+
+SYNOPSIS
+
+      gcloud compute operations describe NAME [--global | --region REGION |
+       --zone ZONE] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      gcloud compute operations describe displays all data associated with a
+      Google Compute Engine operation in a project.
+
+POSITIONAL ARGUMENTS
+
+      NAME
+
+         The name of the resource to fetch.
+
+FLAGS
+
+      --global
+
+         If provided, it is assumed that the requested operation is global.
+
+      --region REGION
+
+         The region of the operation to fetch.
+
+      --zone ZONE
+
+         The zone of the operation to fetch.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To get details about a global operation, run:
+
+        $ gcloud compute operations describe OPERATION --global
+
+      To get details about a regional operation, run:
+
+        $ gcloud compute operations describe OPERATION --region us-central1
+
+      To get details about a zonal operation, run:
+
+        $ gcloud compute operations describe OPERATION --zone us-central1-a
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

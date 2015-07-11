@@ -1,0 +1,46 @@
+NAME
+
+      gcloud compute target-http-proxies - list, create, and delete target HTTP
+         proxies
+
+SYNOPSIS
+
+      gcloud compute target-http-proxies COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      List, create, and delete target HTTP proxies.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      create
+
+         Create a target HTTP proxy.
+
+      delete
+
+         Delete target HTTP proxies.
+
+      describe
+
+         Display detailed information about a target HTTP proxy.
+
+      list
+
+         List Google Compute Engine target HTTP proxies.
+
+      update
+
+         Update a target HTTP proxy.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

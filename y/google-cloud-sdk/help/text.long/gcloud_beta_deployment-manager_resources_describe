@@ -1,0 +1,44 @@
+NAME
+
+      gcloud beta deployment-manager resources describe - provide information
+         about a resource
+
+SYNOPSIS
+
+      gcloud beta deployment-manager resources describe RESOURCE
+      [--deployment DEPLOYMENT] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (BETA) This command prints out all available details about a resource.
+
+POSITIONAL ARGUMENTS
+
+      RESOURCE
+
+         Resource name.
+
+GROUP FLAGS
+
+      --deployment DEPLOYMENT
+
+         Deployment name
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To display information about a resource, run:
+
+        $ gcloud beta deployment-manager resources describe \
+            --deployment my-deployment my-resource-name
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in BETA and may change without notice.
+

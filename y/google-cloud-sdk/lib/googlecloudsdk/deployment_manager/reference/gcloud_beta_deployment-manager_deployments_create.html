@@ -1,0 +1,100 @@
+<html devsite="">
+<head>
+<title>gcloud beta deployment-manager deployments create</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="project_path" value="/sdk/_project.yaml">
+<meta name="book_path" value="/sdk/_book.yaml">
+<!--
+        THIS DOC IS GENERATED.  DO NOT EDIT.
+        -->
+<style>
+  dd { margin-bottom: 1ex; }
+  .hangingindent { padding-left: 1.5em; text-indent: -1.5em; }
+</style>
+</head>
+<body><dl>
+<section>
+<dt>NAME</dt>
+<dd>gcloud beta deployment-manager deployments create - create a deployment</dd>
+</section><section>
+<dt>SYNOPSIS</dt>
+<dd><pre>gcloud beta deployment-manager deployments create DEPLOYMENT_NAME [--async] --config CONFIG [--description DESCRIPTION] [--preview] [GLOBAL-FLAG …]</pre></dd>
+</section><section>
+<dt>DESCRIPTION</dt>
+<dd>
+<code>(BETA)</code> This command inserts (creates) a new deployment based on a provided config
+file.</dd>
+</section><section>
+<dt>POSITIONAL ARGUMENTS</dt>
+<dd><dl>
+<dt class="hangingindent">
+<code><var>DEPLOYMENT_NAME</var></code>
+</dt>
+
+<dd>
+Deployment name.
+</dd>
+
+</dl></dd>
+</section><section>
+<dt>FLAGS</dt>
+<dd><dl>
+<dt>
+<code>--async</code>
+</dt>
+
+<dd>
+Return immediately and print information about the Operation in progress rather than waiting for the Operation to complete. (default=False)
+</dd>
+
+
+<dt>
+<code>--config</code> <code><var>CONFIG</var></code>
+</dt>
+
+<dd>
+Filename of config which specifies resources to deploy.
+</dd>
+
+
+<dt>
+<code>--description</code> <code><var>DESCRIPTION</var></code>
+</dt>
+
+<dd>
+Optional description of the deployment to insert.
+</dd>
+
+
+<dt>
+<code>--preview</code>
+</dt>
+
+<dd>
+Preview the requested create without actually instantiating the underlying resources. (default=False)
+</dd>
+
+</dl></dd>
+</section><section>
+<dt>GLOBAL FLAGS</dt>
+<dd>Run <code>$ <a href="../../../">gcloud</a> help</code> for a description of flags available to
+all commands.</dd>
+</section><section>
+<dt>EXAMPLES</dt>
+<dd>To create a new deployment, run:</dd>
+<dd><pre>$ <A href="../../../beta/deployment-manager/deployments/create">gcloud beta deployment-manager deployments create</A> my-deployment \
+    --config config.yaml --description "My deployment"</pre></dd>
+<dd>To preview a deployment without actually creating resources, run:</dd>
+<dd><pre>$ <A href="../../../beta/deployment-manager/deployments/create">gcloud beta deployment-manager deployments create</A> \
+    my-new-deployment --config config.yaml --preview</pre></dd>
+<dd>To instantiate a deployment that has been previewed, issue an update command for that deployment without specifying a config file.</dd>
+</section><section>
+<dt>NOTES</dt>
+<dd>This command is in the Google Cloud SDK <code>gcloud</code> component. See
+<a href="/sdk/gcloud/#gcloud.components">installing components</a>
+if it is not installed.</dd>
+<dd>This command is currently in BETA and may change without notice.</dd>
+</section>
+</dl></body>
+</html>
+

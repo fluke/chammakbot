@@ -1,0 +1,30 @@
+NAME
+
+      gcloud alpha dataflow jobs cancel - cancels all jobs that match the
+         command line arguments
+
+SYNOPSIS
+
+      gcloud alpha dataflow jobs cancel JOB [JOB ...] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Cancels all jobs that match the command line arguments.
+
+POSITIONAL ARGUMENTS
+
+      JOB [JOB ...]
+
+         The jobs to operate on.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

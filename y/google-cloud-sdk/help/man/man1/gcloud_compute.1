@@ -1,0 +1,164 @@
+.TH "GCLOUD COMPUTE" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_compute \- read and manipulate Google Compute Engine resources
+.SH "SYNOPSIS"
+.sp
+gcloud compute \fIGROUP\fR | \fICOMMAND\fR [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+Read and manipulate Google Compute Engine resources\&.
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "GROUPS"
+.sp
+\fIGROUP\fR is one of the following:
+.HP
+\fBaddresses\fR
+.RE
+.PP
+\fBbackend\-services\fR
+.RS 4
+List, create, and delete backend services\&.
+.RE
+.PP
+\fBdisk\-types\fR
+.RS 4
+Read Google Compute Engine virtual disk types\&.
+.RE
+.PP
+\fBdisks\fR
+.RS 4
+Read and manipulate Google Compute Engine disks\&.
+.RE
+.PP
+\fBfirewall\-rules\fR
+.RS 4
+List, create, and delete Google Compute Engine firewall rules\&.
+.RE
+.PP
+\fBforwarding\-rules\fR
+.RS 4
+Read and manipulate forwarding rules to send traffic to load balancers\&.
+.RE
+.PP
+\fBhttp\-health\-checks\fR
+.RS 4
+Read and manipulate HTTP health checks for load balanced instances\&.
+.RE
+.PP
+\fBimages\fR
+.RS 4
+List, create, and delete Google Compute Engine images\&.
+.RE
+.PP
+\fBinstance\-templates\fR
+.RS 4
+Read and manipulate Google Compute Engine instances templates\&.
+.RE
+.PP
+\fBinstances\fR
+.RS 4
+Read and manipulate Google Compute Engine virtual machine instances\&.
+.RE
+.PP
+\fBmachine\-types\fR
+.RS 4
+Read Google Compute Engine virtual machine types\&.
+.RE
+.PP
+\fBnetworks\fR
+.RS 4
+List, create, and delete Google Compute Engine networks\&.
+.RE
+.PP
+\fBoperations\fR
+.RS 4
+Read and manipulate Google Compute Engine operations\&.
+.RE
+.PP
+\fBproject\-info\fR
+.RS 4
+Read and manipulate project\-level data like quotas and metadata\&.
+.RE
+.PP
+\fBregions\fR
+.RS 4
+List Google Compute Engine regions\&.
+.RE
+.PP
+\fBroutes\fR
+.RS 4
+Read and manipulate routes\&.
+.RE
+.PP
+\fBsnapshots\fR
+.RS 4
+List, describe, and delete Google Compute Engine snapshots\&.
+.RE
+.PP
+\fBtarget\-http\-proxies\fR
+.RS 4
+List, create, and delete target HTTP proxies\&.
+.RE
+.PP
+\fBtarget\-instances\fR
+.RS 4
+Read and manipulate Google Compute Engine virtual target instances\&.
+.RE
+.PP
+\fBtarget\-pools\fR
+.RS 4
+Control Compute Engine target pools for network load balancing\&.
+.RE
+.PP
+\fBtarget\-vpn\-gateways\fR
+.RS 4
+Read and manipulate Google Compute Engine VPN Gateways\&.
+.RE
+.PP
+\fBurl\-maps\fR
+.RS 4
+List, create, and delete URL maps\&.
+.RE
+.PP
+\fBvpn\-tunnels\fR
+.RS 4
+Read and manipulate Google Compute Engine VPN Tunnels\&.
+.RE
+.PP
+\fBzones\fR
+.RS 4
+List Google Compute Engine zones\&.
+.RE
+.SH "COMMANDS"
+.sp
+\fICOMMAND\fR is one of the following:
+.PP
+\fBconfig\-ssh\fR
+.RS 4
+Populate SSH config files with Host entries from each instance\&.
+.RE
+.PP
+\fBcopy\-files\fR
+.RS 4
+Copy files to and from Google Compute Engine virtual machines\&.
+.RE
+.PP
+\fBreset\-windows\-password\fR
+.RS 4
+Reset and return a password for a Windows machine instance\&.
+.RE
+.PP
+\fBssh\fR
+.RS 4
+SSH into a virtual machine instance\&.
+.RE
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBcompute\fR component\&. See installing components if it is not installed\&.

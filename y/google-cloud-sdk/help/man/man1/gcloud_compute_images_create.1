@@ -1,0 +1,101 @@
+.TH "GCLOUD COMPUTE IMAGES CREATE" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_compute_images_create \- create Google Compute Engine images
+.SH "SYNOPSIS"
+.sp
+gcloud compute images create \fINAME\fR [\fB\-\-description\fR \fIDESCRIPTION\fR] [\fB\-\-source\-disk\-zone\fR \fISOURCE_DISK_ZONE\fR] [\fB\-\-source\-disk\fR \fISOURCE_DISK\fR | \fB\-\-source\-uri\fR \fISOURCE_URI\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute images create\fR is used to create custom disk images\&. The resulting image can be provided during instance or disk creation so that the instance attached to the resulting disks has access to a known set of software or files from the image\&.
+.sp
+Images can be created from gzipped compressed tarball containing raw disk data or from existing disks in any zone\&.
+.sp
+Images are global resources, so they can be used across zones and projects\&.
+.sp
+To learn more about creating image tarballs, visit https://developers\&.google\&.com/compute/docs/images\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fINAME\fR
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-description\fR \fIDESCRIPTION\fR
+.RS 4
+An optional, textual description for the image being created\&.
+.RE
+.PP
+\fB\-\-source\-disk\fR \fISOURCE_DISK\fR
+.RS 4
+A source disk to create the image from\&. The value for this option can be the name of a disk with the zone specified via
+\fI\-\-source\-disk\-zone\fR
+flag\&.
+.sp
+This flag is mutually exclusive with
+\fI\-\-source\-uri\fR\&.
+.RE
+.PP
+\fB\-\-source\-disk\-zone\fR \fISOURCE_DISK_ZONE\fR
+.RS 4
+The zone of the disk specified by \-\-source\-disk\&. If not specified, you will be prompted to select a zone\&.
+.sp
+To avoid prompting when this flag is omitted, you can set the
+\fIcompute/zone\fR
+property:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud config set compute/zone ZONE
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+A list of zones can be fetched by running:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud compute zones list
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To unset the property, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud config unset compute/zone
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+Alternatively, the zone can be stored in the environment variable
+\fICLOUDSDK_COMPUTE_ZONE\fR\&.
+.RE
+.PP
+\fB\-\-source\-uri\fR \fISOURCE_URI\fR
+.RS 4
+The full Google Cloud Storage URI where the disk image is stored\&. This file must be a gzip\-compressed tarball whose name ends in
+\fI\&.tar\&.gz\fR\&.
+.sp
+This flag is mutually exclusive with
+\fI\-\-source\-disk\fR\&.
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBcompute\fR component\&. See installing components if it is not installed\&.

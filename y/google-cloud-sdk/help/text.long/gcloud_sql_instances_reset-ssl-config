@@ -1,0 +1,34 @@
+NAME
+
+      gcloud sql instances reset-ssl-config - deletes all client certificates
+         and generates a new server certificate
+
+SYNOPSIS
+
+      gcloud sql instances reset-ssl-config INSTANCE [--async] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      Deletes all client certificates and generates a new server certificate.
+
+POSITIONAL ARGUMENTS
+
+      INSTANCE
+
+         Cloud SQL instance ID.
+
+FLAGS
+
+      --async
+
+         Do not wait for the operation to complete.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK sql component. See installing
+      components if it is not installed.
+

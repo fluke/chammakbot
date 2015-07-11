@@ -1,0 +1,53 @@
+.TH "GCLOUD ALPHA BIGQUERY JOBS" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_alpha_bigquery_jobs \- a group of subcommands for working with BigQuery jobs
+.SH "SYNOPSIS"
+.sp
+gcloud alpha bigquery jobs \fICOMMAND\fR [\fB\-\-fingerprint\-job\-id\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(ALPHA)\fR A group of subcommands for working with BigQuery jobs\&.
+.SH "GROUP FLAGS"
+.HP
+\fB\-\-fingerprint\-job\-id\fR
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "COMMANDS"
+.sp
+\fICOMMAND\fR is one of the following:
+.PP
+\fBdescribe\fR
+.RS 4
+\fB(ALPHA)\fR
+Shows information about a specified job\&.
+.RE
+.PP
+\fBlist\fR
+.RS 4
+\fB(ALPHA)\fR
+Lists all jobs in a particular project\&.
+.RE
+.PP
+\fBshow\-rows\fR
+.RS 4
+\fB(ALPHA)\fR
+Displays selected rows in the result of a query job\&.
+.RE
+.PP
+\fBwait\fR
+.RS 4
+\fB(ALPHA)\fR
+Waits up to a specified number of seconds for a specified job to finish\&.
+.RE
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBbigquery\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in ALPHA and may change without notice\&.

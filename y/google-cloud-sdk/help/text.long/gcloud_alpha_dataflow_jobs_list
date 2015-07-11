@@ -1,0 +1,50 @@
+NAME
+
+      gcloud alpha dataflow jobs list - lists all jobs in a particular project
+
+SYNOPSIS
+
+      gcloud alpha dataflow jobs list [JOB ...] [--created-after CREATED_AFTER]
+      [--created-before CREATED_BEFORE] [--job-name JOB_NAME] [--status STATUS]
+      [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) By default, jobs in the current project are listed; this can be
+      overridden with the gcloud --project flag.
+
+POSITIONAL ARGUMENTS
+
+      [JOB ...]
+
+         The jobs to operate on.
+
+FLAGS
+
+      --created-after CREATED_AFTER
+
+         Filter the jobs to those created after the given time
+
+      --created-before CREATED_BEFORE
+
+         Filter the jobs to those created before the given time
+
+      --job-name JOB_NAME
+
+         Filter the jobs to those with the given name.
+
+      --status STATUS
+
+         Filter the jobs to those with the selected status
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

@@ -1,0 +1,72 @@
+NAME
+
+      gcloud alpha bigquery tables patch - updates one or more attributes of a
+         table or view
+
+SYNOPSIS
+
+      gcloud alpha bigquery tables patch TABLE_OR_VIEW
+      [--description DESCRIPTION] [--expiration EXPIRATION]
+      [--fingerprint-job-id] [--friendly-name FRIENDLY_NAME] [--schema SCHEMA |
+       --schema-file SCHEMA_FILE] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) The attributes that may be updated are the description, expiration
+      time, friendly name, and schema. A schema may be updated only for a table,
+      not a view. The new schema is specified by exactly one of the --schema or
+      --schema-file flags.
+
+POSITIONAL ARGUMENTS
+
+      TABLE_OR_VIEW
+
+         The table or view whose attributes are to be updated.
+
+FLAGS
+
+      --description DESCRIPTION
+
+         Description of the table or view.
+
+      --expiration EXPIRATION
+
+         Expiration time, in seconds from now, of a table or view.
+
+      --friendly-name FRIENDLY_NAME
+
+         Friendly name of the table.
+
+      --schema SCHEMA
+
+         A comma-separated list of entries of the form name[:type], where type
+         defaults to string if not present, specifying field names and types in
+         the new schema for the table. Possible types are string, integer,
+         float, boolean, record, and timestamp.
+
+      --schema-file SCHEMA_FILE
+
+         The name of a JSON file containing a single array object, each element
+         of which is an object with properties name, type, and, optionally,
+         mode, specifying a new schema for the table. Possible types are string,
+         integer, float, boolean, record, and timestamp. Possible modes are
+         NULLABLE, REQUIRED, and REPEATED.
+
+GROUP FLAGS
+
+      --fingerprint-job-id
+
+         Whether to use a job id that is derived from a fingerprint of the job
+         configuration.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK bigquery component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

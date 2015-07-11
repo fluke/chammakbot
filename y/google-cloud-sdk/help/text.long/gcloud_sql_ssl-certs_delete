@@ -1,0 +1,41 @@
+NAME
+
+      gcloud sql ssl-certs delete - deletes an SSL certificate for a Cloud SQL
+         instance
+
+SYNOPSIS
+
+      gcloud sql ssl-certs delete COMMON_NAME [--async]
+      [--instance INSTANCE, -i INSTANCE] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      Deletes an SSL certificate for a Cloud SQL instance.
+
+POSITIONAL ARGUMENTS
+
+      COMMON_NAME
+
+         User supplied name. Constrained to [a-zA-Z.-_ ]+.
+
+FLAGS
+
+      --async
+
+         Do not wait for the operation to complete.
+
+GROUP FLAGS
+
+      --instance INSTANCE, -i INSTANCE
+
+         Cloud SQL instance ID.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK sql component. See installing
+      components if it is not installed.
+

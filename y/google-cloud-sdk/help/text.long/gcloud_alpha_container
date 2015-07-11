@@ -1,0 +1,51 @@
+NAME
+
+      gcloud alpha container - deploy and manage clusters of machines for
+         running containers
+
+SYNOPSIS
+
+      gcloud alpha container GROUP | COMMAND [--zone ZONE, -z ZONE] [GLOBAL-FLAG
+      ...]
+
+DESCRIPTION
+
+      (ALPHA) Deploy and manage clusters of machines for running containers.
+
+FLAGS
+
+      --zone ZONE, -z ZONE
+
+         The compute zone (e.g. us-central1-a) for the cluster
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+GROUPS
+
+      GROUP is one of the following:
+
+      clusters
+
+         (ALPHA) Deploy and teardown Google Container Engine clusters.
+
+      operations
+
+         (ALPHA) Get and list operations for Google Container Engine clusters.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      get-credentials
+
+         (ALPHA) Fetch credentials for a running cluster.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

@@ -1,0 +1,69 @@
+NAME
+
+      gcloud compute zones list - list Google Compute Engine zones
+
+SYNOPSIS
+
+      gcloud compute zones list [NAME ...] [--limit LIMIT]
+      [--regexp REGEXP, -r REGEXP] [--sort-by SORT_BY] [--uri] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      gcloud compute zones list displays all Google Compute Engine zones in a
+      project.
+
+      By default, zones from all regions are listed. The results can be narrowed
+      down by providing the --regions flag.
+
+POSITIONAL ARGUMENTS
+
+      [NAME ...]
+
+         If provided, show details for the specified names and/or URIs of
+         resources.
+
+FLAGS
+
+      --limit LIMIT
+
+         The maximum number of results.
+
+      --regexp REGEXP, -r REGEXP
+
+         A regular expression to filter the names of the results on. Any names
+         that do not match the entire regular expression will be filtered out.
+
+      --sort-by SORT_BY
+
+         A field to sort by. To perform a descending-order sort, prefix the
+         value of this flag with a tilde (~).
+
+      --uri
+
+         If provided, the list command will only print URIs for the resources
+         returned. If this flag is not provided, the list command will print a
+         human-readable table of useful resource data.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+EXAMPLES
+
+      To list all zones in a project in table form, run:
+
+        $ gcloud compute zones list
+
+      To list the URIs of all zones in a project, run:
+
+        $ gcloud compute zones list --uri
+
+      To list all zones in the us-central1 and europe-west1 regions, run:
+
+        $ gcloud compute zones list --regions us-central1 europe-west1
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

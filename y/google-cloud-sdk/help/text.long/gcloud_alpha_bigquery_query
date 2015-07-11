@@ -1,0 +1,102 @@
+NAME
+
+      gcloud alpha bigquery query - executes an SQL query
+
+SYNOPSIS
+
+      gcloud alpha bigquery query SQL_QUERY [--allow-large-results]
+      [--append-to APPEND_TO | --write-to WRITE_TO] [--async] [--batch]
+      [--dry-run] [--fingerprint-job-id] [--job-id JOB_ID]
+      [--limit LIMIT; default="100"] [--require-cache] [--start-row START_ROW]
+      [--status STATUS; default="periodic"] [--structured] [--use-cache]
+      [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) A table or view reference in the query has the form
+
+          dataset_name/table_or_view_name (for a dataset in the current project)
+      or
+          /project_name/dataset_name/table_or_view_name
+
+POSITIONAL ARGUMENTS
+
+      SQL_QUERY
+
+         an SQL SELECT statement (typically in the form of a quoted string)
+
+FLAGS
+
+      --allow-large-results
+
+         Enable larger --append-to or --write-to table sizes.
+
+      --append-to APPEND_TO
+
+         Name of a table to which query results will be appended.
+
+      --async
+
+         Create an asynchronous job to perform the query.
+
+      --batch
+
+         Run the query in batch mode.
+
+      --dry-run
+
+         Validate the query, but do not execute it.
+
+      --job-id JOB_ID
+
+         A unique job ID to use for the request.
+
+      --limit LIMIT; default="100"
+
+         How many rows to return in the result.
+
+      --require-cache
+
+         Run the query only if it is already cached.
+
+      --start-row START_ROW
+
+         First row to return in the result.
+
+      --status STATUS; default="periodic"
+
+         Whether the status of the query job should be reported periodically,
+         every time the status changes, or not at all.
+
+      --structured
+
+         Preserve nested and repeated fields in the result schema. If not set,
+         rows in the result are flattened.
+
+      --use-cache
+
+         Use the query cache to avoid rerunning cached queries.
+
+      --write-to WRITE_TO
+
+         Name of a table to which query results will be written (replacing the
+         old contents of the table, if any).
+
+GROUP FLAGS
+
+      --fingerprint-job-id
+
+         Whether to use a job id that is derived from a fingerprint of the job
+         configuration.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK bigquery component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

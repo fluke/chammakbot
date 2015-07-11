@@ -1,0 +1,47 @@
+.TH "GCLOUD SQL SSL-CERTS" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_sql_ssl-certs \- provide commands for managing SSL certificates of Cloud SQL instances
+.SH "SYNOPSIS"
+.sp
+gcloud sql ssl\-certs \fICOMMAND\fR [\fB\-\-instance\fR \fIINSTANCE\fR, \fB\-i\fR \fIINSTANCE\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+Provide commands for managing SSL certificates of Cloud SQL instances, including creating, deleting, listing, and getting information about certificates\&.
+.SH "FLAGS"
+.HP
+\fB\-\-instance\fR \fIINSTANCE\fR, \fB\-i\fR \fIINSTANCE\fR
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "COMMANDS"
+.sp
+\fICOMMAND\fR is one of the following:
+.PP
+\fBcreate\fR
+.RS 4
+Creates an SSL certificate for a Cloud SQL instance\&.
+.RE
+.PP
+\fBdelete\fR
+.RS 4
+Deletes an SSL certificate for a Cloud SQL instance\&.
+.RE
+.PP
+\fBdescribe\fR
+.RS 4
+Retrieves information about an SSL cert for a Cloud SQL instance\&.
+.RE
+.PP
+\fBlist\fR
+.RS 4
+Lists all SSL certs for a Cloud SQL instance\&.
+.RE
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBsql\fR component\&. See installing components if it is not installed\&.

@@ -1,0 +1,36 @@
+NAME
+
+      gcloud sql backups list - lists all backups associated with a given
+         instance
+
+SYNOPSIS
+
+      gcloud sql backups list [--instance INSTANCE, -i INSTANCE] [--limit LIMIT]
+      [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      Lists all backups associated with a given Cloud SQL instance and
+      configuration in the reverse chronological order of the enqueued time.
+
+FLAGS
+
+      --limit LIMIT
+
+         Maximum number of backups to list.
+
+GROUP FLAGS
+
+      --instance INSTANCE, -i INSTANCE
+
+         Cloud SQL instance ID.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK sql component. See installing
+      components if it is not installed.
+

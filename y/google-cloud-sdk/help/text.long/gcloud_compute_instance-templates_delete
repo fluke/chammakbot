@@ -1,0 +1,29 @@
+NAME
+
+      gcloud compute instance-templates delete - delete Google Compute Engine
+         virtual machine instance templates
+
+SYNOPSIS
+
+      gcloud compute instance-templates delete NAME [NAME ...] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      gcloud compute instance-templates delete deletes one or more Google
+      Compute Engine virtual machine instance templates.
+
+POSITIONAL ARGUMENTS
+
+      NAME [NAME ...]
+
+         The resources to delete.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+

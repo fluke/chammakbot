@@ -1,0 +1,76 @@
+<html devsite="">
+<head>
+<title>gcloud beta deployment-manager deployments delete</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="project_path" value="/sdk/_project.yaml">
+<meta name="book_path" value="/sdk/_book.yaml">
+<!--
+        THIS DOC IS GENERATED.  DO NOT EDIT.
+        -->
+<style>
+  dd { margin-bottom: 1ex; }
+  .hangingindent { padding-left: 1.5em; text-indent: -1.5em; }
+</style>
+</head>
+<body><dl>
+<section>
+<dt>NAME</dt>
+<dd>gcloud beta deployment-manager deployments delete - delete a deployment</dd>
+</section><section>
+<dt>SYNOPSIS</dt>
+<dd><pre>gcloud beta deployment-manager deployments delete DEPLOYMENT_NAME [DEPLOYMENT_NAME …] [--async] [GLOBAL-FLAG …]</pre></dd>
+</section><section>
+<dt>DESCRIPTION</dt>
+<dd>
+<code>(BETA)</code> This command deletes a deployment and deletes all associated resources.</dd>
+</section><section>
+<dt>POSITIONAL ARGUMENTS</dt>
+<dd><dl>
+<dt class="hangingindent">
+<code><var>DEPLOYMENT_NAME</var></code>&nbsp;&nbsp;&#32;<nobr>[<code><var>DEPLOYMENT_NAME</var></code>&nbsp;&nbsp;&#32;…]</nobr>
+</dt>
+
+<dd>
+Deployment name.
+</dd>
+
+</dl></dd>
+</section><section>
+<dt>FLAGS</dt>
+<dd><dl>
+<dt>
+<code>--async</code>
+</dt>
+
+<dd>
+Return immediately and print information about the Operation in progress rather than waiting for the Operation to complete. (default=False)
+</dd>
+
+</dl></dd>
+</section><section>
+<dt>GLOBAL FLAGS</dt>
+<dd>Run <code>$ <a href="../../../">gcloud</a> help</code> for a description of flags available to
+all commands.</dd>
+</section><section>
+<dt>EXAMPLES</dt>
+<dd>To delete a deployment, run:</dd>
+<dd><pre>$ <A href="../../../beta/deployment-manager/deployments/delete">gcloud beta deployment-manager deployments delete</A> my-deployment</pre></dd>
+<dd>To issue a delete command without waiting for the operation to complete, run:</dd>
+<dd><pre>$ <A href="../../../beta/deployment-manager/deployments/delete">gcloud beta deployment-manager deployments delete</A> my-deployment \
+    --async</pre></dd>
+<dd>To delete several deployments, run:</dd>
+<dd><pre>$ <A href="../../../beta/deployment-manager/deployments/delete/deployment-one">gcloud beta deployment-manager deployments delete deployment-one</A> \
+    deployment-two deployment-three</pre></dd>
+<dd>To disable the confirmation prompt on delete, run:</dd>
+<dd><pre>$ <A href="../../../beta/deployment-manager/deployments/delete">gcloud beta deployment-manager deployments delete</A> my-deployment \
+    -q</pre></dd>
+</section><section>
+<dt>NOTES</dt>
+<dd>This command is in the Google Cloud SDK <code>gcloud</code> component. See
+<a href="/sdk/gcloud/#gcloud.components">installing components</a>
+if it is not installed.</dd>
+<dd>This command is currently in BETA and may change without notice.</dd>
+</section>
+</dl></body>
+</html>
+

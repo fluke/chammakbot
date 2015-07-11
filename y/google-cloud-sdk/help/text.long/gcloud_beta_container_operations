@@ -1,0 +1,47 @@
+NAME
+
+      gcloud beta container operations - get and list operations for Google
+         Container Engine clusters
+
+SYNOPSIS
+
+      gcloud beta container operations COMMAND [--zone ZONE, -z ZONE]
+      [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (BETA) Get and list operations for Google Container Engine clusters.
+
+GROUP FLAGS
+
+      --zone ZONE, -z ZONE
+
+         The compute zone (e.g. us-central1-a) for the cluster
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      describe
+
+         (BETA) Describe an operation.
+
+      list
+
+         (BETA) List operations for container clusters.
+
+      wait
+
+         (BETA) Poll an operation for completion.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in BETA and may change without notice.
+

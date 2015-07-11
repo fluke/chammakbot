@@ -1,0 +1,92 @@
+NAME
+
+      gcloud dns record-sets transaction - make scriptable and transactional
+         changes to your record-sets
+
+SYNOPSIS
+
+      gcloud dns record-sets transaction COMMAND
+      [--transaction-file TRANSACTION_FILE; default="transaction.yaml"]
+      [--zone ZONE, -z ZONE] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      Make scriptable and transactional changes to your record-sets.
+
+FLAGS
+
+      --transaction-file TRANSACTION_FILE; default="transaction.yaml"
+
+         Path of the file which contains the transaction.
+
+GROUP FLAGS
+
+      --zone ZONE, -z ZONE
+
+         Name of the managed-zone whose record-sets you want to manage.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      abort
+
+         Abort transaction.
+
+      add
+
+         Append a record-set addition to the transaction.
+
+      describe
+
+         Describe the transaction.
+
+      execute
+
+         Execute the transaction on Cloud DNS.
+
+      remove
+
+         Append a record-set deletion to the transaction.
+
+      start
+
+         Start a transaction.
+
+EXAMPLES
+
+      To start a transaction, run:
+
+        $ gcloud dns record-sets transaction start
+
+      To append a record-set addition to the transaction, run:
+
+        $ gcloud dns record-sets transaction add --name RECORD_SET_NAME \
+            --ttl TTL --type TYPE DATA
+
+      To append a record-set removal to the transaction, run:
+
+        $ gcloud dns record-sets transaction remove --name RECORD_SET_NAME \
+            --ttl TTL --type TYPE DATA
+
+      To look at the details of the transaction, run:
+
+        $ gcloud dns record-sets transaction describe
+
+      To delete the transaction, run:
+
+        $ gcloud dns record-sets transaction abort
+
+      To execute the transaction, run:
+
+        $ gcloud dns record-sets transaction execute
+
+NOTES
+
+      This command is in the Google Cloud SDK dns component. See installing
+      components if it is not installed.
+

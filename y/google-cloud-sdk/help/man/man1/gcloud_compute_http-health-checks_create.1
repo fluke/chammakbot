@@ -1,0 +1,81 @@
+.TH "GCLOUD COMPUTE HTTP-HEALTH-CHECKS CREATE" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_compute_http-health-checks_create \- create an HTTP health check to monitor load balanced instances
+.SH "SYNOPSIS"
+.sp
+gcloud compute http\-health\-checks create \fINAME\fR [\fB\-\-check\-interval\fR \fICHECK_INTERVAL\fR; default="5s"] [\fB\-\-description\fR \fIDESCRIPTION\fR] [\fB\-\-healthy\-threshold\fR \fIHEALTHY_THRESHOLD\fR; default="2"] [\fB\-\-host\fR \fIHOST\fR] [\fB\-\-port\fR \fIPORT\fR; default="80"] [\fB\-\-request\-path\fR \fIREQUEST_PATH\fR; default="/"] [\fB\-\-timeout\fR \fITIMEOUT\fR; default="5s"] [\fB\-\-unhealthy\-threshold\fR \fIUNHEALTHY_THRESHOLD\fR; default="2"] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute http\-health\-checks create\fR is used to create an HTTP health check\&. HTTP health checks monitor instances in a load balancer controlled by a target pool\&. All arguments to the command are optional except for the name of the health check\&. For more information on load balancing, see https://developers\&.google\&.com/compute/docs/load\-balancing/\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+\fINAME\fR
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-check\-interval\fR \fICHECK_INTERVAL\fR; default="5s"
+.RS 4
+How often to perform a health check for an instance\&. For example, specifying
+\fI10s\fR
+will run the check every 10 seconds\&. Valid units for this flag are
+\fIs\fR
+for seconds and
+\fIm\fR
+for minutes\&. The default value is
+\fI5s\fR\&.
+.RE
+.PP
+\fB\-\-description\fR \fIDESCRIPTION\fR
+.RS 4
+An optional, textual description for the HTTP health check\&.
+.RE
+.PP
+\fB\-\-healthy\-threshold\fR \fIHEALTHY_THRESHOLD\fR; default="2"
+.RS 4
+The number of consecutive successful health checks before an unhealthy instance is marked as healthy\&. The default is 2\&.
+.RE
+.PP
+\fB\-\-host\fR \fIHOST\fR
+.RS 4
+The value of the host header used in this HTTP health check request\&. By default, this is empty and Google Compute Engine automatically sets the host header in health requests to the same external IP address as the forwarding rule associated with the target pool\&.
+.RE
+.PP
+\fB\-\-port\fR \fIPORT\fR; default="80"
+.RS 4
+The TCP port number that this health check monitors\&. The default value is 80\&.
+.RE
+.PP
+\fB\-\-request\-path\fR \fIREQUEST_PATH\fR; default="/"
+.RS 4
+The request path that this health check monitors\&. For example,
+\fI/healthcheck\fR\&. The default value is
+\fI/\fR\&.
+.RE
+.PP
+\fB\-\-timeout\fR \fITIMEOUT\fR; default="5s"
+.RS 4
+If Google Compute Engine doesn\(cqt receive an HTTP 200 response from the instance by the time specified by the value of this flag, the health check request is considered a failure\&. For example, specifying
+\fI10s\fR
+will cause the check to wait for 10 seconds before considering the request a failure\&. Valid units for this flag are
+\fIs\fR
+for seconds and
+\fIm\fR
+for minutes\&. The default value is
+\fI5s\fR\&.
+.RE
+.PP
+\fB\-\-unhealthy\-threshold\fR \fIUNHEALTHY_THRESHOLD\fR; default="2"
+.RS 4
+The number of consecutive health check failures before a healthy instance is marked as unhealthy\&. The default is 2\&.
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR for a description of flags available to all commands\&.
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBcompute\fR component\&. See installing components if it is not installed\&.

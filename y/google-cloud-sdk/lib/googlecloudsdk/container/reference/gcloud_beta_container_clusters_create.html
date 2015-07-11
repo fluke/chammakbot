@@ -1,0 +1,192 @@
+<html devsite="">
+<head>
+<title>gcloud beta container clusters create</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="project_path" value="/sdk/_project.yaml">
+<meta name="book_path" value="/sdk/_book.yaml">
+<!--
+        THIS DOC IS GENERATED.  DO NOT EDIT.
+        -->
+<style>
+  dd { margin-bottom: 1ex; }
+  .hangingindent { padding-left: 1.5em; text-indent: -1.5em; }
+</style>
+</head>
+<body><dl>
+<section>
+<dt>NAME</dt>
+<dd>gcloud beta container clusters create - create a cluster for running containers</dd>
+</section><section>
+<dt>SYNOPSIS</dt>
+<dd><pre>gcloud beta container clusters create NAME [--container-ipv4-cidr CONTAINER_IPV4_CIDR] [--disk-size DISK_SIZE] [--machine-type MACHINE_TYPE, -m MACHINE_TYPE] [--network NETWORK] [--no-enable-cloud-logging] [--no-enable-cloud-monitoring] [--no-wait] [--num-nodes NUM_NODES; default="3"] [--password PASSWORD] [--scopes SCOPE,[SCOPE,…]] [--username USERNAME, -u USERNAME; default="admin"] [--zone ZONE, -z ZONE] [GLOBAL-FLAG …]</pre></dd>
+</section><section>
+<dt>DESCRIPTION</dt>
+<dd>
+<code>(BETA)</code> Create a cluster for running containers.</dd>
+</section><section>
+<dt>POSITIONAL ARGUMENTS</dt>
+<dd><dl>
+<dt class="hangingindent">
+<code><var>NAME</var></code>
+</dt>
+
+<dd>
+The name of this cluster.
+</dd>
+
+</dl></dd>
+</section><section>
+<dt>FLAGS</dt>
+<dd><dl>
+<dt>
+<code>--container-ipv4-cidr</code> <code><var>CONTAINER_IPV4_CIDR</var></code>
+</dt>
+
+<dd>
+The IP addresses of the container pods in this cluster in CIDR notation (e.g. 10.0.0.0/14). Defaults to server-specified
+</dd>
+
+
+<dt>
+<code>--disk-size</code> <code><var>DISK_SIZE</var></code>
+</dt>
+
+<dd>
+Size in GB for node VM boot disks. Defaults to 100GB
+</dd>
+
+
+<dt>
+<code>--machine-type</code> <code><var>MACHINE_TYPE</var></code>, <code>-m</code> <code><var>MACHINE_TYPE</var></code>
+</dt>
+
+<dd>
+The type of machine to use for workers. Defaults to server-specified
+</dd>
+
+
+<dt>
+<code>--network</code> <code><var>NETWORK</var></code>
+</dt>
+
+<dd>
+The Compute Engine Network that the cluster will connect to. Google Container Engine will use this network when creating routes and firewalls for the clusters. Defaults to the <code>default</code> network.
+</dd>
+
+
+<dt>
+<code>--no-enable-cloud-logging</code>
+</dt>
+
+<dd>
+Don’t automatically send logs from the cluster to the Google Cloud Logging API.
+</dd>
+
+
+<dt>
+<code>--no-enable-cloud-monitoring</code>
+</dt>
+
+<dd>
+Don’t automatically send metrics from the cluster to the Google Cloud Monitoring API.
+</dd>
+
+
+<dt>
+<code>--no-wait</code>
+</dt>
+
+<dd>
+Return after issuing create request without polling the operation for completion.
+</dd>
+
+
+<dt>
+<code>--num-nodes</code> <code><var>NUM_NODES</var></code>; default="3"
+</dt>
+
+<dd>
+The number of nodes in the cluster.
+</dd>
+
+
+<dt>
+<code>--password</code> <code><var>PASSWORD</var></code>
+</dt>
+
+<dd>
+The password to use for cluster auth. Defaults to a randomly-generated string.
+</dd>
+
+
+<dt>
+<code>--scopes</code> <code><var>SCOPE</var></code>,[<code><var>SCOPE</var></code>,…]
+</dt>
+
+<dd>
+Specifies scopes for the node instances. The project’s default
+service account is used. Examples:
+</dd>
+<dd><pre>$ <A href="../../../beta/container/clusters/create">gcloud beta container clusters create</A> example-cluster \
+    --scopes https://www.googleapis.com/auth/devstorage.read_only</pre></dd>
+<dd><pre>$ <A href="../../../beta/container/clusters/create">gcloud beta container clusters create</A> example-cluster \
+    --scopes bigquery,storage-rw,compute-ro</pre></dd>
+<dd>Multiple SCOPEs can specified, separated by commas. The scopes
+necessary for the cluster to function properly (compute-rw, storage-ro),
+are always added, even if not explicitly specified.</dd>
+<dd>SCOPE can be either the full URI of the scope or an alias.
+Available aliases are:</dd>
+<dd>Alias,URI
+bigquery,https://www.googleapis.com/auth/bigquery
+        cloud-platform,https://www.googleapis.com/auth/cloud-platform
+        compute-ro,https://www.googleapis.com/auth/compute.readonly
+        compute-rw,https://www.googleapis.com/auth/compute
+        computeaccounts-ro,https://www.googleapis.com/auth/computeaccounts.readonly
+        computeaccounts-rw,https://www.googleapis.com/auth/computeaccounts
+        datastore,https://www.googleapis.com/auth/datastore
+        logging-write,https://www.googleapis.com/auth/logging.write
+        monitoring,https://www.googleapis.com/auth/monitoring
+        sql,https://www.googleapis.com/auth/sqlservice
+        sql-admin,https://www.googleapis.com/auth/sqlservice.admin
+        storage-full,https://www.googleapis.com/auth/devstorage.full_control
+        storage-ro,https://www.googleapis.com/auth/devstorage.read_only
+        storage-rw,https://www.googleapis.com/auth/devstorage.read_write
+        taskqueue,https://www.googleapis.com/auth/taskqueue
+        userinfo-email,https://www.googleapis.com/auth/userinfo.email</dd>
+
+
+<dt>
+<code>--username</code> <code><var>USERNAME</var></code>, <code>-u</code> <code><var>USERNAME</var></code>; default="admin"
+</dt>
+
+<dd>
+The user name to use for cluster auth.
+</dd>
+
+</dl></dd>
+</section><section>
+<dt>GROUP FLAGS</dt>
+<dd><dl>
+<dt>
+<code>--zone</code> <code><var>ZONE</var></code>, <code>-z</code> <code><var>ZONE</var></code>
+</dt>
+
+<dd>
+The compute zone (e.g. us-central1-a) for the cluster
+</dd>
+
+</dl></dd>
+</section><section>
+<dt>GLOBAL FLAGS</dt>
+<dd>Run <code>$ <a href="../../../">gcloud</a> help</code> for a description of flags available to
+all commands.</dd>
+</section><section>
+<dt>NOTES</dt>
+<dd>This command is in the Google Cloud SDK <code>gcloud</code> component. See
+<a href="/sdk/gcloud/#gcloud.components">installing components</a>
+if it is not installed.</dd>
+<dd>This command is currently in BETA and may change without notice.</dd>
+</section>
+</dl></body>
+</html>
+

@@ -1,0 +1,25 @@
+NAME
+
+      gcloud compute project-info describe - describe the Google Compute Engine
+         project resource
+
+SYNOPSIS
+
+      gcloud compute project-info describe [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      gcloud compute project-info describe displays all data associated with the
+      Google Compute Engine project resource. The project resource contains data
+      such as global quotas, common instance metadata, and the project's
+      creation time.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help for a description of flags available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK compute component. See installing
+      components if it is not installed.
+
