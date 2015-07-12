@@ -28,7 +28,7 @@ def hello():
 def bot():
     """Get bot."""
     webhook = request.data
-    params = {'chat_id': webhook['from']['id'], 'Heyyyy'}
+    params = {'chat_id': webhook['from']['id'], 'message':'Heyyyy'}
     json_data = json.loads(bot_api('sendMessage', 'GET', params))
     return str(json_data['result']), 200
 
