@@ -1,5 +1,7 @@
 import requests
+import random
 import json
+import logging
 from flask import Flask
 from flask import request
 app = Flask(__name__)
@@ -8,12 +10,14 @@ app.config['DEBUG'] = True
 # Note: We don't need to call run() since our application is embedded within
 # the App Engine WSGI application server.
 
-def bot_api(method_name, method, params = {}):
+def bot_api(method_name, method, params):
     path = "https://api.telegram.org/bot91678886:AAHpiQP0tCIfeqXKy5zA8BEPHOm7EZOkLCU/" + method_name
     if params:
         path += "?"
         for param in params:
-            path += param + "=" + params[param]
+            path += param + "=" + str(params[param]) + "&"
+        path = path[:-1]
+
     if method == 'GET':
         return requests.get(path, verify=True).text
     if method == 'POST':
@@ -24,13 +28,18 @@ def hello():
     """Return a friendly HTTP greeting."""
     return 'Hello World!'
 
-@app.route('/91678886:AAHpiQP0tCIfeqXKy5zA8BEPHOm7EZOkLCU')
+@app.route('/91678886:AAHpiQP0tCIfeqXKy5zA8BEPHOm7EZOkLCU', methods = ['POST'])
 def bot():
     """Get bot."""
-    webhook = request.data
-    params = {'chat_id': webhook['from']['id'], 'message':'Heyyyy'}
-    json_data = json.loads(bot_api('sendMessage', 'GET', params))
-    return str(json_data['result']), 200
+    webhook = json.loads(request.data)
+    logging.info(webhook)
+    if webhook['message']['text'].startswith('/quote'):
+      chammakisms = ['Heyyy', 'Let me be your Chammak Challo', 'A coffee machine is a good investment', 'The cloud bro', 'I don\'t go to shady places', 'I can\'t sleep without the AC', 'I wish Mallika would like me.', 'Yozz', 'Hiiii', 'HBD Broda']
+      params = {'chat_id': webhook['message']['chat']['id'], 'text': chammakisms[random.randint(1, 10)]}
+      json_data = json.loads(bot_api('sendMessage', 'GET', params))
+      return str(json_data), 200
+    else:
+      return 'Not a command', 200
 
 @app.errorhandler(404)
 def page_not_found(e):
