@@ -34,8 +34,8 @@ def bot():
     webhook = json.loads(request.data)
     logging.info(webhook)
     if webhook['message']['text'].startswith('/quote'):
-      chammakisms = ['Heyyy', 'Let me be your Chammak Challo', 'A coffee machine is a good investment', 'The cloud bro', 'I don\'t go to shady places', 'I can\'t sleep without the AC', 'I wish Mallika would like me.', 'Yozz', 'Hiiii', 'HBD Broda']
-      params = {'chat_id': webhook['message']['chat']['id'], 'text': chammakisms[random.randint(1, 10)]}
+      chammakisms = ['I\'m so important that people want me killed.. yo!', 'Let me be your Chammak Challo', 'A coffee machine is a good investment', 'The cloud bro', 'I don\'t go to shady places', 'I can\'t sleep without the AC', '*snakes hand in between you and a girl*', 'I have a patent in the US.', 'It\'s all dynamic bro']
+      params = {'chat_id': webhook['message']['chat']['id'], 'text': chammakisms[random.randint(1, len(chammakisms))]}
       json_data = json.loads(bot_api('sendMessage', 'GET', params))
       return str(json_data), 200
     else:
