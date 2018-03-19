@@ -10,8 +10,14 @@ app.config['DEBUG'] = True
 # Note: We don't need to call run() since our application is embedded within
 # the App Engine WSGI application server.
 
+wrench = u'\U0001F527'
+wine = u'\U0001F377'
+
+key = 'AKIAJUS6XG6DKLRZXKJA'
+secret = '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'
+
 def bot_api(method_name, method, params):
-    path = "https://api.telegram.org/bot91678886:AAHpiQP0tCIfeqXKy5zA8BEPHOm7EZOkLCU/" + method_name
+    path = "https://api.telegram.org/bot545176716:AAFJd0oqTnXxS99MYswmdQiCfdwpfLJkyDA/" + method_name
     if params:
         path += "?"
         for param in params:
@@ -26,9 +32,10 @@ def bot_api(method_name, method, params):
 @app.route('/')
 def hello():
     """Return a friendly HTTP greeting."""
-    return 'Hello World!'
+    json_data = json.loads(bot_api('setWebhook', 'POST', {'url': 'https://7855b829.ngrok.io/545176716:AAFJd0oqTnXxS99MYswmdQiCfdwpfLJkyDA'}))
+    return str(json_data), 200
 
-@app.route('/91678886:AAHpiQP0tCIfeqXKy5zA8BEPHOm7EZOkLCU', methods = ['POST'])
+@app.route('/545176716:AAFJd0oqTnXxS99MYswmdQiCfdwpfLJkyDA', methods = ['POST'])
 def bot():
     """Get bot."""
     webhook = json.loads(request.data)
@@ -36,7 +43,7 @@ def bot():
     if 'text' in webhook['message']:
       if webhook['message']['text'].startswith('/quote'):
         # if webhook['message']['from']['id'] != 24135208:
-        chammakisms = ['I\'m so important that people want me killed.. yo!', "Hi. I'm roll number 2.", "You are too cool for me Khushboo Sharma!! You are too awesome for me! :'(", 'Let me be your Chammak Challo', 'A coffee machine is a good investment', 'The cloud bro', 'I don\'t go to shady places', 'I can\'t sleep without the AC', 'I wish Mallika would like me.', '*snakes hand in between you and a girl*', 'I have a patent in the US.', 'It\'s all dynamic bro']
+        chammakisms = [('Is this a wrench or a spanner ' + wrench).encode('utf-8'), 'How dare are you.', 'I\'m sitting like an awkward intern', 'Hey Sandesh Is Kartik there', 'I\'m getting stress rashes because of this shit hole', 'You should get her to talk to prajwal about clones and check if she goes mad or not', 'Welcome to monogamy', 'You know I had a doctor called rex. Misdiagnosed me with malaria When I had jaundice', 'I\'m going to go eat my sweet potato in silence', ('Drown sorrow with ' + wine).encode('utf-8')]
         params = {'chat_id': webhook['message']['chat']['id'], 'text': chammakisms[random.randint(1, len(chammakisms)) - 1]}
         json_data = json.loads(bot_api('sendMessage', 'GET', params))
         return str(json_data), 200

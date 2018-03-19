@@ -1,0 +1,18 @@
+service: chammakbot
+
+provider:
+  name: aws
+  runtime: python3.6
+  stage: dev
+  region: us-east-1
+  environment:
+    TELEGRAM_TOKEN: ${env:CHAMMAK_TELEGRAM_TOKEN}
+
+functions:
+  post:
+    handler: handler.quote
+    events:
+      - http:
+          path: chammakbot
+          method: post
+          cors: true
